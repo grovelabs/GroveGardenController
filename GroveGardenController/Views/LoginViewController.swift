@@ -78,10 +78,7 @@ internal final class LoginViewController: UIViewController {
       case _?:
         self?.showAlert(.other)
       case nil:
-        let storyboard = UIStoryboard(.device)
-        let initViewController = storyboard.instantiateInitialViewController()!
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.window?.rootViewController = initViewController
+        Storyboard.switchTo(.device)
       }
     }
   }

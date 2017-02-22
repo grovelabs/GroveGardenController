@@ -41,10 +41,19 @@
 		178F64F11E5359FB00161ECC /* SparkDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 178F64E71E5359FB00161ECC /* SparkDevice.m */; };
 		178F64F21E5359FB00161ECC /* SparkEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 178F64E91E5359FB00161ECC /* SparkEvent.m */; };
 		178F64F31E5359FB00161ECC /* SparkSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 178F64EB1E5359FB00161ECC /* SparkSession.m */; };
+		179BF6BE1E5CA8E0008F702E /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179BF6BD1E5CA8E0008F702E /* Notifications.swift */; };
+		179BF6C01E5CF461008F702E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179BF6BF1E5CF461008F702E /* String.swift */; };
+		179BF6C21E5CF492008F702E /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179BF6C11E5CF492008F702E /* Errors.swift */; };
+		179BF6C41E5CFBE9008F702E /* Sensors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179BF6C31E5CFBE9008F702E /* Sensors.swift */; };
+		179BF6C71E5DEAD1008F702E /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179BF6C61E5DEAD1008F702E /* UIViewController.swift */; };
+		179BF6C91E5E187A008F702E /* Light.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179BF6C81E5E187A008F702E /* Light.swift */; };
+		179BF6CB1E5E1EDE008F702E /* Pump.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179BF6CA1E5E1EDE008F702E /* Pump.swift */; };
+		179BF6CE1E5E2B81008F702E /* getAllVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179BF6CD1E5E2B81008F702E /* getAllVariables.swift */; };
+		179BF6D01E5E2C1F008F702E /* Fan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179BF6CF1E5E2C1F008F702E /* Fan.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1708D0151E54AAB200998C9A /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = Extensions/UIColor.swift; sourceTree = "<group>"; };
+		1708D0151E54AAB200998C9A /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		1708D0171E54D13B00998C9A /* GroveManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroveManager.swift; path = Models/GroveManager.swift; sourceTree = "<group>"; };
 		17103C1C1E538841003D56B4 /* GroveGardenController-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GroveGardenController-Bridging-Header.h"; sourceTree = "<group>"; };
 		17103C871E5390E7003D56B4 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
@@ -82,8 +91,8 @@
 		17103CAE1E5390EE003D56B4 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		17214C561E54DD5A003FBFF4 /* DeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceViewController.swift; path = Views/DeviceViewController.swift; sourceTree = "<group>"; };
 		17214C581E54E050003FBFF4 /* Device.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Device.storyboard; path = Views/Device.storyboard; sourceTree = "<group>"; };
-		17214C5A1E54E184003FBFF4 /* UIStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIStoryboard.swift; path = Extensions/UIStoryboard.swift; sourceTree = "<group>"; };
-		17214C5C1E54F580003FBFF4 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Keychain.swift; path = Extensions/Keychain.swift; sourceTree = "<group>"; };
+		17214C5A1E54E184003FBFF4 /* UIStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
+		17214C5C1E54F580003FBFF4 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		17214C601E550545003FBFF4 /* Grove.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Grove.swift; path = Models/Grove.swift; sourceTree = "<group>"; };
 		173DD2DB1E521AF300888F33 /* GroveGardenController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroveGardenController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		173DD2DE1E521AF300888F33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +116,15 @@
 		178F64EB1E5359FB00161ECC /* SparkSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SparkSession.m; sourceTree = "<group>"; };
 		178F64EC1E5359FB00161ECC /* Spark-SDK-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Spark-SDK-Bridging-Header.h"; path = "spark-sdk-ios/Pod/Classes/Spark-SDK-Bridging-Header.h"; sourceTree = "<group>"; };
 		178F64ED1E5359FB00161ECC /* Spark-SDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Spark-SDK.h"; path = "spark-sdk-ios/Pod/Classes/Spark-SDK.h"; sourceTree = "<group>"; };
+		179BF6BD1E5CA8E0008F702E /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		179BF6BF1E5CF461008F702E /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		179BF6C11E5CF492008F702E /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		179BF6C31E5CFBE9008F702E /* Sensors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sensors.swift; path = Models/Sensors.swift; sourceTree = "<group>"; };
+		179BF6C61E5DEAD1008F702E /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		179BF6C81E5E187A008F702E /* Light.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Light.swift; path = Models/Light.swift; sourceTree = "<group>"; };
+		179BF6CA1E5E1EDE008F702E /* Pump.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Pump.swift; path = Models/Pump.swift; sourceTree = "<group>"; };
+		179BF6CD1E5E2B81008F702E /* getAllVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = getAllVariables.swift; path = Models/Grove/getAllVariables.swift; sourceTree = "<group>"; };
+		179BF6CF1E5E2C1F008F702E /* Fan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Fan.swift; path = Models/Fan.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,14 +138,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1708D0141E54AA8F00998C9A /* Extensions */ = {
+		1708D0141E54AA8F00998C9A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				179BF6C11E5CF492008F702E /* Errors.swift */,
 				17214C5C1E54F580003FBFF4 /* Keychain.swift */,
+				179BF6BD1E5CA8E0008F702E /* Notifications.swift */,
+				179BF6BF1E5CF461008F702E /* String.swift */,
 				1708D0151E54AAB200998C9A /* UIColor.swift */,
 				17214C5A1E54E184003FBFF4 /* UIStoryboard.swift */,
+				179BF6C61E5DEAD1008F702E /* UIViewController.swift */,
 			);
-			name = Extensions;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		17103C851E5390DA003D56B4 /* AFNetworking */ = {
@@ -204,7 +226,12 @@
 			isa = PBXGroup;
 			children = (
 				17214C601E550545003FBFF4 /* Grove.swift */,
+				179BF6CC1E5E2B5B008F702E /* Grove */,
 				1708D0171E54D13B00998C9A /* GroveManager.swift */,
+				179BF6C81E5E187A008F702E /* Light.swift */,
+				179BF6CF1E5E2C1F008F702E /* Fan.swift */,
+				179BF6CA1E5E1EDE008F702E /* Pump.swift */,
+				179BF6C31E5CFBE9008F702E /* Sensors.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -235,7 +262,7 @@
 				173DD2DE1E521AF300888F33 /* AppDelegate.swift */,
 				173DD2E51E521AF300888F33 /* Assets.xcassets */,
 				17214C5F1E55052D003FBFF4 /* Models */,
-				1708D0141E54AA8F00998C9A /* Extensions */,
+				1708D0141E54AA8F00998C9A /* Utilities */,
 				17214C5E1E55045F003FBFF4 /* Views */,
 			);
 			path = GroveGardenController;
@@ -295,6 +322,14 @@
 			);
 			name = SDK;
 			path = "spark-sdk-ios/Pod/Classes/SDK";
+			sourceTree = "<group>";
+		};
+		179BF6CC1E5E2B5B008F702E /* Grove */ = {
+			isa = PBXGroup;
+			children = (
+				179BF6CD1E5E2B81008F702E /* getAllVariables.swift */,
+			);
+			name = Grove;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,24 +409,31 @@
 				17103CB61E5390EE003D56B4 /* UIRefreshControl+AFNetworking.m in Sources */,
 				17103C991E5390E7003D56B4 /* AFURLSessionManager.m in Sources */,
 				173DD2E11E521AF300888F33 /* LoginViewController.swift in Sources */,
+				179BF6CB1E5E1EDE008F702E /* Pump.swift in Sources */,
+				179BF6D01E5E2C1F008F702E /* Fan.swift in Sources */,
 				17103CB51E5390EE003D56B4 /* UIProgressView+AFNetworking.m in Sources */,
 				173DD3061E5247AF00888F33 /* Secrets.swift in Sources */,
 				17103CB01E5390EE003D56B4 /* AFImageDownloader.m in Sources */,
 				178F64F21E5359FB00161ECC /* SparkEvent.m in Sources */,
+				179BF6C21E5CF492008F702E /* Errors.swift in Sources */,
 				17214C5D1E54F580003FBFF4 /* Keychain.swift in Sources */,
 				173DD2DF1E521AF300888F33 /* AppDelegate.swift in Sources */,
 				17103CB31E5390EE003D56B4 /* UIButton+AFNetworking.m in Sources */,
 				17103C961E5390E7003D56B4 /* AFSecurityPolicy.m in Sources */,
 				178F64EF1E5359FB00161ECC /* KeychainItemWrapper.m in Sources */,
 				17103CB21E5390EE003D56B4 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				179BF6C71E5DEAD1008F702E /* UIViewController.swift in Sources */,
 				17103CB11E5390EE003D56B4 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				17103CAF1E5390EE003D56B4 /* AFAutoPurgingImageCache.m in Sources */,
 				17103C971E5390E7003D56B4 /* AFURLRequestSerialization.m in Sources */,
+				179BF6C91E5E187A008F702E /* Light.swift in Sources */,
+				179BF6C41E5CFBE9008F702E /* Sensors.swift in Sources */,
 				178F64EE1E5359FB00161ECC /* EventSource.m in Sources */,
 				178F64F31E5359FB00161ECC /* SparkSession.m in Sources */,
 				17103C941E5390E7003D56B4 /* AFHTTPSessionManager.m in Sources */,
 				178F64F01E5359FB00161ECC /* SparkCloud.m in Sources */,
 				1708D0161E54AAB200998C9A /* UIColor.swift in Sources */,
+				179BF6CE1E5E2B81008F702E /* getAllVariables.swift in Sources */,
 				17214C5B1E54E184003FBFF4 /* UIStoryboard.swift in Sources */,
 				17103C951E5390E7003D56B4 /* AFNetworkReachabilityManager.m in Sources */,
 				17103CB71E5390EE003D56B4 /* UIWebView+AFNetworking.m in Sources */,
@@ -399,7 +441,9 @@
 				1708D0181E54D13B00998C9A /* GroveManager.swift in Sources */,
 				17103CB41E5390EE003D56B4 /* UIImageView+AFNetworking.m in Sources */,
 				17214C611E550545003FBFF4 /* Grove.swift in Sources */,
+				179BF6BE1E5CA8E0008F702E /* Notifications.swift in Sources */,
 				178F64F11E5359FB00161ECC /* SparkDevice.m in Sources */,
+				179BF6C01E5CF461008F702E /* String.swift in Sources */,
 				17214C571E54DD5A003FBFF4 /* DeviceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,7 +510,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -509,7 +553,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
