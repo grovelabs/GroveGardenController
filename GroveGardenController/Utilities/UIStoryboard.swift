@@ -3,7 +3,7 @@ import class UIKit.UIApplication
 
 public enum Storyboard: String {
   case login = "Login"
-  case device = "Device"
+  case main = "Main"
 
   public static func switchTo(_ name: Storyboard) {
     let storyboard = UIStoryboard(name)

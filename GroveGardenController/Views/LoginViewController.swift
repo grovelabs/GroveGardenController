@@ -78,7 +78,7 @@ internal final class LoginViewController: UIViewController {
       case _?:
         self?.showAlert(.other)
       case nil:
-        Storyboard.switchTo(.device)
+        Storyboard.switchTo(.main)
       }
     }
   }

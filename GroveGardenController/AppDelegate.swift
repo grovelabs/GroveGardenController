@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         case _?:
           Storyboard.switchTo(.login)
         case nil:
-          Storyboard.switchTo(.device)
+          Storyboard.switchTo(.main)
         }
       }
     }

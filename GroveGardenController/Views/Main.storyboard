@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cD1-Rp-cEN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wZ0-GZ-nee">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -196,6 +197,131 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3F8-z2-gb0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2030" y="139"/>
+        </scene>
+        <!--Grove Garden-->
+        <scene sceneID="neY-Bf-Flt">
+            <objects>
+                <tableViewController storyboardIdentifier="GardenTable" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3Wf-dY-rxz" customClass="GardenTableViewController" customModule="GroveGardenController" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="2rt-SK-t3Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="gardenDetail" rowHeight="76" id="vUl-7Z-tgu" customClass="GardenDetailTableViewCell" customModule="GroveGardenController" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="76"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vUl-7Z-tgu" id="IoX-1V-5YG">
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="75"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8ge-an-65f">
+                                            <rect key="frame" x="8" y="15" width="45" height="45"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="45" id="S2X-tc-XPH"/>
+                                                <constraint firstAttribute="width" constant="45" id="sf2-7s-bcO"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lights" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1I-4S-0iV">
+                                            <rect key="frame" x="66" y="15" width="49" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8:00 AM - 11:00 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4F-Z6-DdQ">
+                                            <rect key="frame" x="66" y="42" width="136" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="0.5607843137254902" green="0.55686274509803924" blue="0.58039215686274503" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Garden Light On" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZT-fx-bpI">
+                                            <rect key="frame" x="221" y="17" width="113" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="0.56078431370000004" green="0.5568627451" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="I1I-4S-0iV" firstAttribute="top" secondItem="8ge-an-65f" secondAttribute="top" id="75f-Rk-WKR"/>
+                                        <constraint firstItem="AZT-fx-bpI" firstAttribute="centerY" secondItem="I1I-4S-0iV" secondAttribute="centerY" id="DGi-uP-J99"/>
+                                        <constraint firstItem="8ge-an-65f" firstAttribute="leading" secondItem="IoX-1V-5YG" secondAttribute="leadingMargin" id="Kn2-Z0-Uhv"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="AZT-fx-bpI" secondAttribute="trailing" id="Ln7-Wn-bzk"/>
+                                        <constraint firstItem="8ge-an-65f" firstAttribute="centerY" secondItem="IoX-1V-5YG" secondAttribute="centerY" id="Nu0-NR-3AM"/>
+                                        <constraint firstItem="I1I-4S-0iV" firstAttribute="leading" secondItem="8ge-an-65f" secondAttribute="trailing" constant="13" id="W3h-Lb-WcZ"/>
+                                        <constraint firstItem="l4F-Z6-DdQ" firstAttribute="leading" secondItem="8ge-an-65f" secondAttribute="trailing" constant="13" id="YzI-nb-bVu"/>
+                                        <constraint firstItem="l4F-Z6-DdQ" firstAttribute="bottom" secondItem="8ge-an-65f" secondAttribute="baseline" id="fGp-b2-OyI"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.94999999999999996"/>
+                                <connections>
+                                    <outlet property="callToAction" destination="AZT-fx-bpI" id="Rnf-kZ-TuM"/>
+                                    <outlet property="icon" destination="8ge-an-65f" id="EA4-JH-Vem"/>
+                                    <outlet property="subtitle" destination="l4F-Z6-DdQ" id="P9K-2V-NSH"/>
+                                    <outlet property="title" destination="I1I-4S-0iV" id="wZn-h3-DaQ"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="garden" rowHeight="76" id="1Iz-U2-AcZ" customClass="GardenTableViewCell" customModule="GroveGardenController" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="104" width="375" height="76"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Iz-U2-AcZ" id="Ndh-Pg-cNy">
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="75"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grove Market" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7pE-T1-8oY">
+                                            <rect key="frame" x="66" y="27.5" width="105.5" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XDG-xJ-Irv">
+                                            <rect key="frame" x="8" y="15.5" width="45" height="45"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="45" id="F4E-Me-eWc"/>
+                                                <constraint firstAttribute="width" constant="45" id="Z0E-xZ-Rce"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="XDG-xJ-Irv" firstAttribute="leading" secondItem="Ndh-Pg-cNy" secondAttribute="leadingMargin" id="52j-mj-781"/>
+                                        <constraint firstItem="XDG-xJ-Irv" firstAttribute="centerY" secondItem="Ndh-Pg-cNy" secondAttribute="centerY" id="GjT-5n-e8L"/>
+                                        <constraint firstItem="7pE-T1-8oY" firstAttribute="centerY" secondItem="XDG-xJ-Irv" secondAttribute="centerY" id="g3O-fI-OLN"/>
+                                        <constraint firstItem="7pE-T1-8oY" firstAttribute="leading" secondItem="XDG-xJ-Irv" secondAttribute="trailing" constant="13" id="sFh-9R-cDW"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.94999999999999996"/>
+                                <connections>
+                                    <outlet property="icon" destination="XDG-xJ-Irv" id="gwh-nd-ESx"/>
+                                    <outlet property="title" destination="7pE-T1-8oY" id="jD0-Yu-3tJ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3Wf-dY-rxz" id="Jx3-Nl-pRC"/>
+                            <outlet property="delegate" destination="3Wf-dY-rxz" id="JVh-3x-zx9"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Grove Garden" id="iZH-h4-1qg"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kAy-Nc-wEC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2968.8000000000002" y="812.74362818590714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6HM-fE-vnR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wZ0-GZ-nee" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dze-VW-JgK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3Wf-dY-rxz" kind="relationship" relationship="rootViewController" id="Byy-wW-2wS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o6f-gg-9Wy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2029.5999999999999" y="812.74362818590714"/>
         </scene>
     </scenes>
 </document>

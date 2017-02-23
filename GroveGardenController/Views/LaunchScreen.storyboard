@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="oVr-DL-Lem">
             <objects>
-                <viewController storyboardIdentifier="Device" useStoryboardIdentifierAsRestorationIdentifier="YES" id="igX-cV-xOI" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LaunchScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="igX-cV-xOI" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="969-5X-yYt"/>
                         <viewControllerLayoutGuide type="bottom" id="G2p-mI-mcw"/>
@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🌱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGe-0C-PFo">
-                                <rect key="frame" x="127.5" y="267.5" width="121" height="134"/>
+                                <rect key="frame" x="127" y="266.5" width="121" height="134"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="112"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
