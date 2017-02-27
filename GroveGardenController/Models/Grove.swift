@@ -15,6 +15,7 @@ struct Grove {
     case overCurrent = "alarm-5vOvercurrent"
   }
 
+  var device: SparkDevice
   var serialNumber: String
   var connected: Bool
   var sensors: Sensors

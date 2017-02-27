@@ -1,28 +1,3 @@
-
-/**
- Sample JSON:
- ```
- {
-   "pumpOn":true,
-   "mode":"SCHEDULE_HOUR_ALIGNED",
-   "why":"AUTO",
-   "sched": {
-     "onTimeMins":15,
-     "offTimeMins":45,
-     "aribitraryModeSecsLeft":0
-   },
-   "inter":{
-     "indef":false,
-     "dur":720,
-     "secsLeft":0
-   },
-   "power":{
-     "alarm":0,
-     "value":0.00
-   }
- }
- ```
- */
 struct Pump {
 
   struct Schedule {

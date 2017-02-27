@@ -2,28 +2,6 @@ open class GroveManager: NSObject, Notifier {
   static let shared = GroveManager()
   override fileprivate init() {}
 
-  var device: SparkDevice? = nil {
-    didSet {
-      switch (device, oldValue) {
-      case (let device?, _):
-        // new device was set
-        SparkCloud.sharedInstance().subscribeToDeviceEvents(withPrefix: nil,
-                                                            deviceID: device.id,
-                                                            handler: eventParser)
-
-        print("device:", device)
-        Grove.getAllVariables(device: device) { grove in
-          GroveManager.shared.grove = grove
-        }
-
-      case (nil, let oldDevice?):
-        // device was unset
-        SparkCloud.sharedInstance().unsubscribeFromEvent(withID: oldDevice.id)
-      default: break
-      }
-    }
-  }
-
   var grove: Grove? = nil {
     didSet {
       sendNotification(.Grove)
@@ -70,8 +48,15 @@ open class GroveManager: NSObject, Notifier {
     }
   }
 
+  /**
+   1. Logins into SparkCloud
+   2. Gets the device from the could
+   3. Saves the serial number to the iOS' device's keychain
+   4. Gets all the variables required to build a grove object
+   5. Saves the new grove object to GroveManager.shared.grove
+   */
   func getDevice(serialNumber: String,
-                        completion: @escaping (_ error: Error?) -> Void) {
+                 completion: @escaping (_ error: Error?) -> Void) {
 
     loginIfNeeded { error in
       if let error = error { return completion(error) }
@@ -80,8 +65,20 @@ open class GroveManager: NSObject, Notifier {
         if let error = error { return completion(error) }
         guard let device = device else { return completion(ParticleError.noDevice) }
 
-        GroveManager.shared.device = device
         Keychain.saveSerial(serialNumber)
+        SparkCloud.sharedInstance().subscribeToDeviceEvents(withPrefix: nil,
+                                                            deviceID: device.id,
+                                                            handler: self.eventParser)
+        // TODO: handle offline groves and other failure states
+        GroveManager.getAllVariables(device: device) { (grove, error) in
+          if let error = error {
+            return completion(error)
+          }
+
+          GroveManager.shared.grove = grove
+        }
+
+        print("device:", device)
         return completion(nil)
       }
     }
@@ -95,6 +92,113 @@ open class GroveManager: NSObject, Notifier {
       SparkCloud.sharedInstance().login(withUser: Secrets.Particle.username,
                                         password: Secrets.Particle.password,
                                         completion: completion)
+    }
+  }
+
+  /**
+   Calls each variable from the Grove until it has all the data required to build a Grove.
+
+   Completion closure will contain a Grove object, or nil if there was an error.
+   */
+  static func getAllVariables(device: SparkDevice, completion: @escaping (Grove?, Error?) -> Void) {
+
+    let dispatchVariables = DispatchGroup()
+
+    var _sensors: Sensors? = nil
+    var _light0: Light? = nil
+    var _light1: Light? = nil
+    var _light2: Light? = nil
+    var _pump: Pump? = nil
+    var _fan: Fan? = nil
+
+    dispatchVariables.enter()
+    device.getVariable("sensors") { (data, error) in
+      guard
+        let jsonString = data as? String,
+        let json = try? jsonString.parseJSON(),
+        let sensors = try? Sensors(json: json) else {
+          return dispatchVariables.leave()
+      }
+      _sensors = sensors
+      dispatchVariables.leave()
+    }
+
+    dispatchVariables.enter()
+    device.getVariable("light0") { (data, error) in
+      guard
+        let jsonString = data as? String,
+        let json = try? jsonString.parseJSON() else {
+          return dispatchVariables.leave()
+      }
+      _light0 = try? Light(json: json)
+      dispatchVariables.leave()
+    }
+
+    dispatchVariables.enter()
+    device.getVariable("light1") { (data, error) in
+      guard
+        let jsonString = data as? String,
+        let json = try? jsonString.parseJSON() else {
+          return dispatchVariables.leave()
+      }
+      _light1 = try? Light(json: json)
+      dispatchVariables.leave()
+    }
+
+    dispatchVariables.enter()
+    device.getVariable("light2") { (data, error) in
+      guard
+        let jsonString = data as? String,
+        let json = try? jsonString.parseJSON() else {
+          return dispatchVariables.leave()
+      }
+      _light2 = try? Light(json: json)
+      dispatchVariables.leave()
+    }
+
+    dispatchVariables.enter()
+    device.getVariable("pump0") { (data, error) in
+      guard
+        let jsonString = data as? String,
+        let json = try? jsonString.parseJSON() else {
+          return dispatchVariables.leave()
+      }
+      _pump = try? Pump(json: json)
+      dispatchVariables.leave()
+    }
+
+    dispatchVariables.enter()
+    device.getVariable("fan0") { (data, error) in
+      guard
+        let jsonString = data as? String,
+        let json = try? jsonString.parseJSON() else {
+          return dispatchVariables.leave()
+      }
+      _fan = try? Fan(json: json)
+      dispatchVariables.leave()
+    }
+
+    dispatchVariables.notify(queue: .main) {
+      guard
+        let name = device.name,
+        let sensors = _sensors,
+        let light0 = _light0,
+        let light1 = _light1,
+        let light2 = _light2,
+        let pump = _pump,
+        let fan = _fan else {
+          return completion(nil, nil)
+      }
+      let grove = Grove(device: device,
+                        serialNumber: name,
+                        connected: device.connected,
+                        sensors: sensors,
+                        light0: light0,
+                        light1: light1,
+                        light2: light2,
+                        pump: pump,
+                        fan: fan)
+      completion(grove, nil)
     }
   }
 }

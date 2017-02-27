@@ -23,4 +23,13 @@ extension UIViewController {
     spinner.startAnimating()
     return loadingView
   }
+
+  enum SegueType: String {
+    case air
+//    case airInterruptions
+  }
+
+  func performSegue(type: UIViewController.SegueType, sender: Any?) {
+    self.performSegue(withIdentifier: type.rawValue, sender: sender)
+  }
 }

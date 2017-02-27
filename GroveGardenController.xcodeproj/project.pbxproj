@@ -24,13 +24,18 @@
 		17103CB51E5390EE003D56B4 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 17103CAA1E5390EE003D56B4 /* UIProgressView+AFNetworking.m */; };
 		17103CB61E5390EE003D56B4 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 17103CAC1E5390EE003D56B4 /* UIRefreshControl+AFNetworking.m */; };
 		17103CB71E5390EE003D56B4 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 17103CAE1E5390EE003D56B4 /* UIWebView+AFNetworking.m */; };
-		17214C571E54DD5A003FBFF4 /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17214C561E54DD5A003FBFF4 /* DeviceViewController.swift */; };
+		1715EE7E1E60944F005C2FCA /* AirTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1715EE7D1E60944F005C2FCA /* AirTableViewController.swift */; };
+		1715EE801E6098E4005C2FCA /* AirInterruptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1715EE7F1E6098E4005C2FCA /* AirInterruptionsTableViewController.swift */; };
+		1715EE821E60C790005C2FCA /* FanControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1715EE811E60C790005C2FCA /* FanControls.swift */; };
 		17214C591E54E050003FBFF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17214C581E54E050003FBFF4 /* Main.storyboard */; };
 		17214C5B1E54E184003FBFF4 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17214C5A1E54E184003FBFF4 /* UIStoryboard.swift */; };
 		17214C5D1E54F580003FBFF4 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17214C5C1E54F580003FBFF4 /* Keychain.swift */; };
 		17214C611E550545003FBFF4 /* Grove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17214C601E550545003FBFF4 /* Grove.swift */; };
 		172782761E5F717B001CC9FD /* GardenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172782751E5F717B001CC9FD /* GardenTableViewController.swift */; };
 		172782781E5F9A42001CC9FD /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172782771E5F9A42001CC9FD /* UITableView.swift */; };
+		1739EDF51E64A6730086C5FD /* LightInterruptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739EDF41E64A6730086C5FD /* LightInterruptionsTableViewController.swift */; };
+		1739EDF71E64AB820086C5FD /* LightControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739EDF61E64AB820086C5FD /* LightControls.swift */; };
+		1739EDF91E64D2480086C5FD /* FanIntensityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739EDF81E64D2480086C5FD /* FanIntensityTableViewController.swift */; };
 		173DD2DF1E521AF300888F33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173DD2DE1E521AF300888F33 /* AppDelegate.swift */; };
 		173DD2E11E521AF300888F33 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173DD2E01E521AF300888F33 /* LoginViewController.swift */; };
 		173DD2E41E521AF300888F33 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 173DD2E21E521AF300888F33 /* Login.storyboard */; };
@@ -50,7 +55,6 @@
 		179BF6C71E5DEAD1008F702E /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179BF6C61E5DEAD1008F702E /* UIViewController.swift */; };
 		179BF6C91E5E187A008F702E /* Light.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179BF6C81E5E187A008F702E /* Light.swift */; };
 		179BF6CB1E5E1EDE008F702E /* Pump.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179BF6CA1E5E1EDE008F702E /* Pump.swift */; };
-		179BF6CE1E5E2B81008F702E /* getAllVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179BF6CD1E5E2B81008F702E /* getAllVariables.swift */; };
 		179BF6D01E5E2C1F008F702E /* Fan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179BF6CF1E5E2C1F008F702E /* Fan.swift */; };
 /* End PBXBuildFile section */
 
@@ -91,13 +95,18 @@
 		17103CAC1E5390EE003D56B4 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		17103CAD1E5390EE003D56B4 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		17103CAE1E5390EE003D56B4 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
-		17214C561E54DD5A003FBFF4 /* DeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceViewController.swift; path = Views/DeviceViewController.swift; sourceTree = "<group>"; };
+		1715EE7D1E60944F005C2FCA /* AirTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AirTableViewController.swift; path = Views/AirTableViewController.swift; sourceTree = "<group>"; };
+		1715EE7F1E6098E4005C2FCA /* AirInterruptionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AirInterruptionsTableViewController.swift; path = Views/AirInterruptionsTableViewController.swift; sourceTree = "<group>"; };
+		1715EE811E60C790005C2FCA /* FanControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FanControls.swift; path = Models/Grove/FanControls.swift; sourceTree = "<group>"; };
 		17214C581E54E050003FBFF4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Views/Main.storyboard; sourceTree = "<group>"; };
 		17214C5A1E54E184003FBFF4 /* UIStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
 		17214C5C1E54F580003FBFF4 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		17214C601E550545003FBFF4 /* Grove.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Grove.swift; path = Models/Grove.swift; sourceTree = "<group>"; };
 		172782751E5F717B001CC9FD /* GardenTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GardenTableViewController.swift; path = Views/GardenTableViewController.swift; sourceTree = "<group>"; };
 		172782771E5F9A42001CC9FD /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		1739EDF41E64A6730086C5FD /* LightInterruptionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LightInterruptionsTableViewController.swift; path = Views/LightInterruptionsTableViewController.swift; sourceTree = "<group>"; };
+		1739EDF61E64AB820086C5FD /* LightControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LightControls.swift; path = Models/Grove/LightControls.swift; sourceTree = "<group>"; };
+		1739EDF81E64D2480086C5FD /* FanIntensityTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FanIntensityTableViewController.swift; path = Views/FanIntensityTableViewController.swift; sourceTree = "<group>"; };
 		173DD2DB1E521AF300888F33 /* GroveGardenController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroveGardenController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		173DD2DE1E521AF300888F33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		173DD2E01E521AF300888F33 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Views/LoginViewController.swift; sourceTree = "<group>"; };
@@ -127,7 +136,6 @@
 		179BF6C61E5DEAD1008F702E /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		179BF6C81E5E187A008F702E /* Light.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Light.swift; path = Models/Light.swift; sourceTree = "<group>"; };
 		179BF6CA1E5E1EDE008F702E /* Pump.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Pump.swift; path = Models/Pump.swift; sourceTree = "<group>"; };
-		179BF6CD1E5E2B81008F702E /* getAllVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = getAllVariables.swift; path = Models/Grove/getAllVariables.swift; sourceTree = "<group>"; };
 		179BF6CF1E5E2C1F008F702E /* Fan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Fan.swift; path = Models/Fan.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -219,9 +227,12 @@
 			isa = PBXGroup;
 			children = (
 				17214C581E54E050003FBFF4 /* Main.storyboard */,
-				17214C561E54DD5A003FBFF4 /* DeviceViewController.swift */,
+				1715EE7F1E6098E4005C2FCA /* AirInterruptionsTableViewController.swift */,
+				1715EE7D1E60944F005C2FCA /* AirTableViewController.swift */,
+				1739EDF81E64D2480086C5FD /* FanIntensityTableViewController.swift */,
 				172782751E5F717B001CC9FD /* GardenTableViewController.swift */,
 				173DD2E71E521AF300888F33 /* LaunchScreen.storyboard */,
+				1739EDF41E64A6730086C5FD /* LightInterruptionsTableViewController.swift */,
 				173DD2E21E521AF300888F33 /* Login.storyboard */,
 				173DD2E01E521AF300888F33 /* LoginViewController.swift */,
 			);
@@ -333,7 +344,8 @@
 		179BF6CC1E5E2B5B008F702E /* Grove */ = {
 			isa = PBXGroup;
 			children = (
-				179BF6CD1E5E2B81008F702E /* getAllVariables.swift */,
+				1715EE811E60C790005C2FCA /* FanControls.swift */,
+				1739EDF61E64AB820086C5FD /* LightControls.swift */,
 			);
 			name = Grove;
 			sourceTree = "<group>";
@@ -417,6 +429,7 @@
 				173DD2E11E521AF300888F33 /* LoginViewController.swift in Sources */,
 				179BF6CB1E5E1EDE008F702E /* Pump.swift in Sources */,
 				179BF6D01E5E2C1F008F702E /* Fan.swift in Sources */,
+				1715EE821E60C790005C2FCA /* FanControls.swift in Sources */,
 				17103CB51E5390EE003D56B4 /* UIProgressView+AFNetworking.m in Sources */,
 				173DD3061E5247AF00888F33 /* Secrets.swift in Sources */,
 				17103CB01E5390EE003D56B4 /* AFImageDownloader.m in Sources */,
@@ -426,11 +439,13 @@
 				173DD2DF1E521AF300888F33 /* AppDelegate.swift in Sources */,
 				17103CB31E5390EE003D56B4 /* UIButton+AFNetworking.m in Sources */,
 				17103C961E5390E7003D56B4 /* AFSecurityPolicy.m in Sources */,
+				1739EDF91E64D2480086C5FD /* FanIntensityTableViewController.swift in Sources */,
 				172782781E5F9A42001CC9FD /* UITableView.swift in Sources */,
 				178F64EF1E5359FB00161ECC /* KeychainItemWrapper.m in Sources */,
 				17103CB21E5390EE003D56B4 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				179BF6C71E5DEAD1008F702E /* UIViewController.swift in Sources */,
 				17103CB11E5390EE003D56B4 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				1715EE7E1E60944F005C2FCA /* AirTableViewController.swift in Sources */,
 				17103CAF1E5390EE003D56B4 /* AFAutoPurgingImageCache.m in Sources */,
 				17103C971E5390E7003D56B4 /* AFURLRequestSerialization.m in Sources */,
 				179BF6C91E5E187A008F702E /* Light.swift in Sources */,
@@ -440,19 +455,20 @@
 				17103C941E5390E7003D56B4 /* AFHTTPSessionManager.m in Sources */,
 				178F64F01E5359FB00161ECC /* SparkCloud.m in Sources */,
 				1708D0161E54AAB200998C9A /* UIColor.swift in Sources */,
-				179BF6CE1E5E2B81008F702E /* getAllVariables.swift in Sources */,
 				17214C5B1E54E184003FBFF4 /* UIStoryboard.swift in Sources */,
+				1715EE801E6098E4005C2FCA /* AirInterruptionsTableViewController.swift in Sources */,
 				17103C951E5390E7003D56B4 /* AFNetworkReachabilityManager.m in Sources */,
 				17103CB71E5390EE003D56B4 /* UIWebView+AFNetworking.m in Sources */,
+				1739EDF71E64AB820086C5FD /* LightControls.swift in Sources */,
 				17103C981E5390E7003D56B4 /* AFURLResponseSerialization.m in Sources */,
 				1708D0181E54D13B00998C9A /* GroveManager.swift in Sources */,
+				1739EDF51E64A6730086C5FD /* LightInterruptionsTableViewController.swift in Sources */,
 				17103CB41E5390EE003D56B4 /* UIImageView+AFNetworking.m in Sources */,
 				172782761E5F717B001CC9FD /* GardenTableViewController.swift in Sources */,
 				17214C611E550545003FBFF4 /* Grove.swift in Sources */,
 				179BF6BE1E5CA8E0008F702E /* Notifications.swift in Sources */,
 				178F64F11E5359FB00161ECC /* SparkDevice.m in Sources */,
 				179BF6C01E5CF461008F702E /* String.swift in Sources */,
-				17214C571E54DD5A003FBFF4 /* DeviceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

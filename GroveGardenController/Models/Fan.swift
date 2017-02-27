@@ -5,6 +5,15 @@ struct Fan {
     case low = "LOW"
     case medium = "MEDIUM"
     case high = "HIGH"
+
+    var digit: String {
+      switch self {
+      case .off: return "0"
+      case .low: return "1"
+      case .medium: return "2"
+      case .high: return "3"
+      }
+    }
   }
 
   struct Schedule {
