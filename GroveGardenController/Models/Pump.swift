@@ -1,8 +1,21 @@
 struct Pump {
 
   struct Schedule {
+    enum Presets {
+      static let off = Pump.Schedule(on: 0, off: 60)
+      static let less = Pump.Schedule(on: 5, off: 55)
+      static let normal = Pump.Schedule(on: 15, off: 45)
+      static let more = Pump.Schedule(on: 30, off: 30)
+      static let on = Pump.Schedule(on: 60, off: 0)
+    }
     let on: Int
     let off: Int
+
+    func toString() -> String {
+      let onString = String(format: "%03d", on.normalizeTo255())
+      let offString = String(format: "%03d", off.normalizeTo255())
+      return "\(onString):\(offString)"
+    }
   }
 
   struct Interuption {
@@ -28,6 +41,11 @@ extension Pump.Schedule {
     self.on = on
     self.off = off
   }
+}
+
+extension Pump.Schedule: Equatable {}
+func ==(rhs: Pump.Schedule, lhs: Pump.Schedule) -> Bool {
+  return (rhs.on == lhs.on) && (rhs.off == lhs.off)
 }
 
 extension Pump.Interuption {

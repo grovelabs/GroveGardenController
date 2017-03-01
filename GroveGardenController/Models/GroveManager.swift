@@ -5,6 +5,9 @@ open class GroveManager: NSObject, Notifier {
   var grove: Grove? = nil {
     didSet {
       sendNotification(.Grove)
+      if (grove == nil && oldValue != nil) {
+        SparkCloud.sharedInstance().unsubscribeFromEvent(withID: oldValue!.device.id)
+      }
     }
   }
 
@@ -13,10 +16,7 @@ open class GroveManager: NSObject, Notifier {
       let event = incomingEvent,
       let eventType = Grove.Event(rawValue: event.event),
       let dataAsString = event.data,
-      let json = try? dataAsString.parseJSON() else {
-        // "log-watchdogTime" comes through with non-JSON data...
-        return print("eventParser Error:", incomingEvent)
-    }
+      let json = try? dataAsString.parseJSON() else { return }
 
     switch eventType {
     case .light0:
@@ -43,8 +43,7 @@ open class GroveManager: NSObject, Notifier {
       guard let sensors = try? Sensors(json: json) else { return }
       GroveManager.shared.grove?.sensors = sensors
 
-    default:
-      print("Uncaught JSON", eventType, json)
+    default: break
     }
   }
 
@@ -110,6 +109,7 @@ open class GroveManager: NSObject, Notifier {
     var _light2: Light? = nil
     var _pump: Pump? = nil
     var _fan: Fan? = nil
+    var _aquariumTempTarget: Int? = nil
 
     dispatchVariables.enter()
     device.getVariable("sensors") { (data, error) in
@@ -178,6 +178,17 @@ open class GroveManager: NSObject, Notifier {
       dispatchVariables.leave()
     }
 
+    dispatchVariables.enter()
+    device.getVariable("groveSystem") { (data, error) in
+      guard
+        let jsonString = data as? String,
+        let json = try? jsonString.parseJSON() else {
+          return dispatchVariables.leave()
+      }
+      _aquariumTempTarget = json["aquaTempTarget"] as? Int
+      dispatchVariables.leave()
+    }
+
     dispatchVariables.notify(queue: .main) {
       guard
         let name = device.name,
@@ -186,7 +197,8 @@ open class GroveManager: NSObject, Notifier {
         let light1 = _light1,
         let light2 = _light2,
         let pump = _pump,
-        let fan = _fan else {
+        let fan = _fan,
+        let aquariumTempTarget = _aquariumTempTarget else {
           return completion(nil, nil)
       }
       let grove = Grove(device: device,
@@ -197,7 +209,8 @@ open class GroveManager: NSObject, Notifier {
                         light1: light1,
                         light2: light2,
                         pump: pump,
-                        fan: fan)
+                        fan: fan,
+                        aquariumTempTarget: aquariumTempTarget)
       completion(grove, nil)
     }
   }

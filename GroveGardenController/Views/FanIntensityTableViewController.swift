@@ -8,7 +8,7 @@ class FanIntensityTableViewController: UITableViewController, NotificationListen
 
   override func viewDidLoad() {
     super.viewDidLoad()
-     self.clearsSelectionOnViewWillAppear = true
+    self.clearsSelectionOnViewWillAppear = true
 
     addListener(forNotification: .Grove, selector: #selector(bindView))
     bindView()

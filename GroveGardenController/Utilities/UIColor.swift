@@ -15,4 +15,12 @@ public extension UIColor {
     return UIColor(r: 205, g: 96, b: 3)
   }
 
+  public static var gr_grey_disabled: UIColor {
+    return UIColor(r: 143, g: 142, b: 148)
+  }
+
+  public static var gr_blue_enabled: UIColor {
+    return UIColor(r: 0, g: 118, b: 255)
+  }
+
 }

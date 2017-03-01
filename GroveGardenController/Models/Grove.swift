@@ -24,7 +24,6 @@ struct Grove {
   var light2: Light
   var pump: Pump
   var fan: Fan
-
-  //  let id: String
+  var aquariumTempTarget: Int
   //  let groveSystem: String
 }
