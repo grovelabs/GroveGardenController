@@ -1,5 +1,9 @@
 struct Light {
 
+  enum Location {
+    case garden, seedling, aquarium
+  }
+
   struct Settings {
 
     enum Presets {
@@ -41,6 +45,22 @@ struct Light {
     let dayBegins: Int
     let sunsetBegins: Int
     let nightBegins: Int
+
+    func printableSchedule() -> String {
+      return "\(sunriseBegins.secondsToPrintableTime()) - \(nightBegins.secondsToPrintableTime())"
+    }
+
+    func changeSettings(intensity: Int? = nil, color: Int? = nil) -> Light.Schedule {
+      let newDay = Light.Settings(intensity: intensity ?? day.intensity,
+                                  colorTemp: color ?? day.colorTemp)
+
+      return Light.Schedule(day: newDay,
+                            night: night,
+                            sunriseBegins: sunriseBegins,
+                            dayBegins: dayBegins,
+                            sunsetBegins: sunsetBegins,
+                            nightBegins: nightBegins)
+    }
   }
 
   struct Interuption {

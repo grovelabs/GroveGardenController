@@ -32,6 +32,8 @@
 		17214C611E550545003FBFF4 /* Grove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17214C601E550545003FBFF4 /* Grove.swift */; };
 		172782761E5F717B001CC9FD /* GardenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172782751E5F717B001CC9FD /* GardenTableViewController.swift */; };
 		172782781E5F9A42001CC9FD /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172782771E5F9A42001CC9FD /* UITableView.swift */; };
+		1731E7EE1E672D14002195B2 /* LightScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1731E7ED1E672D14002195B2 /* LightScheduleTableViewController.swift */; };
+		1731E7F01E6732B1002195B2 /* LightsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1731E7EF1E6732B1002195B2 /* LightsTableViewController.swift */; };
 		1739EDF51E64A6730086C5FD /* LightInterruptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739EDF41E64A6730086C5FD /* LightInterruptionsTableViewController.swift */; };
 		1739EDF71E64AB820086C5FD /* LightControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739EDF61E64AB820086C5FD /* LightControls.swift */; };
 		1739EDF91E64D2480086C5FD /* FanIntensityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739EDF81E64D2480086C5FD /* FanIntensityTableViewController.swift */; };
@@ -108,6 +110,8 @@
 		17214C601E550545003FBFF4 /* Grove.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Grove.swift; path = Models/Grove.swift; sourceTree = "<group>"; };
 		172782751E5F717B001CC9FD /* GardenTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GardenTableViewController.swift; path = Views/GardenTableViewController.swift; sourceTree = "<group>"; };
 		172782771E5F9A42001CC9FD /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		1731E7ED1E672D14002195B2 /* LightScheduleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LightScheduleTableViewController.swift; path = Views/LightScheduleTableViewController.swift; sourceTree = "<group>"; };
+		1731E7EF1E6732B1002195B2 /* LightsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LightsTableViewController.swift; path = Views/LightsTableViewController.swift; sourceTree = "<group>"; };
 		1739EDF41E64A6730086C5FD /* LightInterruptionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LightInterruptionsTableViewController.swift; path = Views/LightInterruptionsTableViewController.swift; sourceTree = "<group>"; };
 		1739EDF61E64AB820086C5FD /* LightControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LightControls.swift; path = Models/Grove/LightControls.swift; sourceTree = "<group>"; };
 		1739EDF81E64D2480086C5FD /* FanIntensityTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FanIntensityTableViewController.swift; path = Views/FanIntensityTableViewController.swift; sourceTree = "<group>"; };
@@ -245,6 +249,8 @@
 				173DD2E21E521AF300888F33 /* Login.storyboard */,
 				173DD2E01E521AF300888F33 /* LoginViewController.swift */,
 				17214C581E54E050003FBFF4 /* Main.storyboard */,
+				1731E7EF1E6732B1002195B2 /* LightsTableViewController.swift */,
+				1731E7ED1E672D14002195B2 /* LightScheduleTableViewController.swift */,
 				17CE0D141E6602E200F40131 /* HeaterTargetTempTableViewController.swift */,
 				17CE0D101E65D64B00F40131 /* PumpInterruptionsTableViewController.swift */,
 				17CE0D0C1E65D23F00F40131 /* PumpScheduleTableViewController.swift */,
@@ -439,9 +445,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1731E7EE1E672D14002195B2 /* LightScheduleTableViewController.swift in Sources */,
 				17103CB61E5390EE003D56B4 /* UIRefreshControl+AFNetworking.m in Sources */,
 				17103C991E5390E7003D56B4 /* AFURLSessionManager.m in Sources */,
 				173DD2E11E521AF300888F33 /* LoginViewController.swift in Sources */,
+				1731E7F01E6732B1002195B2 /* LightsTableViewController.swift in Sources */,
 				179BF6CB1E5E1EDE008F702E /* Pump.swift in Sources */,
 				17CE0D111E65D64B00F40131 /* PumpInterruptionsTableViewController.swift in Sources */,
 				17CE0D151E6602E200F40131 /* HeaterTargetTempTableViewController.swift in Sources */,

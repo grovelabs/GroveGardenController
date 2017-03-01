@@ -38,9 +38,9 @@ class GardenTableViewController: UITableViewController, NotificationListener {
         self?.airDetailLabel.text = {
           switch (grove.sensors.air.temperature, grove.sensors.air.humidity) {
           case (let temp?, let humidity?):
-            return "\(temp.toFahrenheit())   \(humidity)%"
+            return "\(temp.printableFahrenheit())   \(humidity)%"
           case (let temp?, _):
-            return temp.toFahrenheit()
+            return temp.printableFahrenheit()
           case (_, let humidity?):
             return "\(humidity)%"
           default:
@@ -48,7 +48,7 @@ class GardenTableViewController: UITableViewController, NotificationListener {
           }
         }()
 
-        self?.waterDetailLabel.text = grove.sensors.water.temperature.toFahrenheit()
+        self?.waterDetailLabel.text = grove.sensors.water.temperature.printableFahrenheit()
 
       case nil:
         self?.loading = true

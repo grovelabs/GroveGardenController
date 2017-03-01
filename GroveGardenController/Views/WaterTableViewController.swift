@@ -17,15 +17,15 @@ class WaterTableViewController: UITableViewController, NotificationListener {
     DispatchQueue.main.async { [weak self] in
       guard let grove = GroveManager.shared.grove else { return }
 
-      self?.waterTempLabel.text = grove.sensors.water.temperature.toFahrenheit()
-      self?.targetTempActionLabel.text = grove.aquariumTempTarget.toFahrenheit()
+      self?.waterTempLabel.text = grove.sensors.water.temperature.printableFahrenheit()
+      self?.targetTempActionLabel.text = grove.aquariumTempTarget.printableFahrenheit()
 
       self?.targetTempActionLabel.text = {
         switch grove.aquariumTempTarget {
         case Int.min..<1: return "Off"
         case 19, 20, 21: return "68 ℉"
         case 255..<Int.max: return "78 ℉"
-        default: return grove.aquariumTempTarget.toFahrenheit()
+        default: return grove.aquariumTempTarget.printableFahrenheit()
         }
       }()
 

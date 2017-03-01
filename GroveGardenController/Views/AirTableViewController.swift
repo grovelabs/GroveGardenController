@@ -18,7 +18,7 @@ class AirTableViewController: UITableViewController, NotificationListener {
       guard let grove = GroveManager.shared.grove else { return }
       let sensors = grove.sensors
 
-      self?.airTempLabel.text = (sensors.air.temperature != nil) ? grove.sensors.air.temperature!.toFahrenheit() : "No data"
+      self?.airTempLabel.text = (sensors.air.temperature != nil) ? grove.sensors.air.temperature!.printableFahrenheit() : "No data"
       self?.humidityLabel.text = (sensors.air.humidity != nil) ? "\(grove.sensors.air.humidity!)%" : "No data"
 
       self?.fanActionLabel.text = grove.fan.schedule.speed.rawValue
