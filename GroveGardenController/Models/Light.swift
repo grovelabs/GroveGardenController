@@ -41,18 +41,50 @@ struct Light {
   struct Schedule {
     let day: Light.Settings
     let night: Light.Settings
-    let sunriseBegins: Int
-    let dayBegins: Int
-    let sunsetBegins: Int
-    let nightBegins: Int
+    let sunriseBegins: Seconds
+    let dayBegins: Seconds
+    let sunsetBegins: Seconds
+    let nightBegins: Seconds
 
     func printableSchedule() -> String {
-      return "\(sunriseBegins.secondsToPrintableTime()) - \(nightBegins.secondsToPrintableTime())"
+      guard
+        let sunrise = sunriseBegins.toPrintableTime(),
+        let night = nightBegins.toPrintableTime() else { return "" }
+      return "\(sunrise) - \(night)"
     }
 
-    func changeSettings(intensity: Int? = nil, color: Int? = nil) -> Light.Schedule {
-      let newDay = Light.Settings(intensity: intensity ?? day.intensity,
-                                  colorTemp: color ?? day.colorTemp)
+    func changeSettings(intensity newIntensity: Int? = nil,
+                        color newColor: Int? = nil,
+                        sunriseBegins newSunriseBegins: Seconds? = nil,
+                        dayLength newDayLength: Seconds? = nil) throws -> Light.Schedule {
+
+      let newDay = Light.Settings(intensity: newIntensity ?? self.day.intensity,
+                                  colorTemp: newColor ?? self.day.colorTemp)
+
+      let sunriseBegins = newSunriseBegins ?? self.sunriseBegins
+
+      let nightBegins: Seconds = {
+        switch newDayLength {
+        case let newDayLength?:
+          return (sunriseBegins + newDayLength).correctToDayLength()
+        case nil:
+          return self.nightBegins
+        }
+      }()
+
+      let sunsetBegins: Seconds = {
+        switch newDayLength {
+        case _?:
+          let halfAnHour: Seconds = 30 * 60
+          return (nightBegins - halfAnHour).correctToDayLength()
+        case nil:
+          return self.sunsetBegins
+        }
+      }()
+
+      if (abs(nightBegins - sunriseBegins) < 3600) {
+        throw LightScheduleError.dayLengthNotLongEnough
+      }
 
       return Light.Schedule(day: newDay,
                             night: night,
@@ -99,6 +131,7 @@ extension Light.Schedule {
 
     self.day = try Light.Settings(json: dayJSON)
     self.night = try Light.Settings(json: nightJSON)
+    print("times:", times)
     self.sunriseBegins = times[0]
     self.dayBegins = times[1]
     self.sunsetBegins = times[2]

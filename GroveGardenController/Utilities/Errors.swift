@@ -6,3 +6,7 @@ enum SerializationError: Swift.Error {
 enum ParticleError: Swift.Error {
   case noDevice
 }
+
+enum LightScheduleError: Swift.Error {
+  case dayLengthNotLongEnough
+}

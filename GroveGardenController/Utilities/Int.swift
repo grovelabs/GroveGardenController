@@ -1,38 +1,6 @@
 extension Int {
-  func normalizeTo255() -> Int {
-    switch self {
-    case Int.min..<1: return 0
-    case 255..<Int.max: return 255
-    default: return self
-    }
-  }
-
   func printableFahrenheit() -> String {
     return Double(self).printableFahrenheit()
-  }
-
-  func normalizeSeconds() -> Int {
-    switch self {
-    case Int.min..<1: return 0
-    case 86399..<Int.max: return 86399
-    default: return self
-    }
-  }
-
-  func secondsToPrintableTime() -> String {
-    let minutes = self.normalizeSeconds() / 60
-
-    let hour = minutes / 60
-    let minute = minutes % 60
-    let anteMeridiem = (hour >= 12) ? "PM" : "AM"
-    let printableHour: Int = {
-      switch hour {
-      case 0: return 12
-      case 13..<24: return hour - 12
-      default: return hour
-      }
-    }()
-    return "\(printableHour):\(String(format: "%02d", minute))\(anteMeridiem)"
   }
 
   func toSliderValue() -> Float {
@@ -40,9 +8,62 @@ extension Int {
   }
 }
 
+// TODO: Replace `Minutes` and `Seconds` with TimeInterval
+public typealias Minutes = Int
+public typealias Seconds = Int
+
+extension Seconds {
+  func toDate() -> Date? {
+    let cal = Calendar.current
+    let components = DateComponents(second: self)
+    return cal.date(from: components)
+  }
+
+  func toPrintableTime() -> String? {
+    guard let date = self.toDate() else { return nil }
+    let formatter = DateFormatter()
+    formatter.timeStyle = .short
+    return formatter.string(from: date)
+  }
+
+  func correctToDayLength() -> Seconds {
+    let secondsInADay = 86400
+    let pos = abs(self)
+    if (pos >= secondsInADay) {
+      let correction = pos - secondsInADay
+      return correction.correctToDayLength()
+    }
+    return pos
+  }
+}
+
 extension Double {
   func printableFahrenheit() -> String {
     let fahrenheit = (self * 1.8) + 32
     return String(format: "%.02f ℉", fahrenheit)
+  }
+}
+
+extension Date {
+  static func timeBetween(_ firstDate: Date,
+                          _ secondDate: Date) -> TimeInterval {
+    return abs(secondDate.timeIntervalSince(firstDate))
+  }
+
+  func seconds() -> Seconds {
+    let cal = Calendar.current
+    let hours = cal.component(.hour, from: self)
+    let minutes = cal.component(.minute, from: self)
+    let seconds = cal.component(.second, from: self)
+    return (hours * 60 * 60) + (minutes * 60) + seconds
+  }
+}
+
+extension TimeInterval {
+  func hoursAndMinutes() -> (hours: Int, minutes: Int) {
+    let totalMinutes = Int(self / 60)
+    let hours = totalMinutes / 60
+    let minutes = totalMinutes % 60
+    return (hours, minutes)
   }
 }

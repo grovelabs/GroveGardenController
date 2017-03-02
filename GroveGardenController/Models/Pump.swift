@@ -8,12 +8,12 @@ struct Pump {
       static let more = Pump.Schedule(on: 30, off: 30)
       static let on = Pump.Schedule(on: 60, off: 0)
     }
-    let on: Int
-    let off: Int
+    let on: Minutes
+    let off: Minutes
 
     func toString() -> String {
-      let onString = String(format: "%03d", on.normalizeTo255())
-      let offString = String(format: "%03d", off.normalizeTo255())
+      let onString = String(format: "%03d", on)
+      let offString = String(format: "%03d", off)
       return "\(onString):\(offString)"
     }
   }
