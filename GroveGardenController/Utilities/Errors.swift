@@ -9,4 +9,5 @@ enum ParticleError: Swift.Error {
 
 enum LightScheduleError: Swift.Error {
   case dayLengthNotLongEnough
+  case dayLengthTooLong
 }

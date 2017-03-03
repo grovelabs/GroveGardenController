@@ -44,11 +44,11 @@ class GardenTableViewController: UITableViewController, NotificationListener {
           case (_, let humidity?):
             return "\(humidity)%"
           default:
-            return "No sensor data"
+            return ""
           }
         }()
 
-        self?.waterDetailLabel.text = grove.sensors.water.temperature.printableFahrenheit()
+        self?.waterDetailLabel.text = grove.sensors.water.temperature?.printableFahrenheit() ?? ""
 
       case nil:
         self?.loading = true

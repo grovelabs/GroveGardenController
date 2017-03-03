@@ -2,26 +2,20 @@ struct Pump {
 
   struct Schedule {
     enum Presets {
-      static let off = Pump.Schedule(on: 0, off: 60)
-      static let less = Pump.Schedule(on: 5, off: 55)
-      static let normal = Pump.Schedule(on: 15, off: 45)
-      static let more = Pump.Schedule(on: 30, off: 30)
-      static let on = Pump.Schedule(on: 60, off: 0)
+      static let off = Pump.Schedule(on: 0, off: 60 * 60)
+      static let less = Pump.Schedule(on: 5 * 60, off: 55 * 60)
+      static let normal = Pump.Schedule(on: 15 * 60, off: 45 * 60)
+      static let more = Pump.Schedule(on: 30 * 60, off: 30 * 60)
+      static let on = Pump.Schedule(on: 60 * 60, off: 0)
     }
-    let on: Minutes
-    let off: Minutes
-
-    func toString() -> String {
-      let onString = String(format: "%03d", on)
-      let offString = String(format: "%03d", off)
-      return "\(onString):\(offString)"
-    }
+    let on: TimeInterval
+    let off: TimeInterval
   }
 
   struct Interuption {
     let indefinite: Bool
-    let duration: Int
-    let secondsLeft: Int
+    let duration: TimeInterval
+    let secondsLeft: TimeInterval
   }
 
   let on: Bool
@@ -38,8 +32,8 @@ extension Pump.Schedule {
       throw SerializationError.missing("offTimeMins")
     }
 
-    self.on = on
-    self.off = off
+    self.on = TimeInterval(on * 60)
+    self.off = TimeInterval(off * 60)
   }
 }
 
@@ -56,12 +50,12 @@ extension Pump.Interuption {
     guard let duration = json["dur"] as? Int else {
       throw SerializationError.missing("dur")
     }
-    guard let secondsLeft = json["secsLeft"] as? Int else {
+    guard let secondsLeft = json["secsLeft"] as? TimeInterval else {
       throw SerializationError.missing("secsLeft")
     }
 
     self.indefinite = indefinite
-    self.duration = duration
+    self.duration = TimeInterval(duration * 60)
     self.secondsLeft = secondsLeft
   }
 }

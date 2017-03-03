@@ -17,9 +17,15 @@ class LightsTableViewController: UITableViewController, NotificationListener {
     DispatchQueue.main.async { [weak self] in
       guard let grove = GroveManager.shared.grove else { return }
 
-      self?.gardenDetailLabel.text = grove.light0.schedule.printableSchedule()
-      self?.seedlingDetailLabel.text = grove.light1.schedule.printableSchedule()
-      self?.aquariumDetailLabel.text = grove.light2.schedule.printableSchedule()
+      func sunriseToNight(_ schedule: Light.Schedule) -> String {
+        let sunrise = schedule.sunriseBegins.printable()
+        let night = schedule.nightBegins.printable()
+        return sunrise + " - " + night
+      }
+
+      self?.gardenDetailLabel.text = sunriseToNight(grove.light0.schedule)
+      self?.seedlingDetailLabel.text = sunriseToNight(grove.light1.schedule)
+      self?.aquariumDetailLabel.text = sunriseToNight(grove.light2.schedule)
     }
   }
 

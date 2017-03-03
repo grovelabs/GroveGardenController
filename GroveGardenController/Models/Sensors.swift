@@ -6,7 +6,7 @@ struct Sensors {
   }
 
   struct Water {
-    let temperature: Double
+    let temperature: Double?
   }
 
   let air: Air
@@ -24,9 +24,12 @@ extension Sensors.Air {
 }
 
 extension Sensors.Water {
-  init(json: [String: Any]) throws {
-    guard let temperature = json["temp"] as? Double else {
-      throw SerializationError.missing("temp")
+  init(json: [String: Any]) {
+    guard
+      let temperature = json["temp"] as? Double,
+      temperature == abs(temperature) else {
+        self.temperature = nil
+        return
     }
 
     self.temperature = temperature
@@ -43,6 +46,6 @@ extension Sensors {
     }
 
     self.air = Air(json: airJSON)
-    self.water = try Water(json: waterJSON)
+    self.water = Water(json: waterJSON)
   }
 }

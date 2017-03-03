@@ -18,15 +18,14 @@ extension Grove {
 
     let scheduleString = "schedule-"
       + whichLight
-      + String(format: ":%04d", schedule.sunriseBegins / 60)
+      + String(format: ":%04d", Int(schedule.sunriseBegins / 60))
       + ":030"
-      + String(format: ":%04d", schedule.sunsetBegins / 60)
+      + String(format: ":%04d", Int(schedule.sunsetBegins / 60))
       + ":030"
       + ":" + schedule.day.toString()
       + ":" + schedule.night.toString()
       + ":2"
 
-    print(#function, "->", scheduleString)
     device.callFunction("setLight", withArguments: [scheduleString], completion: nil)
   }
 

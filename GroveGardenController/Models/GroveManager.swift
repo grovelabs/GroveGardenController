@@ -77,7 +77,6 @@ open class GroveManager: NSObject, Notifier {
           GroveManager.shared.grove = grove
         }
 
-        print("device:", device)
         return completion(nil)
       }
     }

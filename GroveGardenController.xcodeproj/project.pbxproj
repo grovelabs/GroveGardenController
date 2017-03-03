@@ -63,6 +63,7 @@
 		17CE0D111E65D64B00F40131 /* PumpInterruptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CE0D101E65D64B00F40131 /* PumpInterruptionsTableViewController.swift */; };
 		17CE0D131E65DE0500F40131 /* WaterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CE0D121E65DE0500F40131 /* WaterTableViewController.swift */; };
 		17CE0D151E6602E200F40131 /* HeaterTargetTempTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CE0D141E6602E200F40131 /* HeaterTargetTempTableViewController.swift */; };
+		17D0417F1E68E0FD0090B82B /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D0417E1E68E0FD0090B82B /* TimeInterval.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -151,6 +152,7 @@
 		17CE0D101E65D64B00F40131 /* PumpInterruptionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PumpInterruptionsTableViewController.swift; path = Views/PumpInterruptionsTableViewController.swift; sourceTree = "<group>"; };
 		17CE0D121E65DE0500F40131 /* WaterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WaterTableViewController.swift; path = Views/WaterTableViewController.swift; sourceTree = "<group>"; };
 		17CE0D141E6602E200F40131 /* HeaterTargetTempTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeaterTargetTempTableViewController.swift; path = Views/HeaterTargetTempTableViewController.swift; sourceTree = "<group>"; };
+		17D0417E1E68E0FD0090B82B /* TimeInterval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeInterval.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 			children = (
 				179BF6C11E5CF492008F702E /* Errors.swift */,
 				17CE0D081E65CDAE00F40131 /* Int.swift */,
+				17D0417E1E68E0FD0090B82B /* TimeInterval.swift */,
 				17214C5C1E54F580003FBFF4 /* Keychain.swift */,
 				179BF6BD1E5CA8E0008F702E /* Notifications.swift */,
 				179BF6BF1E5CF461008F702E /* String.swift */,
@@ -461,6 +464,7 @@
 				178F64F21E5359FB00161ECC /* SparkEvent.m in Sources */,
 				17CE0D131E65DE0500F40131 /* WaterTableViewController.swift in Sources */,
 				179BF6C21E5CF492008F702E /* Errors.swift in Sources */,
+				17D0417F1E68E0FD0090B82B /* TimeInterval.swift in Sources */,
 				17214C5D1E54F580003FBFF4 /* Keychain.swift in Sources */,
 				173DD2DF1E521AF300888F33 /* AppDelegate.swift in Sources */,
 				17103CB31E5390EE003D56B4 /* UIButton+AFNetworking.m in Sources */,

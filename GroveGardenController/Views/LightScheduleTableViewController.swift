@@ -31,30 +31,16 @@ class LightScheduleTableViewController: UITableViewController, NotificationListe
 
   func bindView() {
     DispatchQueue.main.async { [weak self] in
-      guard let grove = GroveManager.shared.grove else { return }
+      guard let schedule = self?.getSchedule() else { return }
 
-      let light: Light = {
-        switch self?.lightLocation {
-        case .garden?: return grove.light0
-        case .seedling?: return grove.light1
-        default: return grove.light2
-        }
-      }()
+      self?.sunriseDetail.text = schedule.sunriseBegins.printable()
+      self?.sunrisePicker.setDate(schedule.sunriseBegins.toDate(), animated: false)
 
-      let sunrise = light.schedule.sunriseBegins
+      let daylength = schedule.dayLength()
 
-      self?.sunriseDetail.text = sunrise.toPrintableTime()
-
-      guard
-        let sunriseDate = sunrise.toDate(),
-        let nightDate = light.schedule.nightBegins.toDate() else {
-          return
-      }
-
-      self?.sunrisePicker.setDate(sunriseDate, animated: false)
-
+      let parts = daylength.parts()
       self?.dayLengthCustomDetailLabel.text = {
-        switch Date.timeBetween(sunriseDate, nightDate).hoursAndMinutes() {
+        switch (parts.hours, parts.minutes) {
         case (0, let minutes): return "\(minutes) min"
         case (1, 0): return "1 hour"
         case (let hours, 0): return "\(hours) hours"
@@ -62,17 +48,19 @@ class LightScheduleTableViewController: UITableViewController, NotificationListe
         case (let hours, let minutes): return "\(hours)hrs \(minutes)min"
         }
       }()
+      self?.dayLengthPicker.countDownDuration = daylength
 
-      self?.dayLengthPicker.datePickerMode = .countDownTimer
-      self?.dayLengthPicker.countDownDuration = nightDate.timeIntervalSince(sunriseDate)
+      self?.dayLengthPreset1.accessoryType = (parts.hours == 12 && parts.minutes == 0) ? .checkmark : .none
+      self?.dayLengthPreset2.accessoryType = (parts.hours == 15 && parts.minutes == 0) ? .checkmark : .none
+      self?.dayLengthPreset3.accessoryType = (parts.hours == 18 && parts.minutes == 0) ? .checkmark : .none
 
-      let day = light.schedule.day
+      let day = schedule.day
       self?.brightnessSlider.setValue(day.intensity.toSliderValue(), animated: false)
       self?.colorTempSlider.setValue(day.colorTemp.toSliderValue(), animated: false)
     }
   }
 
-  private func showAlert() {
+  fileprivate func showAlert() {
     let alertController = UIAlertController(title: "Day length is too short",
                                             message: "A day must be at least an hour.",
                                             preferredStyle: .alert)
@@ -83,24 +71,31 @@ class LightScheduleTableViewController: UITableViewController, NotificationListe
     self.present(alertController, animated: true, completion: nil)
   }
 
+  fileprivate func getSchedule() -> Light.Schedule? {
+    guard let grove = GroveManager.shared.grove else { return nil }
+    switch lightLocation {
+    case .garden?: return grove.light0.schedule
+    case .seedling?: return grove.light1.schedule
+    case .aquarium?: return grove.light2.schedule
+    default: return nil
+    }
+  }
 
   @IBAction
   internal func sunrisePickerChanged(_ sender: UIDatePicker) {
-    guard let grove = GroveManager.shared.grove else { return }
-    let schedule: Light.Schedule = {
-      switch lightLocation {
-      case .garden?: return grove.light0.schedule
-      case .seedling?: return grove.light1.schedule
-      default: return grove.light2.schedule
-      }
-    }()
+    guard let schedule = getSchedule() else { return }
+    let newSunrise = sender.date.toSeconds()
+    let newSchedule = schedule.changeSettings(sunriseBegins: newSunrise)
+    GroveManager.shared.grove?.lightSchedule(lightLocation, schedule: newSchedule)
+  }
 
-    do {
-      let newSchedule = try schedule.changeSettings(sunriseBegins: sender.date.seconds())
-      grove.lightSchedule(lightLocation, schedule: newSchedule)
-    } catch {
+  private func sendNewDayLength(_ dayLength: TimeInterval) {
+    guard let schedule = getSchedule() else { return }
+    guard let newSchedule = try? schedule.changeSettings(dayLength: dayLength) else {
       showAlert()
+      return
     }
+    GroveManager.shared.grove?.lightSchedule(lightLocation, schedule: newSchedule)
   }
 
   @IBAction
@@ -110,19 +105,12 @@ class LightScheduleTableViewController: UITableViewController, NotificationListe
       showAlert()
       return dayLengthPickerChanged(sender)
     }
-    guard let grove = GroveManager.shared.grove else { return }
-    let schedule: Light.Schedule = {
-      switch lightLocation {
-      case .garden?: return grove.light0.schedule
-      case .seedling?: return grove.light1.schedule
-      default: return grove.light2.schedule
-      }
-    }()
 
+    guard let schedule = getSchedule() else { return }
+    let dayLength = sender.countDownDuration
     do {
-      let dayLength = Int(sender.countDownDuration)
       let newSchedule = try schedule.changeSettings(dayLength: dayLength)
-      grove.lightSchedule(lightLocation, schedule: newSchedule)
+      GroveManager.shared.grove?.lightSchedule(lightLocation, schedule: newSchedule)
     } catch {
       showAlert()
     }
@@ -130,22 +118,10 @@ class LightScheduleTableViewController: UITableViewController, NotificationListe
 
   @IBAction
   internal func brightnessSliderChanged(_ sender: UISlider) {
-    guard let grove = GroveManager.shared.grove else { return }
-    let schedule: Light.Schedule = {
-      switch lightLocation {
-      case .garden?: return grove.light0.schedule
-      case .seedling?: return grove.light1.schedule
-      default: return grove.light2.schedule
-      }
-    }()
-
-    do {
-      let intensity = Int(sender.value * 100)
-      let newSchedule = try schedule.changeSettings(intensity: intensity)
-      grove.lightSchedule(lightLocation, schedule: newSchedule)
-    } catch {
-      showAlert()
-    }
+    guard let schedule = getSchedule() else { return }
+    let intensity = Int(sender.value * 100)
+    let newSchedule = schedule.changeSettings(intensity: intensity)
+    GroveManager.shared.grove?.lightSchedule(lightLocation, schedule: newSchedule)
   }
 
   var colorSliderDebounceTimer: Timer = Timer()
@@ -173,22 +149,10 @@ class LightScheduleTableViewController: UITableViewController, NotificationListe
   }
 
   internal func sendNewColor() {
-    guard let grove = GroveManager.shared.grove else { return }
-    let schedule: Light.Schedule = {
-      switch lightLocation {
-      case .garden?: return grove.light0.schedule
-      case .seedling?: return grove.light1.schedule
-      default: return grove.light2.schedule
-      }
-    }()
-
-    do {
-      let color = Int(colorTempSlider.value * 100)
-      let newSchedule = try schedule.changeSettings(color: color)
-      grove.lightSchedule(lightLocation, schedule: newSchedule)
-    } catch {
-      showAlert()
-    }
+    guard let schedule = getSchedule() else { return }
+    let color = Int(colorTempSlider.value * 100)
+    let newSchedule = schedule.changeSettings(color: color)
+    GroveManager.shared.grove?.lightSchedule(lightLocation, schedule: newSchedule)
   }
 
   override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -209,29 +173,12 @@ class LightScheduleTableViewController: UITableViewController, NotificationListe
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     switch (indexPath.section, indexPath.row) {
     case (0, 0): showSunrisePicker = !showSunrisePicker
-    case (1, 0): sendPresetDayLength(12 * 60 * 60)
-    case (1, 1): sendPresetDayLength(15 * 60 * 60)
-    case (1, 2): sendPresetDayLength(18 * 60 * 60)
+    case (1, 0): sendNewDayLength(12 * 60 * 60)
+    case (1, 1): sendNewDayLength(15 * 60 * 60)
+    case (1, 2): sendNewDayLength(18 * 60 * 60)
     case (1, 3): showDayLengthPicker = !showDayLengthPicker
     default: break
     }
     tableView.reloadData()
-  }
-
-  private func sendPresetDayLength(_ dayLength: Int) {
-    guard let grove = GroveManager.shared.grove else { return }
-    let schedule: Light.Schedule = {
-      switch lightLocation {
-      case .garden?: return grove.light0.schedule
-      case .seedling?: return grove.light1.schedule
-      default: return grove.light2.schedule
-      }
-    }()
-    do {
-      let newSchedule = try schedule.changeSettings(dayLength: dayLength)
-      grove.lightSchedule(lightLocation, schedule: newSchedule)
-    } catch {
-      showAlert()
-    }
   }
 }

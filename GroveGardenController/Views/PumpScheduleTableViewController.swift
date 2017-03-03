@@ -29,7 +29,6 @@ class PumpScheduleTableViewController: UITableViewController, NotificationListen
   }
 
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
     switch indexPath.row {
     case 0: GroveManager.shared.grove?.pumpSchedule(Pump.Schedule.Presets.off)
     case 1: GroveManager.shared.grove?.pumpSchedule(Pump.Schedule.Presets.less)

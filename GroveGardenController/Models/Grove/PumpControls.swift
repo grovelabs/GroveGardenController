@@ -5,7 +5,11 @@ extension Grove {
   }
 
   func pumpSchedule(_ schedule: Pump.Schedule) {
-    let scheduleString = "schedule-\(schedule.toString())"
+    let scheduleString: String = {
+      let onString = String(format: "%03d", Int(schedule.on / 60))
+      let offString = String(format: "%03d", Int(schedule.off / 60))
+      return "schedule-\(onString):\(offString)"
+    }()
     device.callFunction("setPump", withArguments: [scheduleString], completion: nil)
   }
 
@@ -32,5 +36,4 @@ extension Grove {
       GroveManager.shared.grove?.aquariumTempTarget = value
     }
   }
-
 }

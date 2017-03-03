@@ -16,13 +16,45 @@ class AirTableViewController: UITableViewController, NotificationListener {
   func bindView() {
     DispatchQueue.main.async { [weak self] in
       guard let grove = GroveManager.shared.grove else { return }
-      let sensors = grove.sensors
 
-      self?.airTempLabel.text = (sensors.air.temperature != nil) ? grove.sensors.air.temperature!.printableFahrenheit() : "No data"
-      self?.humidityLabel.text = (sensors.air.humidity != nil) ? "\(grove.sensors.air.humidity!)%" : "No data"
-
+      self?.airTempLabel.text = grove.sensors.air.temperature?.printableFahrenheit() ?? ""
       self?.fanActionLabel.text = grove.fan.schedule.speed.rawValue
+      self?.humidityLabel.text = {
+        switch grove.sensors.air.humidity {
+        case let humidity?: return "\(humidity)%"
+        case nil: return ""
+        }
+      }()
     }
+  }
+
+  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    switch (indexPath.section, indexPath.row) {
+    case (0, 0) where (GroveManager.shared.grove?.sensors.air.temperature == nil):
+      return 0
+    case (0, 1) where (GroveManager.shared.grove?.sensors.air.humidity == nil):
+      return 0
+    default:
+      return super.tableView(tableView, heightForRowAt: indexPath)
+    }
+  }
+
+  override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    if (section == 0 &&
+      GroveManager.shared.grove?.sensors.air.temperature == nil &&
+      GroveManager.shared.grove?.sensors.air.humidity == nil) {
+      return ""
+    }
+    return super.tableView(tableView, titleForHeaderInSection: section)
+  }
+
+  override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+    if (section == 0 &&
+      GroveManager.shared.grove?.sensors.air.temperature == nil &&
+      GroveManager.shared.grove?.sensors.air.humidity == nil) {
+      return ""
+    }
+    return super.tableView(tableView, titleForFooterInSection: section)
   }
 
 }

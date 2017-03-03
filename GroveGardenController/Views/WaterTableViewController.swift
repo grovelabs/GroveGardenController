@@ -17,7 +17,8 @@ class WaterTableViewController: UITableViewController, NotificationListener {
     DispatchQueue.main.async { [weak self] in
       guard let grove = GroveManager.shared.grove else { return }
 
-      self?.waterTempLabel.text = grove.sensors.water.temperature.printableFahrenheit()
+      self?.waterTempLabel.text = grove.sensors.water.temperature?.printableFahrenheit() ?? ""
+
       self?.targetTempActionLabel.text = grove.aquariumTempTarget.printableFahrenheit()
 
       self?.targetTempActionLabel.text = {
@@ -29,7 +30,34 @@ class WaterTableViewController: UITableViewController, NotificationListener {
         }
       }()
 
-      self?.pumpScheduleActionLabel.text = "\(grove.pump.schedule.on) min"
+      self?.pumpScheduleActionLabel.text = "\(Int(grove.pump.schedule.on) / 60) min"
+    }
+  }
+
+  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    switch (indexPath.section, GroveManager.shared.grove?.sensors.water.temperature) {
+    case (0, nil), (1, nil):
+      return 0
+    default:
+      return super.tableView(tableView, heightForRowAt: indexPath)
+    }
+  }
+
+  override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    switch (section, GroveManager.shared.grove?.sensors.water.temperature) {
+    case (0, nil), (1, nil):
+      return nil
+    default:
+      return super.tableView(tableView, titleForHeaderInSection: section)
+    }
+  }
+
+  override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+    switch (section, GroveManager.shared.grove?.sensors.water.temperature) {
+    case (0, nil), (1, nil):
+      return nil
+    default:
+      return super.tableView(tableView, titleForFooterInSection: section)
     }
   }
 }
