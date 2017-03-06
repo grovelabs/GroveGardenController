@@ -9,21 +9,14 @@
 /* Begin PBXBuildFile section */
 		1708D0161E54AAB200998C9A /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708D0151E54AAB200998C9A /* UIColor.swift */; };
 		1708D0181E54D13B00998C9A /* GroveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708D0171E54D13B00998C9A /* GroveManager.swift */; };
-		1715EE7E1E60944F005C2FCA /* AirTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1715EE7D1E60944F005C2FCA /* AirTableViewController.swift */; };
 		1715EE821E60C790005C2FCA /* FanControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1715EE811E60C790005C2FCA /* FanControls.swift */; };
 		17214C591E54E050003FBFF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17214C581E54E050003FBFF4 /* Main.storyboard */; };
 		17214C5B1E54E184003FBFF4 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17214C5A1E54E184003FBFF4 /* UIStoryboard.swift */; };
 		17214C5D1E54F580003FBFF4 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17214C5C1E54F580003FBFF4 /* Keychain.swift */; };
 		17214C611E550545003FBFF4 /* Grove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17214C601E550545003FBFF4 /* Grove.swift */; };
 		172782761E5F717B001CC9FD /* GardenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172782751E5F717B001CC9FD /* GardenTableViewController.swift */; };
-		172782781E5F9A42001CC9FD /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172782771E5F9A42001CC9FD /* UITableView.swift */; };
-		1731E7EE1E672D14002195B2 /* LightScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1731E7ED1E672D14002195B2 /* LightScheduleTableViewController.swift */; };
-		1731E7F01E6732B1002195B2 /* LightsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1731E7EF1E6732B1002195B2 /* LightsTableViewController.swift */; };
-		1739EDF51E64A6730086C5FD /* LightInterruptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739EDF41E64A6730086C5FD /* LightInterruptionsTableViewController.swift */; };
 		1739EDF71E64AB820086C5FD /* LightControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739EDF61E64AB820086C5FD /* LightControls.swift */; };
-		1739EDF91E64D2480086C5FD /* FanIntensityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739EDF81E64D2480086C5FD /* FanIntensityTableViewController.swift */; };
 		173DD2DF1E521AF300888F33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173DD2DE1E521AF300888F33 /* AppDelegate.swift */; };
-		173DD2E11E521AF300888F33 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173DD2E01E521AF300888F33 /* LoginViewController.swift */; };
 		173DD2E41E521AF300888F33 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 173DD2E21E521AF300888F33 /* Login.storyboard */; };
 		173DD2E61E521AF300888F33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 173DD2E51E521AF300888F33 /* Assets.xcassets */; };
 		173DD2E91E521AF300888F33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 173DD2E71E521AF300888F33 /* LaunchScreen.storyboard */; };
@@ -46,11 +39,16 @@
 		179BF6D01E5E2C1F008F702E /* Fan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179BF6CF1E5E2C1F008F702E /* Fan.swift */; };
 		17CE0D091E65CDAE00F40131 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CE0D081E65CDAE00F40131 /* Int.swift */; };
 		17CE0D0B1E65D14D00F40131 /* PumpControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CE0D0A1E65D14D00F40131 /* PumpControls.swift */; };
-		17CE0D0D1E65D23F00F40131 /* PumpScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CE0D0C1E65D23F00F40131 /* PumpScheduleTableViewController.swift */; };
-		17CE0D111E65D64B00F40131 /* PumpInterruptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CE0D101E65D64B00F40131 /* PumpInterruptionsTableViewController.swift */; };
-		17CE0D131E65DE0500F40131 /* WaterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CE0D121E65DE0500F40131 /* WaterTableViewController.swift */; };
-		17CE0D151E6602E200F40131 /* HeaterTargetTempTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CE0D141E6602E200F40131 /* HeaterTargetTempTableViewController.swift */; };
 		17D0417F1E68E0FD0090B82B /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D0417E1E68E0FD0090B82B /* TimeInterval.swift */; };
+		17DBEC111E6E2DFF00A10A43 /* FanIntensityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DBEC061E6E2DFF00A10A43 /* FanIntensityTableViewController.swift */; };
+		17DBEC121E6E2DFF00A10A43 /* AirTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DBEC071E6E2DFF00A10A43 /* AirTableViewController.swift */; };
+		17DBEC131E6E2DFF00A10A43 /* LightInterruptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DBEC091E6E2DFF00A10A43 /* LightInterruptionsTableViewController.swift */; };
+		17DBEC141E6E2DFF00A10A43 /* LightScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DBEC0A1E6E2DFF00A10A43 /* LightScheduleTableViewController.swift */; };
+		17DBEC151E6E2DFF00A10A43 /* LightsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DBEC0B1E6E2DFF00A10A43 /* LightsTableViewController.swift */; };
+		17DBEC161E6E2DFF00A10A43 /* HeaterTargetTempTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DBEC0D1E6E2DFF00A10A43 /* HeaterTargetTempTableViewController.swift */; };
+		17DBEC171E6E2DFF00A10A43 /* PumpInterruptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DBEC0E1E6E2DFF00A10A43 /* PumpInterruptionsTableViewController.swift */; };
+		17DBEC181E6E2DFF00A10A43 /* PumpScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DBEC0F1E6E2DFF00A10A43 /* PumpScheduleTableViewController.swift */; };
+		17DBEC191E6E2DFF00A10A43 /* WaterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DBEC101E6E2DFF00A10A43 /* WaterTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -73,22 +71,15 @@
 		1708D0151E54AAB200998C9A /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		1708D0171E54D13B00998C9A /* GroveManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroveManager.swift; path = Models/GroveManager.swift; sourceTree = "<group>"; };
 		17103C1C1E538841003D56B4 /* GroveGardenController-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GroveGardenController-Bridging-Header.h"; sourceTree = "<group>"; };
-		1715EE7D1E60944F005C2FCA /* AirTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AirTableViewController.swift; path = Views/AirTableViewController.swift; sourceTree = "<group>"; };
 		1715EE811E60C790005C2FCA /* FanControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FanControls.swift; path = Models/Grove/FanControls.swift; sourceTree = "<group>"; };
 		17214C581E54E050003FBFF4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Views/Main.storyboard; sourceTree = "<group>"; };
 		17214C5A1E54E184003FBFF4 /* UIStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
 		17214C5C1E54F580003FBFF4 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		17214C601E550545003FBFF4 /* Grove.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Grove.swift; path = Models/Grove.swift; sourceTree = "<group>"; };
 		172782751E5F717B001CC9FD /* GardenTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GardenTableViewController.swift; path = Views/GardenTableViewController.swift; sourceTree = "<group>"; };
-		172782771E5F9A42001CC9FD /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
-		1731E7ED1E672D14002195B2 /* LightScheduleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LightScheduleTableViewController.swift; path = Views/LightScheduleTableViewController.swift; sourceTree = "<group>"; };
-		1731E7EF1E6732B1002195B2 /* LightsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LightsTableViewController.swift; path = Views/LightsTableViewController.swift; sourceTree = "<group>"; };
-		1739EDF41E64A6730086C5FD /* LightInterruptionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LightInterruptionsTableViewController.swift; path = Views/LightInterruptionsTableViewController.swift; sourceTree = "<group>"; };
 		1739EDF61E64AB820086C5FD /* LightControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LightControls.swift; path = Models/Grove/LightControls.swift; sourceTree = "<group>"; };
-		1739EDF81E64D2480086C5FD /* FanIntensityTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FanIntensityTableViewController.swift; path = Views/FanIntensityTableViewController.swift; sourceTree = "<group>"; };
 		173DD2DB1E521AF300888F33 /* GroveGardenController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroveGardenController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		173DD2DE1E521AF300888F33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		173DD2E01E521AF300888F33 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Views/LoginViewController.swift; sourceTree = "<group>"; };
 		173DD2E31E521AF300888F33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Views/Login.storyboard; sourceTree = "<group>"; };
 		173DD2E51E521AF300888F33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		173DD2E81E521AF300888F33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Views/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -110,11 +101,16 @@
 		17CDD8B11E6DF1A700A98A59 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		17CE0D081E65CDAE00F40131 /* Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		17CE0D0A1E65D14D00F40131 /* PumpControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PumpControls.swift; path = Models/Grove/PumpControls.swift; sourceTree = "<group>"; };
-		17CE0D0C1E65D23F00F40131 /* PumpScheduleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PumpScheduleTableViewController.swift; path = Views/PumpScheduleTableViewController.swift; sourceTree = "<group>"; };
-		17CE0D101E65D64B00F40131 /* PumpInterruptionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PumpInterruptionsTableViewController.swift; path = Views/PumpInterruptionsTableViewController.swift; sourceTree = "<group>"; };
-		17CE0D121E65DE0500F40131 /* WaterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WaterTableViewController.swift; path = Views/WaterTableViewController.swift; sourceTree = "<group>"; };
-		17CE0D141E6602E200F40131 /* HeaterTargetTempTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeaterTargetTempTableViewController.swift; path = Views/HeaterTargetTempTableViewController.swift; sourceTree = "<group>"; };
 		17D0417E1E68E0FD0090B82B /* TimeInterval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeInterval.swift; sourceTree = "<group>"; };
+		17DBEC061E6E2DFF00A10A43 /* FanIntensityTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FanIntensityTableViewController.swift; sourceTree = "<group>"; };
+		17DBEC071E6E2DFF00A10A43 /* AirTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirTableViewController.swift; sourceTree = "<group>"; };
+		17DBEC091E6E2DFF00A10A43 /* LightInterruptionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightInterruptionsTableViewController.swift; sourceTree = "<group>"; };
+		17DBEC0A1E6E2DFF00A10A43 /* LightScheduleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightScheduleTableViewController.swift; sourceTree = "<group>"; };
+		17DBEC0B1E6E2DFF00A10A43 /* LightsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightsTableViewController.swift; sourceTree = "<group>"; };
+		17DBEC0D1E6E2DFF00A10A43 /* HeaterTargetTempTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaterTargetTempTableViewController.swift; sourceTree = "<group>"; };
+		17DBEC0E1E6E2DFF00A10A43 /* PumpInterruptionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PumpInterruptionsTableViewController.swift; sourceTree = "<group>"; };
+		17DBEC0F1E6E2DFF00A10A43 /* PumpScheduleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PumpScheduleTableViewController.swift; sourceTree = "<group>"; };
+		17DBEC101E6E2DFF00A10A43 /* WaterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,7 +138,6 @@
 				179BF6BF1E5CF461008F702E /* String.swift */,
 				1708D0151E54AAB200998C9A /* UIColor.swift */,
 				17214C5A1E54E184003FBFF4 /* UIStoryboard.swift */,
-				172782771E5F9A42001CC9FD /* UITableView.swift */,
 				179BF6C61E5DEAD1008F702E /* UIViewController.swift */,
 			);
 			path = Utilities;
@@ -151,21 +146,12 @@
 		17214C5E1E55045F003FBFF4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1715EE7D1E60944F005C2FCA /* AirTableViewController.swift */,
-				1739EDF81E64D2480086C5FD /* FanIntensityTableViewController.swift */,
+				17DBEC041E6E2DFF00A10A43 /* Garden */,
 				172782751E5F717B001CC9FD /* GardenTableViewController.swift */,
-				17CE0D141E6602E200F40131 /* HeaterTargetTempTableViewController.swift */,
 				173DD2E71E521AF300888F33 /* LaunchScreen.storyboard */,
-				1739EDF41E64A6730086C5FD /* LightInterruptionsTableViewController.swift */,
-				1731E7ED1E672D14002195B2 /* LightScheduleTableViewController.swift */,
-				1731E7EF1E6732B1002195B2 /* LightsTableViewController.swift */,
 				173DD2E21E521AF300888F33 /* Login.storyboard */,
-				173DD2E01E521AF300888F33 /* LoginViewController.swift */,
 				17214C581E54E050003FBFF4 /* Main.storyboard */,
-				17CE0D101E65D64B00F40131 /* PumpInterruptionsTableViewController.swift */,
-				17CE0D0C1E65D23F00F40131 /* PumpScheduleTableViewController.swift */,
 				1764F2A71E6E04810061C0C4 /* SystemInfoTableViewController.swift */,
-				17CE0D121E65DE0500F40131 /* WaterTableViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -236,6 +222,47 @@
 				1739EDF61E64AB820086C5FD /* LightControls.swift */,
 			);
 			name = Grove;
+			sourceTree = "<group>";
+		};
+		17DBEC041E6E2DFF00A10A43 /* Garden */ = {
+			isa = PBXGroup;
+			children = (
+				17DBEC051E6E2DFF00A10A43 /* Air */,
+				17DBEC071E6E2DFF00A10A43 /* AirTableViewController.swift */,
+				17DBEC081E6E2DFF00A10A43 /* Lights */,
+				17DBEC0B1E6E2DFF00A10A43 /* LightsTableViewController.swift */,
+				17DBEC0C1E6E2DFF00A10A43 /* Water */,
+				17DBEC101E6E2DFF00A10A43 /* WaterTableViewController.swift */,
+			);
+			name = Garden;
+			path = Views/Garden;
+			sourceTree = "<group>";
+		};
+		17DBEC051E6E2DFF00A10A43 /* Air */ = {
+			isa = PBXGroup;
+			children = (
+				17DBEC061E6E2DFF00A10A43 /* FanIntensityTableViewController.swift */,
+			);
+			path = Air;
+			sourceTree = "<group>";
+		};
+		17DBEC081E6E2DFF00A10A43 /* Lights */ = {
+			isa = PBXGroup;
+			children = (
+				17DBEC091E6E2DFF00A10A43 /* LightInterruptionsTableViewController.swift */,
+				17DBEC0A1E6E2DFF00A10A43 /* LightScheduleTableViewController.swift */,
+			);
+			path = Lights;
+			sourceTree = "<group>";
+		};
+		17DBEC0C1E6E2DFF00A10A43 /* Water */ = {
+			isa = PBXGroup;
+			children = (
+				17DBEC0D1E6E2DFF00A10A43 /* HeaterTargetTempTableViewController.swift */,
+				17DBEC0E1E6E2DFF00A10A43 /* PumpInterruptionsTableViewController.swift */,
+				17DBEC0F1E6E2DFF00A10A43 /* PumpScheduleTableViewController.swift */,
+			);
+			path = Water;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,37 +360,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1731E7EE1E672D14002195B2 /* LightScheduleTableViewController.swift in Sources */,
-				173DD2E11E521AF300888F33 /* LoginViewController.swift in Sources */,
-				1731E7F01E6732B1002195B2 /* LightsTableViewController.swift in Sources */,
 				179BF6CB1E5E1EDE008F702E /* Pump.swift in Sources */,
-				17CE0D111E65D64B00F40131 /* PumpInterruptionsTableViewController.swift in Sources */,
-				17CE0D151E6602E200F40131 /* HeaterTargetTempTableViewController.swift in Sources */,
 				179BF6D01E5E2C1F008F702E /* Fan.swift in Sources */,
+				17DBEC191E6E2DFF00A10A43 /* WaterTableViewController.swift in Sources */,
 				1715EE821E60C790005C2FCA /* FanControls.swift in Sources */,
 				173DD3061E5247AF00888F33 /* Secrets.swift in Sources */,
-				17CE0D131E65DE0500F40131 /* WaterTableViewController.swift in Sources */,
 				1764F2A81E6E04810061C0C4 /* SystemInfoTableViewController.swift in Sources */,
 				179BF6C21E5CF492008F702E /* Errors.swift in Sources */,
 				17D0417F1E68E0FD0090B82B /* TimeInterval.swift in Sources */,
 				17214C5D1E54F580003FBFF4 /* Keychain.swift in Sources */,
 				173DD2DF1E521AF300888F33 /* AppDelegate.swift in Sources */,
-				1739EDF91E64D2480086C5FD /* FanIntensityTableViewController.swift in Sources */,
-				172782781E5F9A42001CC9FD /* UITableView.swift in Sources */,
+				17DBEC161E6E2DFF00A10A43 /* HeaterTargetTempTableViewController.swift in Sources */,
 				17CE0D0B1E65D14D00F40131 /* PumpControls.swift in Sources */,
+				17DBEC121E6E2DFF00A10A43 /* AirTableViewController.swift in Sources */,
+				17DBEC181E6E2DFF00A10A43 /* PumpScheduleTableViewController.swift in Sources */,
 				179BF6C71E5DEAD1008F702E /* UIViewController.swift in Sources */,
-				1715EE7E1E60944F005C2FCA /* AirTableViewController.swift in Sources */,
+				17DBEC151E6E2DFF00A10A43 /* LightsTableViewController.swift in Sources */,
+				17DBEC131E6E2DFF00A10A43 /* LightInterruptionsTableViewController.swift in Sources */,
 				179BF6C91E5E187A008F702E /* Light.swift in Sources */,
 				179BF6C41E5CFBE9008F702E /* Sensors.swift in Sources */,
+				17DBEC141E6E2DFF00A10A43 /* LightScheduleTableViewController.swift in Sources */,
 				1708D0161E54AAB200998C9A /* UIColor.swift in Sources */,
 				17214C5B1E54E184003FBFF4 /* UIStoryboard.swift in Sources */,
-				17CE0D0D1E65D23F00F40131 /* PumpScheduleTableViewController.swift in Sources */,
+				17DBEC171E6E2DFF00A10A43 /* PumpInterruptionsTableViewController.swift in Sources */,
 				1739EDF71E64AB820086C5FD /* LightControls.swift in Sources */,
 				1708D0181E54D13B00998C9A /* GroveManager.swift in Sources */,
-				1739EDF51E64A6730086C5FD /* LightInterruptionsTableViewController.swift in Sources */,
 				172782761E5F717B001CC9FD /* GardenTableViewController.swift in Sources */,
 				17214C611E550545003FBFF4 /* Grove.swift in Sources */,
 				179BF6BE1E5CA8E0008F702E /* Notifications.swift in Sources */,
+				17DBEC111E6E2DFF00A10A43 /* FanIntensityTableViewController.swift in Sources */,
 				17CE0D091E65CDAE00F40131 /* Int.swift in Sources */,
 				179BF6C01E5CF461008F702E /* String.swift in Sources */,
 			);
