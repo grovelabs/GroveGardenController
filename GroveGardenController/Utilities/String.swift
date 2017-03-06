@@ -1,3 +1,5 @@
+import Foundation
+
 extension String {
   func parseJSON() throws -> [String: Any] {
     guard

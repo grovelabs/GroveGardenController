@@ -1,3 +1,6 @@
+import Foundation
+import ParticleSDK
+
 open class GroveManager: NSObject, Notifier {
   static let shared = GroveManager()
   override fileprivate init() {}

@@ -1,3 +1,5 @@
+import Foundation
+
 extension TimeInterval {
   static let halfAnHour: TimeInterval = 30 * 60
   static let hour: TimeInterval = 60 * 60

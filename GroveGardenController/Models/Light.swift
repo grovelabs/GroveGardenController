@@ -1,3 +1,5 @@
+import Foundation
+
 struct Light {
 
   enum Location {

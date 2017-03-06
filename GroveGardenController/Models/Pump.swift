@@ -1,3 +1,5 @@
+import Foundation
+
 struct Pump {
 
   struct Schedule {

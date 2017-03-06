@@ -8,9 +8,10 @@ RELEASE ?= beta
 BRANCH ?= master
 DIST_BRANCH = $(RELEASE)-dist
 
-dependencies: submodules secrets
+bootstrap: dependencies secrets
 
-bootstrap: dependencies
+dependencies:
+	@carthage update --use-submodules --no-use-binaries --platform iOS
 
 submodules:
 	@git submodule sync --recursive || true

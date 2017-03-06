@@ -1,3 +1,4 @@
+import Foundation
 import class UIKit.UITableView
 import class UIKit.UITableViewCell
 
