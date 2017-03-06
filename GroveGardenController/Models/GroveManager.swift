@@ -3,47 +3,59 @@ open class GroveManager: NSObject, Notifier {
   override fileprivate init() {}
 
   var grove: Grove? = nil {
-    didSet {
-      sendNotification(.Grove)
-      if (grove == nil && oldValue != nil) {
-        SparkCloud.sharedInstance().unsubscribeFromEvent(withID: oldValue!.device.id)
-      }
-    }
+    didSet { sendNotification(.Grove) }
   }
 
   func eventParser(incomingEvent: SparkEvent?, error: Error?) -> Void {
     guard
       let event = incomingEvent,
-      let eventType = Grove.Event(rawValue: event.event),
-      let dataAsString = event.data,
-      let json = try? dataAsString.parseJSON() else { return }
+      event.deviceID == GroveManager.shared.grove?.device.id,
+      let eventType = Grove.Event(rawValue: event.event) else { return }
 
-    switch eventType {
-    case .light0:
-      guard let light = try? Light(json: json) else { return }
-      GroveManager.shared.grove?.light0 = light
+    guard let dataAsString = event.data,
+      let json = try? dataAsString.parseJSON() else {
 
-    case .light1:
-      guard let light = try? Light(json: json) else { return }
-      GroveManager.shared.grove?.light1 = light
+        // If the device connection is changing status:
+        DispatchQueue.main.async { [weak self] in
+          if (eventType == .status) {
+            self?.sendNotification(.Grove)
+          }
+        }
+        return
+    }
 
-    case .light2:
-      guard let light = try? Light(json: json) else { return }
-      GroveManager.shared.grove?.light2 = light
+    DispatchQueue.main.async {
+      switch eventType {
+      case .light0:
+        guard let light = try? Light(json: json) else { return }
+        GroveManager.shared.grove?.light0 = light
 
-    case .pump:
-      guard let pump = try? Pump(json: json) else { return }
-      GroveManager.shared.grove?.pump = pump
+      case .light1:
+        guard let light = try? Light(json: json) else { return }
+        GroveManager.shared.grove?.light1 = light
 
-    case .fan:
-      guard let fan = try? Fan(json: json) else { return }
-      GroveManager.shared.grove?.fan = fan
+      case .light2:
+        guard let light = try? Light(json: json) else { return }
+        GroveManager.shared.grove?.light2 = light
 
-    case .sensors:
-      guard let sensors = try? Sensors(json: json) else { return }
-      GroveManager.shared.grove?.sensors = sensors
+      case .pump:
+        guard let pump = try? Pump(json: json) else { return }
+        GroveManager.shared.grove?.pump = pump
 
-    default: break
+      case .fan:
+        guard let fan = try? Fan(json: json) else { return }
+        GroveManager.shared.grove?.fan = fan
+
+      case .sensors:
+        guard let sensors = try? Sensors(json: json) else { return }
+        GroveManager.shared.grove?.sensors = sensors
+
+      case .system:
+        guard let powerOn = json["powerOn"] as? Bool else { return }
+        GroveManager.shared.grove?.standby = !powerOn
+        
+      default: break
+      }
     }
   }
 
@@ -68,13 +80,11 @@ open class GroveManager: NSObject, Notifier {
         SparkCloud.sharedInstance().subscribeToDeviceEvents(withPrefix: nil,
                                                             deviceID: device.id,
                                                             handler: self.eventParser)
-        // TODO: handle offline groves and other failure states
-        GroveManager.getAllVariables(device: device) { (grove, error) in
-          if let error = error {
-            return completion(error)
-          }
 
-          GroveManager.shared.grove = grove
+        GroveManager.shared.grove = Grove(device: device,
+                                          serialNumber: serialNumber)
+        if (device.connected) {
+          GroveManager.shared.getAllVariables()
         }
 
         return completion(nil)
@@ -94,123 +104,74 @@ open class GroveManager: NSObject, Notifier {
   }
 
   /**
-   Calls each variable from the Grove until it has all the data required to build a Grove.
-
-   Completion closure will contain a Grove object, or nil if there was an error.
+   Calls each variable from the Grove and assigns the responses data to the current grove.
+   
+   Careful, as each call to this will overwrite each currently held variable.
    */
-  static func getAllVariables(device: SparkDevice, completion: @escaping (Grove?, Error?) -> Void) {
+  func getAllVariables() {
+    guard let device = self.grove?.device else { return }
 
-    let dispatchVariables = DispatchGroup()
-
-    var _sensors: Sensors? = nil
-    var _light0: Light? = nil
-    var _light1: Light? = nil
-    var _light2: Light? = nil
-    var _pump: Pump? = nil
-    var _fan: Fan? = nil
-    var _aquariumTempTarget: Int? = nil
-
-    dispatchVariables.enter()
     device.getVariable("sensors") { (data, error) in
       guard
         let jsonString = data as? String,
         let json = try? jsonString.parseJSON(),
-        let sensors = try? Sensors(json: json) else {
-          return dispatchVariables.leave()
-      }
-      _sensors = sensors
-      dispatchVariables.leave()
+        let sensors = try? Sensors(json: json) else { return }
+      GroveManager.shared.grove?.sensors = sensors
     }
 
-    dispatchVariables.enter()
     device.getVariable("light0") { (data, error) in
       guard
         let jsonString = data as? String,
-        let json = try? jsonString.parseJSON() else {
-          return dispatchVariables.leave()
-      }
-      _light0 = try? Light(json: json)
-      dispatchVariables.leave()
+        let json = try? jsonString.parseJSON(),
+        let light0 = try? Light(json: json) else { return  }
+      GroveManager.shared.grove?.light0 = light0
     }
 
-    dispatchVariables.enter()
+
     device.getVariable("light1") { (data, error) in
       guard
         let jsonString = data as? String,
-        let json = try? jsonString.parseJSON() else {
-          return dispatchVariables.leave()
-      }
-      _light1 = try? Light(json: json)
-      dispatchVariables.leave()
+        let json = try? jsonString.parseJSON(),
+        let light1 = try? Light(json: json) else { return  }
+      GroveManager.shared.grove?.light1 = light1
     }
 
-    dispatchVariables.enter()
     device.getVariable("light2") { (data, error) in
       guard
         let jsonString = data as? String,
-        let json = try? jsonString.parseJSON() else {
-          return dispatchVariables.leave()
-      }
-      _light2 = try? Light(json: json)
-      dispatchVariables.leave()
+        let json = try? jsonString.parseJSON(),
+        let light2 = try? Light(json: json) else { return  }
+      GroveManager.shared.grove?.light2 = light2
     }
 
-    dispatchVariables.enter()
     device.getVariable("pump0") { (data, error) in
       guard
         let jsonString = data as? String,
-        let json = try? jsonString.parseJSON() else {
-          return dispatchVariables.leave()
-      }
-      _pump = try? Pump(json: json)
-      dispatchVariables.leave()
+        let json = try? jsonString.parseJSON(),
+        let pump = try? Pump(json: json) else { return }
+      GroveManager.shared.grove?.pump = pump
     }
 
-    dispatchVariables.enter()
     device.getVariable("fan0") { (data, error) in
       guard
         let jsonString = data as? String,
-        let json = try? jsonString.parseJSON() else {
-          return dispatchVariables.leave()
-      }
-      _fan = try? Fan(json: json)
-      dispatchVariables.leave()
+        let json = try? jsonString.parseJSON(),
+        let fan = try? Fan(json: json) else { return }
+      GroveManager.shared.grove?.fan = fan
     }
 
-    dispatchVariables.enter()
     device.getVariable("groveSystem") { (data, error) in
       guard
         let jsonString = data as? String,
-        let json = try? jsonString.parseJSON() else {
-          return dispatchVariables.leave()
-      }
-      _aquariumTempTarget = json["aquaTempTarget"] as? Int
-      dispatchVariables.leave()
-    }
+        let json = try? jsonString.parseJSON() else { return }
 
-    dispatchVariables.notify(queue: .main) {
-      guard
-        let name = device.name,
-        let sensors = _sensors,
-        let light0 = _light0,
-        let light1 = _light1,
-        let light2 = _light2,
-        let pump = _pump,
-        let fan = _fan,
-        let aquariumTempTarget = _aquariumTempTarget else {
-          return completion(nil, nil)
+      if let powerOn = json["powerOn"] as? Bool {
+        GroveManager.shared.grove?.standby = !powerOn
       }
-      let grove = Grove(device: device,
-                        serialNumber: name,
-                        connected: device.connected,
-                        sensors: sensors,
-                        light0: light0,
-                        light1: light1,
-                        light2: light2,
-                        pump: pump,
-                        fan: fan,
-                        aquariumTempTarget: aquariumTempTarget)
-      completion(grove, nil)
+
+      if let aquariumTempTarget = json["aquaTempTarget"] as? Int {
+        GroveManager.shared.grove?.aquariumTempTarget = aquariumTempTarget
+      }
     }
   }
 }

@@ -14,15 +14,17 @@ class PumpInterruptionsTableViewController: UITableViewController, NotificationL
   }
 
   func bindView() {
-    DispatchQueue.main.async { [weak self] in
-      guard let grove = GroveManager.shared.grove else { return }
+    guard let grove = GroveManager.shared.grove else { return }
 
-      let interruption = grove.pump.interruption
+    let interruption = grove.pump?.interruption
 
-      self?.resumeSchedule.isUserInteractionEnabled = (interruption != nil)
-      self?.resumeSchedule.textLabel?.textColor = (interruption != nil) ? .gr_blue_enabled : .gr_grey_disabled
-      self?.off.accessoryType = (interruption != nil && !grove.pump.on) ? .checkmark : .none
-      self?.on.accessoryType = (interruption != nil && grove.pump.on) ? .checkmark : .none
+    resumeSchedule.isUserInteractionEnabled = (interruption != nil)
+    resumeSchedule.textLabel?.textColor = (interruption != nil) ? .gr_blue_enabled : .gr_grey_disabled
+    off.accessoryType = (interruption != nil && grove.pump?.on == false) ? .checkmark : .none
+    on.accessoryType = (interruption != nil && grove.pump?.on == true) ? .checkmark : .none
+
+    if (!grove.device.connected) {
+      let _ = navigationController?.popToRootViewController(animated: true)
     }
   }
 

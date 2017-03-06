@@ -1,8 +1,14 @@
 import UIKit
+import SafariServices
 
 class GardenTableViewController: UITableViewController, NotificationListener {
+  @IBOutlet weak var lightsCell: UITableViewCell!
+  @IBOutlet weak var airCell: UITableViewCell!
+  @IBOutlet weak var waterCell: UITableViewCell!
+  @IBOutlet weak var lightsDetailLabel: UILabel!
   @IBOutlet weak var airDetailLabel: UILabel!
   @IBOutlet weak var waterDetailLabel: UILabel!
+  @IBOutlet weak var systemDetailLabel: UILabel!
 
   var loadingView: UIView?
   var loading = false {
@@ -30,43 +36,73 @@ class GardenTableViewController: UITableViewController, NotificationListener {
   }
 
   func bindView() {
-    DispatchQueue.main.async { [weak self] in
-      switch GroveManager.shared.grove {
-      case let grove?:
-        self?.loading = false
+    guard let grove = GroveManager.shared.grove else {
+      loading = true
+      return
+    }
 
-        self?.airDetailLabel.text = {
-          switch (grove.sensors.air.temperature, grove.sensors.air.humidity) {
-          case (let temp?, let humidity?):
-            return "\(temp.printableFahrenheit())   \(humidity)%"
-          case (let temp?, _):
-            return temp.printableFahrenheit()
-          case (_, let humidity?):
-            return "\(humidity)%"
-          default:
-            return ""
-          }
-        }()
+    loading = false
+    lightsDetailLabel.text = "Garden, Seedling, Aquarium"
+    waterDetailLabel.text = grove.sensors?.water.temperature?.printableFahrenheit() ?? ""
 
-        self?.waterDetailLabel.text = grove.sensors.water.temperature?.printableFahrenheit() ?? ""
-
-      case nil:
-        self?.loading = true
+    airDetailLabel.text = {
+      switch (grove.sensors?.air.temperature, grove.sensors?.air.humidity) {
+      case (let temp?, let humidity?):
+        return "\(temp.printableFahrenheit())   \(humidity)%"
+      case (let temp?, _):
+        return temp.printableFahrenheit()
+      case (_, let humidity?):
+        return "\(humidity)%"
+      default:
+        return ""
       }
-      self?.tableView.reloadData()
+    }()
+
+    lightsCell.isUserInteractionEnabled = grove.device.connected
+    airCell.isUserInteractionEnabled = grove.device.connected
+    waterCell.isUserInteractionEnabled = grove.device.connected
+
+    let cellColor = (grove.device.connected) ? UIColor.white : UIColor.white.withAlphaComponent(0.25)
+    lightsCell.backgroundColor = cellColor
+    airCell.backgroundColor = cellColor
+    waterCell.backgroundColor = cellColor
+
+    systemDetailLabel.text = {
+      switch grove.standby {
+      case false?: return "Power On"
+      case true?: return "Standby Mode"
+      case nil: return ""
+      }
+    }()
+
+    if (!grove.device.connected) {
+      airDetailLabel.text = "OFFLINE"
+      waterDetailLabel.text = "OFFLINE"
+      lightsDetailLabel.text = "OFFLINE"
+      systemDetailLabel.text = "OFFLINE"
     }
   }
 
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     switch (indexPath.section, indexPath.row) {
     case (1, 0):
-      Keychain.clearSerial()
-      GroveManager.shared.grove = nil
-      Storyboard.switchTo(.login)
+      goToURL(url: URL(string: "https://grovegrown.com/market"))
+
+    case (1, 1):
+      goToURL(url: URL(string: "https://grove.helpshift.com"))
 
     default:
       break
     }
+    tableView.reloadData()
+  }
+
+  fileprivate func goToURL(url: URL?) {
+    guard let url = url else { return }
+    let vc = SFSafariViewController(url: url)
+    vc.view.tintColor = .gr_orange
+    vc.modalPresentationStyle = .overFullScreen
+    present(vc, animated: true, completion: nil)
   }
 
 }

@@ -14,13 +14,15 @@ class HeaterTargetTempTableViewController: UITableViewController, NotificationLi
   }
 
   func bindView() {
-    DispatchQueue.main.async { [weak self] in
-      guard let grove = GroveManager.shared.grove else { return }
+    guard let grove = GroveManager.shared.grove else { return }
 
-      let aquariumTempTarget = grove.aquariumTempTarget
-      self?.off.accessoryType = (aquariumTempTarget == 0) ? .checkmark : .none
-      self?.medium.accessoryType = (aquariumTempTarget == 20) ? .checkmark : .none
-      self?.max.accessoryType = (aquariumTempTarget == 255) ? .checkmark : .none
+    let aquariumTempTarget = grove.aquariumTempTarget
+    off.accessoryType = (aquariumTempTarget == 0) ? .checkmark : .none
+    medium.accessoryType = (aquariumTempTarget == 20) ? .checkmark : .none
+    max.accessoryType = (aquariumTempTarget == 255) ? .checkmark : .none
+
+    if (!grove.device.connected) {
+      let _ = navigationController?.popToRootViewController(animated: true)
     }
   }
 

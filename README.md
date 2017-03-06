@@ -10,4 +10,7 @@ Welcome to Grove's Garden Controller open source iOS app! Unlike the offical 'Gr
 
 ## Dependencies
 
-* [Particle](https://github.com/spark/spark-sdk-ios)
+* [Particle iOS Cloud SDK](https://github.com/spark/spark-sdk-ios)
+  * [AFNetworking](https://github.com/AFNetworking/AFNetworking)
+* [Particle Device Setup Library](https://github.com/spark/spark-setup-ios)
+  * [1Password Extension](https://github.com/AgileBits/onepassword-app-extension)

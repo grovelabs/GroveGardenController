@@ -30,33 +30,35 @@ class LightScheduleTableViewController: UITableViewController, NotificationListe
   }
 
   func bindView() {
-    DispatchQueue.main.async { [weak self] in
-      guard let schedule = self?.getSchedule() else { return }
+    guard let schedule = getSchedule() else { return }
 
-      self?.sunriseDetail.text = schedule.sunriseBegins.printable()
-      self?.sunrisePicker.setDate(schedule.sunriseBegins.toDate(), animated: false)
+    sunriseDetail.text = schedule.sunriseBegins.printable()
+    sunrisePicker.setDate(schedule.sunriseBegins.toDate(), animated: false)
 
-      let daylength = schedule.dayLength()
+    let daylength = schedule.dayLength()
 
-      let parts = daylength.parts()
-      self?.dayLengthCustomDetailLabel.text = {
-        switch (parts.hours, parts.minutes) {
-        case (0, let minutes): return "\(minutes) min"
-        case (1, 0): return "1 hour"
-        case (let hours, 0): return "\(hours) hours"
-        case (1, let minutes): return "1 hour \(minutes) min"
-        case (let hours, let minutes): return "\(hours)hrs \(minutes)min"
-        }
-      }()
-      self?.dayLengthPicker.countDownDuration = daylength
+    let parts = daylength.parts()
+    dayLengthCustomDetailLabel.text = {
+      switch (parts.hours, parts.minutes) {
+      case (0, let minutes): return "\(minutes) min"
+      case (1, 0): return "1 hour"
+      case (let hours, 0): return "\(hours) hours"
+      case (1, let minutes): return "1 hour \(minutes) min"
+      case (let hours, let minutes): return "\(hours)hrs \(minutes)min"
+      }
+    }()
+    dayLengthPicker.countDownDuration = daylength
 
-      self?.dayLengthPreset1.accessoryType = (parts.hours == 12 && parts.minutes == 0) ? .checkmark : .none
-      self?.dayLengthPreset2.accessoryType = (parts.hours == 15 && parts.minutes == 0) ? .checkmark : .none
-      self?.dayLengthPreset3.accessoryType = (parts.hours == 18 && parts.minutes == 0) ? .checkmark : .none
+    dayLengthPreset1.accessoryType = (parts.hours == 12 && parts.minutes == 0) ? .checkmark : .none
+    dayLengthPreset2.accessoryType = (parts.hours == 15 && parts.minutes == 0) ? .checkmark : .none
+    dayLengthPreset3.accessoryType = (parts.hours == 18 && parts.minutes == 0) ? .checkmark : .none
 
-      let day = schedule.day
-      self?.brightnessSlider.setValue(day.intensity.toSliderValue(), animated: false)
-      self?.colorTempSlider.setValue(day.colorTemp.toSliderValue(), animated: false)
+    let day = schedule.day
+    brightnessSlider.setValue(day.intensity.toSliderValue(), animated: false)
+    colorTempSlider.setValue(day.colorTemp.toSliderValue(), animated: false)
+
+    if (GroveManager.shared.grove?.device.connected == false) {
+      let _ = navigationController?.popToRootViewController(animated: true)
     }
   }
 
@@ -74,9 +76,9 @@ class LightScheduleTableViewController: UITableViewController, NotificationListe
   fileprivate func getSchedule() -> Light.Schedule? {
     guard let grove = GroveManager.shared.grove else { return nil }
     switch lightLocation {
-    case .garden?: return grove.light0.schedule
-    case .seedling?: return grove.light1.schedule
-    case .aquarium?: return grove.light2.schedule
+    case .garden?: return grove.light0?.schedule
+    case .seedling?: return grove.light1?.schedule
+    case .aquarium?: return grove.light2?.schedule
     default: return nil
     }
   }

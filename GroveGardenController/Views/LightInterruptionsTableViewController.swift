@@ -18,38 +18,38 @@ class LightInterruptionsTableViewController: UITableViewController, Notification
   }
 
   func bindView() {
-    DispatchQueue.main.async { [weak self] in
-      guard let grove = GroveManager.shared.grove else {
-        return
+    guard let grove = GroveManager.shared.grove else { return }
+
+    let interrupted: Bool = {
+      return (grove.light0?.interruption != nil) ||
+        (grove.light1?.interruption != nil) ||
+        (grove.light2?.interruption != nil)
+    }()
+
+    resumeSchedule.isUserInteractionEnabled = interrupted
+    resumeSchedule.textLabel?.textColor = (interrupted) ? .gr_blue_enabled : .gr_grey_disabled
+
+    let interruption = grove.light0?.interruption
+
+    off.accessoryType = (interruption?.setting == Light.Settings.Presets.off.settings) ? .checkmark : .none
+    harvestMode.accessoryType = (interruption?.setting == Light.Settings.Presets.harvest.settings) ? .checkmark : .none
+    movieMode.accessoryType = (interruption?.setting == Light.Settings.Presets.movie.settings) ? .checkmark : .none
+    photoMode.accessoryType = (interruption?.setting == Light.Settings.Presets.photo.settings) ? .checkmark : .none
+
+    otherMode.accessoryType = {
+      if (!interrupted) { return .none }
+      let setting = interruption?.setting
+      if (setting == Light.Settings.Presets.off.settings ||
+        setting == Light.Settings.Presets.harvest.settings ||
+        setting == Light.Settings.Presets.movie.settings ||
+        setting == Light.Settings.Presets.photo.settings) {
+        return .none
       }
+      return .checkmark
+    }()
 
-      let interrupted: Bool = {
-        return (grove.light0.interruption != nil) ||
-          (grove.light1.interruption != nil) ||
-          (grove.light2.interruption != nil)
-      }()
-
-      self?.resumeSchedule.isUserInteractionEnabled = interrupted
-      self?.resumeSchedule.textLabel?.textColor = (interrupted) ? .gr_blue_enabled : .gr_grey_disabled
-
-      let interruption = grove.light0.interruption
-
-      self?.off.accessoryType = (interruption?.setting == Light.Settings.Presets.off.settings) ? .checkmark : .none
-      self?.harvestMode.accessoryType = (interruption?.setting == Light.Settings.Presets.harvest.settings) ? .checkmark : .none
-      self?.movieMode.accessoryType = (interruption?.setting == Light.Settings.Presets.movie.settings) ? .checkmark : .none
-      self?.photoMode.accessoryType = (interruption?.setting == Light.Settings.Presets.photo.settings) ? .checkmark : .none
-
-      self?.otherMode.accessoryType = {
-        if (!interrupted) { return .none }
-        let setting = interruption?.setting
-        if (setting == Light.Settings.Presets.off.settings ||
-          setting == Light.Settings.Presets.harvest.settings ||
-          setting == Light.Settings.Presets.movie.settings ||
-          setting == Light.Settings.Presets.photo.settings) {
-          return .none
-        }
-        return .checkmark
-      }()
+    if (!grove.device.connected) {
+      let _ = navigationController?.popToRootViewController(animated: true)
     }
   }
 

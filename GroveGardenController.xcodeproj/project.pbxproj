@@ -43,6 +43,7 @@
 		173DD2E61E521AF300888F33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 173DD2E51E521AF300888F33 /* Assets.xcassets */; };
 		173DD2E91E521AF300888F33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 173DD2E71E521AF300888F33 /* LaunchScreen.storyboard */; };
 		173DD3061E5247AF00888F33 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173DD3051E5247AF00888F33 /* Secrets.swift */; };
+		1764F2A81E6E04810061C0C4 /* SystemInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1764F2A71E6E04810061C0C4 /* SystemInfoTableViewController.swift */; };
 		178F64EE1E5359FB00161ECC /* EventSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 178F64E01E5359FB00161ECC /* EventSource.m */; };
 		178F64EF1E5359FB00161ECC /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 178F64E21E5359FB00161ECC /* KeychainItemWrapper.m */; };
 		178F64F01E5359FB00161ECC /* SparkCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = 178F64E51E5359FB00161ECC /* SparkCloud.m */; };
@@ -57,6 +58,7 @@
 		179BF6C91E5E187A008F702E /* Light.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179BF6C81E5E187A008F702E /* Light.swift */; };
 		179BF6CB1E5E1EDE008F702E /* Pump.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179BF6CA1E5E1EDE008F702E /* Pump.swift */; };
 		179BF6D01E5E2C1F008F702E /* Fan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179BF6CF1E5E2C1F008F702E /* Fan.swift */; };
+		17CDD8B21E6DF1A700A98A59 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 17CDD8B11E6DF1A700A98A59 /* README.md */; };
 		17CE0D091E65CDAE00F40131 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CE0D081E65CDAE00F40131 /* Int.swift */; };
 		17CE0D0B1E65D14D00F40131 /* PumpControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CE0D0A1E65D14D00F40131 /* PumpControls.swift */; };
 		17CE0D0D1E65D23F00F40131 /* PumpScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CE0D0C1E65D23F00F40131 /* PumpScheduleTableViewController.swift */; };
@@ -124,6 +126,7 @@
 		173DD2E81E521AF300888F33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Views/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		173DD2EA1E521AF300888F33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		173DD3051E5247AF00888F33 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		1764F2A71E6E04810061C0C4 /* SystemInfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SystemInfoTableViewController.swift; path = Views/SystemInfoTableViewController.swift; sourceTree = "<group>"; };
 		178F64DF1E5359FB00161ECC /* EventSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventSource.h; sourceTree = "<group>"; };
 		178F64E01E5359FB00161ECC /* EventSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventSource.m; sourceTree = "<group>"; };
 		178F64E11E5359FB00161ECC /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
@@ -146,6 +149,7 @@
 		179BF6C81E5E187A008F702E /* Light.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Light.swift; path = Models/Light.swift; sourceTree = "<group>"; };
 		179BF6CA1E5E1EDE008F702E /* Pump.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Pump.swift; path = Models/Pump.swift; sourceTree = "<group>"; };
 		179BF6CF1E5E2C1F008F702E /* Fan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Fan.swift; path = Models/Fan.swift; sourceTree = "<group>"; };
+		17CDD8B11E6DF1A700A98A59 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		17CE0D081E65CDAE00F40131 /* Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		17CE0D0A1E65D14D00F40131 /* PumpControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PumpControls.swift; path = Models/Grove/PumpControls.swift; sourceTree = "<group>"; };
 		17CE0D0C1E65D23F00F40131 /* PumpScheduleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PumpScheduleTableViewController.swift; path = Views/PumpScheduleTableViewController.swift; sourceTree = "<group>"; };
@@ -247,16 +251,17 @@
 				1715EE7D1E60944F005C2FCA /* AirTableViewController.swift */,
 				1739EDF81E64D2480086C5FD /* FanIntensityTableViewController.swift */,
 				172782751E5F717B001CC9FD /* GardenTableViewController.swift */,
+				17CE0D141E6602E200F40131 /* HeaterTargetTempTableViewController.swift */,
 				173DD2E71E521AF300888F33 /* LaunchScreen.storyboard */,
 				1739EDF41E64A6730086C5FD /* LightInterruptionsTableViewController.swift */,
+				1731E7ED1E672D14002195B2 /* LightScheduleTableViewController.swift */,
+				1731E7EF1E6732B1002195B2 /* LightsTableViewController.swift */,
 				173DD2E21E521AF300888F33 /* Login.storyboard */,
 				173DD2E01E521AF300888F33 /* LoginViewController.swift */,
 				17214C581E54E050003FBFF4 /* Main.storyboard */,
-				1731E7EF1E6732B1002195B2 /* LightsTableViewController.swift */,
-				1731E7ED1E672D14002195B2 /* LightScheduleTableViewController.swift */,
-				17CE0D141E6602E200F40131 /* HeaterTargetTempTableViewController.swift */,
 				17CE0D101E65D64B00F40131 /* PumpInterruptionsTableViewController.swift */,
 				17CE0D0C1E65D23F00F40131 /* PumpScheduleTableViewController.swift */,
+				1764F2A71E6E04810061C0C4 /* SystemInfoTableViewController.swift */,
 				17CE0D121E65DE0500F40131 /* WaterTableViewController.swift */,
 			);
 			name = Views;
@@ -279,6 +284,7 @@
 		173DD2D21E521AF300888F33 = {
 			isa = PBXGroup;
 			children = (
+				17CDD8B11E6DF1A700A98A59 /* README.md */,
 				178F63C11E53589F00161ECC /* Frameworks */,
 				173DD2DD1E521AF300888F33 /* GroveGardenController */,
 				173DD2DC1E521AF300888F33 /* Products */,
@@ -463,6 +469,7 @@
 				17103CB01E5390EE003D56B4 /* AFImageDownloader.m in Sources */,
 				178F64F21E5359FB00161ECC /* SparkEvent.m in Sources */,
 				17CE0D131E65DE0500F40131 /* WaterTableViewController.swift in Sources */,
+				1764F2A81E6E04810061C0C4 /* SystemInfoTableViewController.swift in Sources */,
 				179BF6C21E5CF492008F702E /* Errors.swift in Sources */,
 				17D0417F1E68E0FD0090B82B /* TimeInterval.swift in Sources */,
 				17214C5D1E54F580003FBFF4 /* Keychain.swift in Sources */,
@@ -470,6 +477,7 @@
 				17103CB31E5390EE003D56B4 /* UIButton+AFNetworking.m in Sources */,
 				17103C961E5390E7003D56B4 /* AFSecurityPolicy.m in Sources */,
 				1739EDF91E64D2480086C5FD /* FanIntensityTableViewController.swift in Sources */,
+				17CDD8B21E6DF1A700A98A59 /* README.md in Sources */,
 				172782781E5F9A42001CC9FD /* UITableView.swift in Sources */,
 				178F64EF1E5359FB00161ECC /* KeychainItemWrapper.m in Sources */,
 				17103CB21E5390EE003D56B4 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
@@ -625,6 +633,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks/spark-sdk-ios/Example/ParticleSDK",
+					"$(PROJECT_DIR)/Frameworks/**",
 				);
 				INFOPLIST_FILE = GroveGardenController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
@@ -644,6 +653,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks/spark-sdk-ios/Example/ParticleSDK",
+					"$(PROJECT_DIR)/Frameworks/**",
 				);
 				INFOPLIST_FILE = GroveGardenController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;

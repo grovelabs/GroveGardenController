@@ -15,14 +15,16 @@ class FanIntensityTableViewController: UITableViewController, NotificationListen
   }
 
   func bindView() {
-    DispatchQueue.main.async { [weak self] in
-      guard let grove = GroveManager.shared.grove else { return }
-      let speed = grove.fan.schedule.speed
+    guard let grove = GroveManager.shared.grove else { return }
+    let speed = grove.fan?.schedule.speed
 
-      self?.off.accessoryType = (speed == .off) ? .checkmark : .none
-      self?.low.accessoryType = (speed == .low) ? .checkmark : .none
-      self?.medium.accessoryType = (speed == .medium) ? .checkmark : .none
-      self?.high.accessoryType = (speed == .high) ? .checkmark : .none
+    off.accessoryType = (speed == .off) ? .checkmark : .none
+    low.accessoryType = (speed == .low) ? .checkmark : .none
+    medium.accessoryType = (speed == .medium) ? .checkmark : .none
+    high.accessoryType = (speed == .high) ? .checkmark : .none
+
+    if (!grove.device.connected) {
+      let _ = navigationController?.popToRootViewController(animated: true)
     }
   }
 

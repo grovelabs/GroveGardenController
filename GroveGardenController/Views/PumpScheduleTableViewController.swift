@@ -16,15 +16,17 @@ class PumpScheduleTableViewController: UITableViewController, NotificationListen
   }
 
   func bindView() {
-    DispatchQueue.main.async { [weak self] in
-      guard let grove = GroveManager.shared.grove else { return }
-      let schedule = grove.pump.schedule
+    guard let grove = GroveManager.shared.grove else { return }
+    let schedule = grove.pump?.schedule
 
-      self?.off.accessoryType = (schedule == Pump.Schedule.Presets.off) ? .checkmark: .none
-      self?.less.accessoryType = (schedule == Pump.Schedule.Presets.less) ? .checkmark: .none
-      self?.normal.accessoryType = (schedule == Pump.Schedule.Presets.normal) ? .checkmark: .none
-      self?.more.accessoryType = (schedule == Pump.Schedule.Presets.more) ? .checkmark: .none
-      self?.on.accessoryType = (schedule == Pump.Schedule.Presets.on) ? .checkmark: .none
+    off.accessoryType = (schedule == Pump.Schedule.Presets.off) ? .checkmark: .none
+    less.accessoryType = (schedule == Pump.Schedule.Presets.less) ? .checkmark: .none
+    normal.accessoryType = (schedule == Pump.Schedule.Presets.normal) ? .checkmark: .none
+    more.accessoryType = (schedule == Pump.Schedule.Presets.more) ? .checkmark: .none
+    on.accessoryType = (schedule == Pump.Schedule.Presets.on) ? .checkmark: .none
+
+    if (!grove.device.connected) {
+      let _ = navigationController?.popToRootViewController(animated: true)
     }
   }
 

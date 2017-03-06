@@ -14,18 +14,21 @@ class LightsTableViewController: UITableViewController, NotificationListener {
   }
 
   func bindView() {
-    DispatchQueue.main.async { [weak self] in
-      guard let grove = GroveManager.shared.grove else { return }
+    guard let grove = GroveManager.shared.grove else { return }
 
-      func sunriseToNight(_ schedule: Light.Schedule) -> String {
-        let sunrise = schedule.sunriseBegins.printable()
-        let night = schedule.nightBegins.printable()
-        return sunrise + " - " + night
-      }
+    func sunriseToNight(_ schedule: Light.Schedule?) -> String {
+      guard
+        let sunrise = schedule?.sunriseBegins.printable(),
+        let night = schedule?.nightBegins.printable() else { return "" }
+      return sunrise + " - " + night
+    }
 
-      self?.gardenDetailLabel.text = sunriseToNight(grove.light0.schedule)
-      self?.seedlingDetailLabel.text = sunriseToNight(grove.light1.schedule)
-      self?.aquariumDetailLabel.text = sunriseToNight(grove.light2.schedule)
+    gardenDetailLabel.text = sunriseToNight(grove.light0?.schedule)
+    seedlingDetailLabel.text = sunriseToNight(grove.light1?.schedule)
+    aquariumDetailLabel.text = sunriseToNight(grove.light2?.schedule)
+
+    if (!grove.device.connected) {
+      let _ = navigationController?.popToRootViewController(animated: true)
     }
   }
 
