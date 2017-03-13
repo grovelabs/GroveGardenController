@@ -22,6 +22,7 @@
 		173DD2E91E521AF300888F33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 173DD2E71E521AF300888F33 /* LaunchScreen.storyboard */; };
 		173DD3061E5247AF00888F33 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173DD3051E5247AF00888F33 /* Secrets.swift */; };
 		1764F2A81E6E04810061C0C4 /* SystemInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1764F2A71E6E04810061C0C4 /* SystemInfoTableViewController.swift */; };
+		17702D171E7733CF00B8E1F6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17702D161E7733CF00B8E1F6 /* LoginViewController.swift */; };
 		1793D46E1E6E1DBE00C02945 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 1793D46D1E6E1DBE00C02945 /* Cartfile */; };
 		1793D4721E6E1F9700C02945 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1793D4701E6E1F9200C02945 /* AFNetworking.framework */; };
 		1793D4731E6E1F9700C02945 /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1793D4701E6E1F9200C02945 /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -86,6 +87,7 @@
 		173DD2EA1E521AF300888F33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		173DD3051E5247AF00888F33 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		1764F2A71E6E04810061C0C4 /* SystemInfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SystemInfoTableViewController.swift; path = Views/SystemInfoTableViewController.swift; sourceTree = "<group>"; };
+		17702D161E7733CF00B8E1F6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Views/LoginViewController.swift; sourceTree = "<group>"; };
 		1793D46D1E6E1DBE00C02945 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		1793D4701E6E1F9200C02945 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = Carthage/Build/iOS/AFNetworking.framework; sourceTree = "<group>"; };
 		1793D4751E6E1FA500C02945 /* ParticleDeviceSetupLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParticleDeviceSetupLibrary.framework; path = Carthage/Build/iOS/ParticleDeviceSetupLibrary.framework; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				172782751E5F717B001CC9FD /* GardenTableViewController.swift */,
 				173DD2E71E521AF300888F33 /* LaunchScreen.storyboard */,
 				173DD2E21E521AF300888F33 /* Login.storyboard */,
+				17702D161E7733CF00B8E1F6 /* LoginViewController.swift */,
 				17214C581E54E050003FBFF4 /* Main.storyboard */,
 				1764F2A71E6E04810061C0C4 /* SystemInfoTableViewController.swift */,
 			);
@@ -372,6 +375,7 @@
 				173DD2DF1E521AF300888F33 /* AppDelegate.swift in Sources */,
 				17DBEC161E6E2DFF00A10A43 /* HeaterTargetTempTableViewController.swift in Sources */,
 				17CE0D0B1E65D14D00F40131 /* PumpControls.swift in Sources */,
+				17702D171E7733CF00B8E1F6 /* LoginViewController.swift in Sources */,
 				17DBEC121E6E2DFF00A10A43 /* AirTableViewController.swift in Sources */,
 				17DBEC181E6E2DFF00A10A43 /* PumpScheduleTableViewController.swift in Sources */,
 				179BF6C71E5DEAD1008F702E /* UIViewController.swift in Sources */,
