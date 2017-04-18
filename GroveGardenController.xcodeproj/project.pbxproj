@@ -176,8 +176,8 @@
 		173DD2D21E521AF300888F33 = {
 			isa = PBXGroup;
 			children = (
-				1793D46F1E6E1F8000C02945 /* Frameworks */,
 				17CDD8B11E6DF1A700A98A59 /* README.md */,
+				1793D46F1E6E1F8000C02945 /* Frameworks */,
 				173DD2DD1E521AF300888F33 /* GroveGardenController */,
 				173DD2DC1E521AF300888F33 /* Products */,
 			);
@@ -280,6 +280,7 @@
 				173DD2D91E521AF300888F33 /* Resources */,
 				1793D47D1E6E211E00C02945 /* Carthage */,
 				1793D4741E6E1F9700C02945 /* Embed Frameworks */,
+				1751E10D1E899CFD0092CF18 /* Strip Unwanted Architectures From Dynamic Libraries in Xcode */,
 			);
 			buildRules = (
 			);
@@ -341,6 +342,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1751E10D1E899CFD0092CF18 /* Strip Unwanted Architectures From Dynamic Libraries in Xcode */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Strip Unwanted Architectures From Dynamic Libraries in Xcode";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "APP_PATH=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\"\n\n# This script loops through the frameworks embedded in the application and\n# removes unused architectures.\n# find \"$APP_PATH\" -name '*.framework' -type d | while read -r FRAMEWORK\n\n# OR just apply to the frameworks that are causing the problems:\nfind \"$APP_PATH\" -name 'AFNetworking.framework' -o -name  'ParticleDeviceSetupLibrary.framework' -o -name 'ParticleSDK.framework' -type d | while read -r FRAMEWORK\n\ndo\nFRAMEWORK_EXECUTABLE_NAME=$(defaults read \"$FRAMEWORK/Info.plist\" CFBundleExecutable)\nFRAMEWORK_EXECUTABLE_PATH=\"$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME\"\necho \"Executable is $FRAMEWORK_EXECUTABLE_PATH\"\n\nEXTRACTED_ARCHS=()\n\nfor ARCH in $ARCHS\ndo\necho \"Extracting $ARCH from $FRAMEWORK_EXECUTABLE_NAME\"\nlipo -extract \"$ARCH\" \"$FRAMEWORK_EXECUTABLE_PATH\" -o \"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\"\nEXTRACTED_ARCHS+=(\"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\")\ndone\n\necho \"Merging extracted architectures: ${ARCHS}\"\nlipo -o \"$FRAMEWORK_EXECUTABLE_PATH-merged\" -create \"${EXTRACTED_ARCHS[@]}\"\nrm \"${EXTRACTED_ARCHS[@]}\"\n\necho \"Replacing original executable with thinned version\"\nrm \"$FRAMEWORK_EXECUTABLE_PATH\"\nmv \"$FRAMEWORK_EXECUTABLE_PATH-merged\" \"$FRAMEWORK_EXECUTABLE_PATH\"\n\ndone";
+		};
 		1793D47D1E6E211E00C02945 /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
