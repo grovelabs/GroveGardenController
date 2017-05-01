@@ -96,13 +96,24 @@ open class GroveManager: NSObject, Notifier {
   }
 
   func loginIfNeeded(completion: @escaping (_ error: Error?) -> Void) {
+    SparkCloud.sharedInstance().logout()
     switch SparkCloud.sharedInstance().isAuthenticated {
     case true:
       completion(nil)
     case false:
       SparkCloud.sharedInstance().login(withUser: Secrets.Particle.username,
-                                        password: Secrets.Particle.password,
-                                        completion: completion)
+                                        password: Secrets.Particle.password)
+      { (error) in
+        switch (error, Secrets.Particle.password_alt) {
+        case (let error?, let password_alt?) where error._code == 400:
+          // Expect 400 error if the first password is no longer valid
+          SparkCloud.sharedInstance().login(withUser: Secrets.Particle.username,
+                                            password: password_alt,
+                                            completion: completion)
+        default:
+          completion(error)
+        }
+      }
     }
   }
 
