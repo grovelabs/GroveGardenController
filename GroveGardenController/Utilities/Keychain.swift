@@ -25,7 +25,7 @@ struct Keychain {
   }
 
   public static func loadSerial() -> String? {
-    return load(serialNumberKey) as? String
+    return load(serialNumberKey) as String?
   }
 
   private static func save(_ service: NSString, data: NSString) {
