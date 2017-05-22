@@ -17,6 +17,10 @@ class LightScheduleTableViewController: UITableViewController, NotificationListe
   var showSunrisePicker: Bool = false
   var showDayLengthPicker: Bool = false
 
+  var newSunrise: TimeInterval?
+  var newDayLength: TimeInterval?
+  static let confirmText = "Confirm"
+
   override func viewDidLoad() {
     super.viewDidLoad()
     self.clearsSelectionOnViewWillAppear = true
@@ -29,29 +33,49 @@ class LightScheduleTableViewController: UITableViewController, NotificationListe
     bindView()
   }
 
+  deinit {
+    removeListener(forNotification: .Grove)
+  }
+
   func bindView() {
     guard let schedule = getSchedule() else { return }
 
-    sunriseDetail.text = schedule.sunriseBegins.printable()
-    sunrisePicker.setDate(schedule.sunriseBegins.toDate(), animated: false)
+    switch (newSunrise, showSunrisePicker) {
+    case (let newSunrise?, true) where newSunrise != schedule.sunriseBegins:
+      sunriseDetail.textColor = .gr_orange
+      sunriseDetail.text = LightScheduleTableViewController.confirmText
+    case (_, false):
+      sunrisePicker.setDate(schedule.sunriseBegins.toDate(), animated: false)
+      fallthrough
+    case _:
+      sunriseDetail.textColor = .black
+      sunriseDetail.text = schedule.sunriseBegins.printable()
+    }
 
-    let daylength = schedule.dayLength()
+    switch (newDayLength, showDayLengthPicker) {
+    case (let newDayLength?, true) where newDayLength != schedule.dayLength():
+      dayLengthCustomDetailLabel.textColor = .gr_orange
+      dayLengthCustomDetailLabel.text = LightScheduleTableViewController.confirmText
+    case (_, false):
+      dayLengthPicker.countDownDuration = schedule.dayLength()
+      fallthrough
+    case _:
+      dayLengthCustomDetailLabel.textColor = .black
+      let parts = schedule.dayLength().parts()
+      dayLengthCustomDetailLabel.text = {
+        switch (parts.hours, parts.minutes) {
+        case (0, let minutes): return "\(minutes) min"
+        case (1, 0): return "1 hour"
+        case (let hours, 0): return "\(hours) hours"
+        case (1, let minutes): return "1 hour \(minutes) min"
+        case (let hours, let minutes): return "\(hours)hrs \(minutes)min"
+        }
+      }()
 
-    let parts = daylength.parts()
-    dayLengthCustomDetailLabel.text = {
-      switch (parts.hours, parts.minutes) {
-      case (0, let minutes): return "\(minutes) min"
-      case (1, 0): return "1 hour"
-      case (let hours, 0): return "\(hours) hours"
-      case (1, let minutes): return "1 hour \(minutes) min"
-      case (let hours, let minutes): return "\(hours)hrs \(minutes)min"
-      }
-    }()
-    dayLengthPicker.countDownDuration = daylength
-
-    dayLengthPreset1.accessoryType = (parts.hours == 12 && parts.minutes == 0) ? .checkmark : .none
-    dayLengthPreset2.accessoryType = (parts.hours == 15 && parts.minutes == 0) ? .checkmark : .none
-    dayLengthPreset3.accessoryType = (parts.hours == 18 && parts.minutes == 0) ? .checkmark : .none
+      dayLengthPreset1.accessoryType = (parts.hours == 12 && parts.minutes == 0) ? .checkmark : .none
+      dayLengthPreset2.accessoryType = (parts.hours == 15 && parts.minutes == 0) ? .checkmark : .none
+      dayLengthPreset3.accessoryType = (parts.hours == 18 && parts.minutes == 0) ? .checkmark : .none
+    }
 
     let day = schedule.day
     brightnessSlider.setValue(day.intensity.toSliderValue(), animated: false)
@@ -85,18 +109,16 @@ class LightScheduleTableViewController: UITableViewController, NotificationListe
 
   @IBAction
   internal func sunrisePickerChanged(_ sender: UIDatePicker) {
-    guard let schedule = getSchedule() else { return }
-    let newSunrise = sender.date.toSeconds()
-    let newSchedule = schedule.changeSettings(sunriseBegins: newSunrise)
-    GroveManager.shared.grove?.lightSchedule(lightLocation, schedule: newSchedule)
+    newSunrise = sender.date.toSeconds()
+    bindView()
   }
 
-  private func sendNewDayLength(_ dayLength: TimeInterval) {
-    guard let schedule = getSchedule() else { return }
-    guard let newSchedule = try? schedule.changeSettings(dayLength: dayLength) else {
-      showAlert()
-      return
-    }
+  fileprivate func sendNewSunrise() {
+    guard
+      let newSunrise = newSunrise,
+      let schedule = getSchedule(),
+      (sunriseDetail.text == LightScheduleTableViewController.confirmText) else { return }
+    let newSchedule = schedule.changeSettings(sunriseBegins: newSunrise)
     GroveManager.shared.grove?.lightSchedule(lightLocation, schedule: newSchedule)
   }
 
@@ -108,8 +130,27 @@ class LightScheduleTableViewController: UITableViewController, NotificationListe
       return dayLengthPickerChanged(sender)
     }
 
+    newDayLength = sender.countDownDuration
+    bindView()
+  }
+
+  fileprivate func sendNewDayLength() {
+    guard
+      let newDayLength = newDayLength,
+      let schedule = getSchedule(),
+      (dayLengthCustomDetailLabel.text == LightScheduleTableViewController.confirmText) else { return }
+
+    do {
+      let newSchedule = try schedule.changeSettings(dayLength: newDayLength)
+      GroveManager.shared.grove?.lightSchedule(lightLocation, schedule: newSchedule)
+    } catch {
+      showAlert()
+    }
+  }
+
+  fileprivate func sendNewDayLength(_ dayLength: TimeInterval) {
     guard let schedule = getSchedule() else { return }
-    let dayLength = sender.countDownDuration
+
     do {
       let newSchedule = try schedule.changeSettings(dayLength: dayLength)
       GroveManager.shared.grove?.lightSchedule(lightLocation, schedule: newSchedule)
@@ -174,11 +215,15 @@ class LightScheduleTableViewController: UITableViewController, NotificationListe
 
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     switch (indexPath.section, indexPath.row) {
-    case (0, 0): showSunrisePicker = !showSunrisePicker
+    case (0, 0):
+      sendNewSunrise()
+      showSunrisePicker = !showSunrisePicker
     case (1, 0): sendNewDayLength(12 * 60 * 60)
     case (1, 1): sendNewDayLength(15 * 60 * 60)
     case (1, 2): sendNewDayLength(18 * 60 * 60)
-    case (1, 3): showDayLengthPicker = !showDayLengthPicker
+    case (1, 3):
+      sendNewDayLength()
+      showDayLengthPicker = !showDayLengthPicker
     default: break
     }
     tableView.reloadData()

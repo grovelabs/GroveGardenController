@@ -16,10 +16,15 @@ extension Notifier {
 
 protocol NotificationListener: class {
   func addListener(forNotification notification: Notification.Name, selector: Selector)
+  func removeListener(forNotification notification: Notification.Name)
 }
 
 extension NotificationListener {
   func addListener(forNotification notification: Notification.Name, selector: Selector) {
     NotificationCenter.default.addObserver(self, selector: selector, name: notification, object: nil)
+  }
+
+  func removeListener(forNotification notification: Notification.Name) {
+    NotificationCenter.default.removeObserver(self, name: notification, object: nil)
   }
 }

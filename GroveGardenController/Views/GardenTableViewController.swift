@@ -35,6 +35,10 @@ class GardenTableViewController: UITableViewController, NotificationListener {
     bindView()
   }
 
+  deinit {
+    removeListener(forNotification: .Grove)
+  }
+
   func bindView() {
     guard let grove = GroveManager.shared.grove else {
       loading = true
