@@ -14,8 +14,8 @@ struct Light {
       var settings: Light.Settings {
         switch self {
         case .off: return Light.Settings(intensity: 0, colorTemp: 100)
-        case .harvest: return Light.Settings(intensity: 10, colorTemp: 100)
-        case .movie: return Light.Settings(intensity: 1, colorTemp: 0)
+        case .harvest: return Light.Settings(intensity: 15, colorTemp: 75)
+        case .movie: return Light.Settings(intensity: 7, colorTemp: 0)
         case .photo: return Light.Settings(intensity: 5, colorTemp: 50)
         }
       }
