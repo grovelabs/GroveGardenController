@@ -1,3 +1,3 @@
-github "AFNetworking/AFNetworking" "3.1.0"
+github "AFNetworking/AFNetworking" "3.2.1"
 github "grovelabs/spark-setup-ios" "2dd90f38876bd79353c0c984b0304245c1dcaf61"
 github "spark/spark-sdk-ios" "f002bd06c7e603bcfc8ab1bf21fd72d47acc16e4"

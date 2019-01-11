@@ -30,7 +30,7 @@ extension Grove {
 
     device.callFunction("muxFunction", withArguments: [targetString]) { (data, error) in
       guard error == nil,
-        let data = data as Int?,
+        let data = data as? Int,
         data == 1,
         let value = Int(temp.rawValue) else { return }
       GroveManager.shared.grove?.aquariumTempTarget = value

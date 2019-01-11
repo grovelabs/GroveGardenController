@@ -1,0 +1,687 @@
+BCSymbolMap Version: 2.0
+-[SparkSession initWithNewSession:]
+-[SparkSession initWithToken:]
+-[SparkSession storeSessionInKeychainAndSetExpiryTimer]
+-[SparkSession initWithToken:andExpiryDate:]
+-[SparkSession initWithToken:withExpiryDate:withRefreshToken:]
+-[SparkSession initWithSavedSession]
+-[SparkSession accessToken]
+-[SparkSession removeSession]
+-[SparkSession accessTokenExpired:]
+-[SparkSession dealloc]
+-[SparkSession username]
+-[SparkSession setUsername:]
+-[SparkSession refreshToken]
+-[SparkSession setRefreshToken:]
+-[SparkSession delegate]
+-[SparkSession setDelegate:]
+-[SparkSession expiryDate]
+-[SparkSession setExpiryDate:]
+-[SparkSession expiryTimer]
+-[SparkSession setExpiryTimer:]
+-[SparkSession setAccessToken:]
+-[SparkSession .cxx_destruct]
+_OBJC_IVAR_$_SparkSession._accessToken
+_OBJC_IVAR_$_SparkSession._username
+_OBJC_IVAR_$_SparkSession._refreshToken
+_OBJC_IVAR_$_SparkSession._delegate
+_OBJC_IVAR_$_SparkSession._expiryDate
+_OBJC_IVAR_$_SparkSession._expiryTimer
+Apple LLVM version 10.0.0 (clang-1000.11.45.5)
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-sdk-ios/Pod/Classes/SDK/SparkSession.m
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-sdk-ios/Example/ParticleSDK
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-sdk-ios/Pod/Classes/SDK/SparkSession.h
+-[SparkEvent initWithEventDict:]
+-[SparkEvent description]
+-[SparkEvent deviceID]
+-[SparkEvent setDeviceID:]
+-[SparkEvent data]
+-[SparkEvent setData:]
+-[SparkEvent event]
+-[SparkEvent setEvent:]
+-[SparkEvent time]
+-[SparkEvent setTime:]
+-[SparkEvent ttl]
+-[SparkEvent setTtl:]
+-[SparkEvent .cxx_destruct]
+_OBJC_IVAR_$_SparkEvent._deviceID
+_OBJC_IVAR_$_SparkEvent._data
+_OBJC_IVAR_$_SparkEvent._event
+_OBJC_IVAR_$_SparkEvent._time
+_OBJC_IVAR_$_SparkEvent._ttl
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-sdk-ios/Pod/Classes/SDK/SparkEvent.m
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-sdk-ios/Pod/Classes/SDK/SparkEvent.h
+-[SparkDevice initWithParams:]
+-[SparkDevice refresh:]
+___23-[SparkDevice refresh:]_block_invoke
+___copy_helper_block_
+___destroy_helper_block_
+-[SparkDevice setName:]
+-[SparkDevice getVariable:completion:]
+___38-[SparkDevice getVariable:completion:]_block_invoke
+___copy_helper_block_.126
+___destroy_helper_block_.127
+___38-[SparkDevice getVariable:completion:]_block_invoke.130
+___copy_helper_block_.131
+___destroy_helper_block_.132
+-[SparkDevice callFunction:withArguments:completion:]
+___53-[SparkDevice callFunction:withArguments:completion:]_block_invoke
+___copy_helper_block_.159
+___destroy_helper_block_.160
+___53-[SparkDevice callFunction:withArguments:completion:]_block_invoke.162
+___copy_helper_block_.163
+___destroy_helper_block_.164
+-[SparkDevice signal:completion:]
+___33-[SparkDevice signal:completion:]_block_invoke
+___copy_helper_block_.176
+___destroy_helper_block_.177
+___33-[SparkDevice signal:completion:]_block_invoke.179
+___copy_helper_block_.180
+___destroy_helper_block_.181
+-[SparkDevice unclaim:]
+___23-[SparkDevice unclaim:]_block_invoke
+___copy_helper_block_.189
+___destroy_helper_block_.190
+___23-[SparkDevice unclaim:]_block_invoke.192
+___copy_helper_block_.193
+___destroy_helper_block_.194
+-[SparkDevice rename:completion:]
+___33-[SparkDevice rename:completion:]_block_invoke
+___copy_helper_block_.198
+___destroy_helper_block_.199
+___33-[SparkDevice rename:completion:]_block_invoke.201
+___copy_helper_block_.202
+___destroy_helper_block_.203
+-[SparkDevice defaultParams]
+-[SparkDevice setAuthHeaderWithAccessToken]
+-[SparkDevice makeErrorWithDescription:code:]
+-[SparkDevice description]
+-[SparkDevice flashKnownApp:completion:]
+___40-[SparkDevice flashKnownApp:completion:]_block_invoke
+___copy_helper_block_.260
+___destroy_helper_block_.261
+___40-[SparkDevice flashKnownApp:completion:]_block_invoke.263
+___copy_helper_block_.264
+___destroy_helper_block_.265
+-[SparkDevice flashFiles:completion:]
+___37-[SparkDevice flashFiles:completion:]_block_invoke
+___copy_helper_block_.281
+___destroy_helper_block_.282
+___37-[SparkDevice flashFiles:completion:]_block_invoke.287
+___copy_helper_block_.288
+___destroy_helper_block_.289
+-[SparkDevice subscribeToEventsWithPrefix:handler:]
+-[SparkDevice unsubscribeFromEventWithID:]
+-[SparkDevice getCurrentDataUsage:]
+___35-[SparkDevice getCurrentDataUsage:]_block_invoke
+___copy_helper_block_.312
+___destroy_helper_block_.313
+___35-[SparkDevice getCurrentDataUsage:]_block_invoke.315
+___copy_helper_block_.316
+___destroy_helper_block_.317
+-[SparkDevice __receivedSystemEvent:]
+-[SparkDevice id]
+-[SparkDevice setId:]
+-[SparkDevice name]
+-[SparkDevice connected]
+-[SparkDevice setConnected:]
+-[SparkDevice functions]
+-[SparkDevice setFunctions:]
+-[SparkDevice variables]
+-[SparkDevice setVariables:]
+-[SparkDevice lastApp]
+-[SparkDevice lastHeard]
+-[SparkDevice appHash]
+-[SparkDevice setAppHash:]
+-[SparkDevice isFlashing]
+-[SparkDevice setIsFlashing:]
+-[SparkDevice lastIPAdress]
+-[SparkDevice setLastIPAdress:]
+-[SparkDevice lastIccid]
+-[SparkDevice setLastIccid:]
+-[SparkDevice imei]
+-[SparkDevice setImei:]
+-[SparkDevice platformId]
+-[SparkDevice setPlatformId:]
+-[SparkDevice productId]
+-[SparkDevice setProductId:]
+-[SparkDevice status]
+-[SparkDevice setStatus:]
+-[SparkDevice version]
+-[SparkDevice setVersion:]
+-[SparkDevice requiresUpdate]
+-[SparkDevice setRequiresUpdate:]
+-[SparkDevice type]
+-[SparkDevice delegate]
+-[SparkDevice setDelegate:]
+-[SparkDevice manager]
+-[SparkDevice setManager:]
+-[SparkDevice baseURL]
+-[SparkDevice setBaseURL:]
+-[SparkDevice .cxx_destruct]
+_OBJC_IVAR_$_SparkDevice._baseURL
+_OBJC_IVAR_$_SparkDevice._requiresUpdate
+_OBJC_IVAR_$_SparkDevice._name
+_OBJC_IVAR_$_SparkDevice._connected
+_OBJC_IVAR_$_SparkDevice._functions
+_OBJC_IVAR_$_SparkDevice._variables
+_OBJC_IVAR_$_SparkDevice._id
+_OBJC_IVAR_$_SparkDevice._type
+_OBJC_IVAR_$_SparkDevice._productId
+_OBJC_IVAR_$_SparkDevice._lastIccid
+_OBJC_IVAR_$_SparkDevice._imei
+_OBJC_IVAR_$_SparkDevice._status
+_OBJC_IVAR_$_SparkDevice._lastIPAdress
+_OBJC_IVAR_$_SparkDevice._lastApp
+_OBJC_IVAR_$_SparkDevice._lastHeard
+___block_descriptor_tmp
+___block_descriptor_tmp.129
+___block_descriptor_tmp.134
+___block_descriptor_tmp.161
+___block_descriptor_tmp.165
+___block_descriptor_tmp.178
+___block_descriptor_tmp.182
+___block_descriptor_tmp.191
+___block_descriptor_tmp.195
+___block_descriptor_tmp.200
+___block_descriptor_tmp.204
+___block_descriptor_tmp.262
+___block_descriptor_tmp.266
+___block_descriptor_tmp.284
+___block_descriptor_tmp.291
+___block_descriptor_tmp.314
+___block_descriptor_tmp.318
+_OBJC_IVAR_$_SparkDevice._appHash
+_OBJC_IVAR_$_SparkDevice._isFlashing
+_OBJC_IVAR_$_SparkDevice._platformId
+_OBJC_IVAR_$_SparkDevice._version
+_OBJC_IVAR_$_SparkDevice._delegate
+_OBJC_IVAR_$_SparkDevice._manager
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-sdk-ios/Pod/Classes/SDK/SparkDevice.m
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-sdk-ios/Pod/Classes/SDK/SparkDevice.h
+__destroy_helper_block_
+__copy_helper_block_
+__35-[SparkDevice getCurrentDataUsage:]_block_invoke.315
+__35-[SparkDevice getCurrentDataUsage:]_block_invoke
+__37-[SparkDevice flashFiles:completion:]_block_invoke.287
+__37-[SparkDevice flashFiles:completion:]_block_invoke
+__40-[SparkDevice flashKnownApp:completion:]_block_invoke.263
+__40-[SparkDevice flashKnownApp:completion:]_block_invoke
+__33-[SparkDevice rename:completion:]_block_invoke.201
+__33-[SparkDevice rename:completion:]_block_invoke
+__23-[SparkDevice unclaim:]_block_invoke.192
+__23-[SparkDevice unclaim:]_block_invoke
+__33-[SparkDevice signal:completion:]_block_invoke.179
+__33-[SparkDevice signal:completion:]_block_invoke
+__53-[SparkDevice callFunction:withArguments:completion:]_block_invoke.162
+__53-[SparkDevice callFunction:withArguments:completion:]_block_invoke
+__38-[SparkDevice getVariable:completion:]_block_invoke.130
+__38-[SparkDevice getVariable:completion:]_block_invoke
+__23-[SparkDevice refresh:]_block_invoke
+-[KeychainItemWrapper initWithIdentifier:accessGroup:]
+-[KeychainItemWrapper setObject:forKey:]
+-[KeychainItemWrapper objectForKey:]
+-[KeychainItemWrapper resetKeychainItem]
+-[KeychainItemWrapper dictionaryToSecItemFormat:]
+-[KeychainItemWrapper secItemFormatToDictionary:]
+-[KeychainItemWrapper writeToKeychain]
+-[KeychainItemWrapper .cxx_destruct]
+_OBJC_IVAR_$_KeychainItemWrapper.genericPasswordQuery
+_OBJC_IVAR_$_KeychainItemWrapper.keychainItemData
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-sdk-ios/Pod/Classes/Helpers/KeychainItemWrapper.m
++[EventSource eventSourceWithURL:timeoutInterval:queue:]
+-[EventSource initWithURL:timeoutInterval:queue:]
+___49-[EventSource initWithURL:timeoutInterval:queue:]_block_invoke
+-[EventSource addEventListener:handler:]
+-[EventSource removeEventListener:handler:]
+-[EventSource onMessage:]
+-[EventSource onError:]
+-[EventSource onOpen:]
+-[EventSource open]
+-[EventSource close]
+-[EventSource connection:didReceiveResponse:]
+___45-[EventSource connection:didReceiveResponse:]_block_invoke
+___copy_helper_block_.76
+___destroy_helper_block_.77
+-[EventSource connection:didFailWithError:]
+___43-[EventSource connection:didFailWithError:]_block_invoke
+___copy_helper_block_.83
+___destroy_helper_block_.84
+___43-[EventSource connection:didFailWithError:]_block_invoke.88
+___copy_helper_block_.93
+___destroy_helper_block_.94
+-[EventSource connection:didReceiveData:]
+___Block_byref_object_copy_
+___Block_byref_object_dispose_
+___41-[EventSource connection:didReceiveData:]_block_invoke
+___copy_helper_block_.130
+___destroy_helper_block_.131
+-[EventSource connectionDidFinishLoading:]
+___42-[EventSource connectionDidFinishLoading:]_block_invoke
+___copy_helper_block_.145
+___destroy_helper_block_.146
+___42-[EventSource connectionDidFinishLoading:]_block_invoke.148
+___copy_helper_block_.149
+___destroy_helper_block_.150
+-[EventSource dealloc]
+-[EventSource eventURL]
+-[EventSource setEventURL:]
+-[EventSource eventSource]
+-[EventSource setEventSource:]
+-[EventSource eventSourceTask]
+-[EventSource setEventSourceTask:]
+-[EventSource listeners]
+-[EventSource setListeners:]
+-[EventSource timeoutInterval]
+-[EventSource setTimeoutInterval:]
+-[EventSource retryInterval]
+-[EventSource setRetryInterval:]
+-[EventSource lastEventID]
+-[EventSource setLastEventID:]
+-[EventSource queue]
+-[EventSource setQueue:]
+-[EventSource retries]
+-[EventSource setRetries:]
+-[EventSource event]
+-[EventSource setEvent:]
+-[EventSource .cxx_destruct]
+-[Event description]
+-[Event copyWithZone:]
+-[Event name]
+-[Event setName:]
+-[Event data]
+-[Event setData:]
+-[Event readyState]
+-[Event setReadyState:]
+-[Event error]
+-[Event setError:]
+-[Event .cxx_destruct]
+_OBJC_IVAR_$_EventSource._listeners
+_OBJC_IVAR_$_EventSource._eventURL
+_OBJC_IVAR_$_EventSource._timeoutInterval
+_OBJC_IVAR_$_EventSource._retryInterval
+_OBJC_IVAR_$_EventSource._queue
+_OBJC_IVAR_$_EventSource._retries
+_OBJC_IVAR_$_EventSource.wasClosed
+___block_descriptor_tmp.78
+___block_descriptor_tmp.85
+___block_descriptor_tmp.95
+___block_descriptor_tmp.132
+___block_descriptor_tmp.147
+___block_descriptor_tmp.151
+_OBJC_IVAR_$_EventSource._eventSource
+_OBJC_IVAR_$_EventSource._eventSourceTask
+_OBJC_IVAR_$_EventSource._lastEventID
+_OBJC_IVAR_$_EventSource._event
+l_OBJC_PROTOCOL_$_NSObject
+l_OBJC_LABEL_PROTOCOL_$_NSObject
+l_OBJC_PROTOCOL_$_NSURLConnectionDelegate
+l_OBJC_LABEL_PROTOCOL_$_NSURLConnectionDelegate
+l_OBJC_PROTOCOL_$_NSURLConnectionDataDelegate
+l_OBJC_LABEL_PROTOCOL_$_NSURLConnectionDataDelegate
+_OBJC_IVAR_$_Event._name
+_OBJC_IVAR_$_Event._data
+_OBJC_IVAR_$_Event._readyState
+_OBJC_IVAR_$_Event._error
+l_OBJC_PROTOCOL_$_NSCopying
+l_OBJC_LABEL_PROTOCOL_$_NSCopying
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-sdk-ios/Pod/Classes/Helpers/EventSource.m
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-sdk-ios/Pod/Classes/Helpers/EventSource.h
+__42-[EventSource connectionDidFinishLoading:]_block_invoke.148
+__42-[EventSource connectionDidFinishLoading:]_block_invoke
+__41-[EventSource connection:didReceiveData:]_block_invoke
+__Block_byref_object_dispose_
+__Block_byref_object_copy_
+__43-[EventSource connection:didFailWithError:]_block_invoke.88
+__43-[EventSource connection:didFailWithError:]_block_invoke
+__45-[EventSource connection:didReceiveResponse:]_block_invoke
+__49-[EventSource initWithURL:timeoutInterval:queue:]_block_invoke
++[SparkCloud sharedInstance]
+-[SparkCloud init]
+-[SparkCloud accessToken]
+-[SparkCloud injectSessionAccessToken:]
+-[SparkCloud injectSessionAccessToken:withExpiryDate:]
+-[SparkCloud injectSessionAccessToken:withExpiryDate:andRefreshToken:]
+-[SparkCloud loggedInUsername]
+-[SparkCloud isLoggedIn]
+-[SparkCloud isAuthenticated]
+-[SparkCloud setoAuthClientId:]
+-[SparkCloud setoAuthClientSecret:]
+-[SparkCloud SparkSession:didExpireAt:]
+-[SparkCloud refreshToken:]
+___27-[SparkCloud refreshToken:]_block_invoke
+___27-[SparkCloud refreshToken:]_block_invoke.93
+-[SparkCloud loginWithUser:password:completion:]
+___48-[SparkCloud loginWithUser:password:completion:]_block_invoke
+___copy_helper_block_.119
+___destroy_helper_block_.120
+___48-[SparkCloud loginWithUser:password:completion:]_block_invoke.122
+-[SparkCloud createUser:password:accountInfo:completion:]
+___57-[SparkCloud createUser:password:accountInfo:completion:]_block_invoke
+___copy_helper_block_.154
+___destroy_helper_block_.155
+___57-[SparkCloud createUser:password:accountInfo:completion:]_block_invoke.157
+___copy_helper_block_.160
+___destroy_helper_block_.161
+-[SparkCloud signupWithUser:password:completion:]
+-[SparkCloud createCustomer:password:productId:accountInfo:completion:]
+___71-[SparkCloud createCustomer:password:productId:accountInfo:completion:]_block_invoke
+___copy_helper_block_.179
+___destroy_helper_block_.180
+___71-[SparkCloud createCustomer:password:productId:accountInfo:completion:]_block_invoke.182
+___copy_helper_block_.185
+___destroy_helper_block_.186
+-[SparkCloud signupWithCustomer:password:orgSlug:completion:]
+-[SparkCloud logout]
+-[SparkCloud claimDevice:completion:]
+___37-[SparkCloud claimDevice:completion:]_block_invoke
+___copy_helper_block_.206
+___destroy_helper_block_.207
+___37-[SparkCloud claimDevice:completion:]_block_invoke.209
+___copy_helper_block_.212
+___destroy_helper_block_.213
+-[SparkCloud getDevice:completion:]
+___35-[SparkCloud getDevice:completion:]_block_invoke
+___copy_helper_block_.231
+___destroy_helper_block_.232
+___35-[SparkCloud getDevice:completion:]_block_invoke.234
+___copy_helper_block_.237
+___destroy_helper_block_.238
+-[SparkCloud getDevices:]
+___25-[SparkCloud getDevices:]_block_invoke
+___25-[SparkCloud getDevices:]_block_invoke.254
+___copy_helper_block_.255
+___destroy_helper_block_.256
+___25-[SparkCloud getDevices:]_block_invoke.261
+___copy_helper_block_.268
+___destroy_helper_block_.269
+___25-[SparkCloud getDevices:]_block_invoke.271
+___copy_helper_block_.274
+___destroy_helper_block_.275
+-[SparkCloud generateClaimCode:]
+___32-[SparkCloud generateClaimCode:]_block_invoke
+___copy_helper_block_.285
+___destroy_helper_block_.286
+___32-[SparkCloud generateClaimCode:]_block_invoke.288
+___copy_helper_block_.291
+___destroy_helper_block_.292
+-[SparkCloud generateClaimCodeForOrganization:andProduct:withActivationCode:completion:]
+-[SparkCloud generateClaimCodeForProduct:completion:]
+___53-[SparkCloud generateClaimCodeForProduct:completion:]_block_invoke
+___copy_helper_block_.298
+___destroy_helper_block_.299
+___53-[SparkCloud generateClaimCodeForProduct:completion:]_block_invoke.301
+___copy_helper_block_.304
+___destroy_helper_block_.305
+-[SparkCloud requestPasswordResetForCustomer:productId:completion:]
+___67-[SparkCloud requestPasswordResetForCustomer:productId:completion:]_block_invoke
+___copy_helper_block_.309
+___destroy_helper_block_.310
+___67-[SparkCloud requestPasswordResetForCustomer:productId:completion:]_block_invoke.312
+___copy_helper_block_.315
+___destroy_helper_block_.316
+-[SparkCloud requestPasswordResetForCustomer:email:completion:]
+-[SparkCloud requestPasswordResetForUser:completion:]
+___53-[SparkCloud requestPasswordResetForUser:completion:]_block_invoke
+___copy_helper_block_.322
+___destroy_helper_block_.323
+___53-[SparkCloud requestPasswordResetForUser:completion:]_block_invoke.325
+___copy_helper_block_.328
+___destroy_helper_block_.329
+-[SparkCloud listTokens:password:]
+___34-[SparkCloud listTokens:password:]_block_invoke
+___34-[SparkCloud listTokens:password:]_block_invoke_2
+-[SparkCloud makeErrorWithDescription:code:]
+-[SparkCloud subscribeToEventWithURL:handler:]
+___46-[SparkCloud subscribeToEventWithURL:handler:]_block_invoke
+___copy_helper_block_.363
+___destroy_helper_block_.364
+-[SparkCloud unsubscribeFromEventWithID:]
+-[SparkCloud subscribeToAllEventsWithPrefix:handler:]
+-[SparkCloud subscribeToMyDevicesEventsWithPrefix:handler:]
+-[SparkCloud subscribeToDeviceEventsWithPrefix:deviceID:handler:]
+-[SparkCloud publishEventWithName:data:isPrivate:ttl:completion:]
+___65-[SparkCloud publishEventWithName:data:isPrivate:ttl:completion:]_block_invoke
+___copy_helper_block_.423
+___destroy_helper_block_.424
+___65-[SparkCloud publishEventWithName:data:isPrivate:ttl:completion:]_block_invoke.426
+___copy_helper_block_.427
+___destroy_helper_block_.428
+-[SparkCloud subscribeToDevicesSystemEvents]
+___44-[SparkCloud subscribeToDevicesSystemEvents]_block_invoke
+___copy_helper_block_.438
+___destroy_helper_block_.439
+-[SparkCloud unsubscribeToDevicesSystemEvents]
+-[SparkCloud dealloc]
+-[SparkCloud oAuthClientId]
+-[SparkCloud setOAuthClientId:]
+-[SparkCloud oAuthClientSecret]
+-[SparkCloud setOAuthClientSecret:]
+-[SparkCloud baseURL]
+-[SparkCloud setBaseURL:]
+-[SparkCloud session]
+-[SparkCloud setSession:]
+-[SparkCloud manager]
+-[SparkCloud setManager:]
+-[SparkCloud eventListenersDict]
+-[SparkCloud setEventListenersDict:]
+-[SparkCloud devicesMapTable]
+-[SparkCloud setDevicesMapTable:]
+-[SparkCloud systemEventsListenerId]
+-[SparkCloud setSystemEventsListenerId:]
+-[SparkCloud .cxx_destruct]
+_sharedInstance.sharedInstance
+_OBJC_IVAR_$_SparkCloud._oAuthClientId
+_OBJC_IVAR_$_SparkCloud._oAuthClientSecret
+___block_literal_global
+___block_descriptor_tmp.121
+___block_descriptor_tmp.156
+___block_descriptor_tmp.162
+___block_descriptor_tmp.181
+___block_descriptor_tmp.187
+___block_descriptor_tmp.208
+___block_descriptor_tmp.214
+___block_descriptor_tmp.233
+___block_descriptor_tmp.239
+___block_descriptor_tmp.258
+___block_descriptor_tmp.267
+___block_descriptor_tmp.270
+___block_descriptor_tmp.276
+___block_descriptor_tmp.287
+___block_descriptor_tmp.293
+___block_descriptor_tmp.300
+___block_descriptor_tmp.306
+___block_descriptor_tmp.311
+___block_descriptor_tmp.317
+___block_descriptor_tmp.324
+___block_descriptor_tmp.330
+___block_descriptor_tmp.333
+___block_literal_global.334
+___block_descriptor_tmp.335
+___block_literal_global.336
+___block_descriptor_tmp.366
+___block_descriptor_tmp.425
+___block_descriptor_tmp.429
+___block_descriptor_tmp.441
+_OBJC_IVAR_$_SparkCloud._baseURL
+_OBJC_IVAR_$_SparkCloud._session
+_OBJC_IVAR_$_SparkCloud._manager
+_OBJC_IVAR_$_SparkCloud._eventListenersDict
+_OBJC_IVAR_$_SparkCloud._devicesMapTable
+_OBJC_IVAR_$_SparkCloud._systemEventsListenerId
+l_OBJC_PROTOCOL_$_SparkSessionDelegate
+l_OBJC_LABEL_PROTOCOL_$_SparkSessionDelegate
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-sdk-ios/Pod/Classes/SDK/SparkCloud.m
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-sdk-ios/Pod/Classes/SDK/SparkCloud.h
+__44-[SparkCloud subscribeToDevicesSystemEvents]_block_invoke
+__65-[SparkCloud publishEventWithName:data:isPrivate:ttl:completion:]_block_invoke.426
+__65-[SparkCloud publishEventWithName:data:isPrivate:ttl:completion:]_block_invoke
+__46-[SparkCloud subscribeToEventWithURL:handler:]_block_invoke
+__34-[SparkCloud listTokens:password:]_block_invoke_2
+__34-[SparkCloud listTokens:password:]_block_invoke
+__53-[SparkCloud requestPasswordResetForUser:completion:]_block_invoke.325
+__53-[SparkCloud requestPasswordResetForUser:completion:]_block_invoke
+__67-[SparkCloud requestPasswordResetForCustomer:productId:completion:]_block_invoke.312
+__67-[SparkCloud requestPasswordResetForCustomer:productId:completion:]_block_invoke
+__53-[SparkCloud generateClaimCodeForProduct:completion:]_block_invoke.301
+__53-[SparkCloud generateClaimCodeForProduct:completion:]_block_invoke
+__32-[SparkCloud generateClaimCode:]_block_invoke.288
+__32-[SparkCloud generateClaimCode:]_block_invoke
+__25-[SparkCloud getDevices:]_block_invoke.271
+__25-[SparkCloud getDevices:]_block_invoke.261
+__25-[SparkCloud getDevices:]_block_invoke.254
+__25-[SparkCloud getDevices:]_block_invoke
+__35-[SparkCloud getDevice:completion:]_block_invoke.234
+__35-[SparkCloud getDevice:completion:]_block_invoke
+__37-[SparkCloud claimDevice:completion:]_block_invoke.209
+__37-[SparkCloud claimDevice:completion:]_block_invoke
+__71-[SparkCloud createCustomer:password:productId:accountInfo:completion:]_block_invoke.182
+__71-[SparkCloud createCustomer:password:productId:accountInfo:completion:]_block_invoke
+__57-[SparkCloud createUser:password:accountInfo:completion:]_block_invoke.157
+__57-[SparkCloud createUser:password:accountInfo:completion:]_block_invoke
+__48-[SparkCloud loginWithUser:password:completion:]_block_invoke.122
+__48-[SparkCloud loginWithUser:password:completion:]_block_invoke
+__27-[SparkCloud refreshToken:]_block_invoke.93
+__27-[SparkCloud refreshToken:]_block_invoke
+/Users/julien/Library/Caches/org.carthage.CarthageKit/DerivedData/10.1_10B61/spark-sdk-ios/f002bd06c7e603bcfc8ab1bf21fd72d47acc16e4/Build/Intermediates.noindex/ArchiveIntermediates/ParticleSDK/IntermediateBuildFilesPath/ParticleSDK.build/Release-iphoneos/ParticleSDK.build/DerivedSources/ParticleSDK_vers.c
+__ZL15__ARCLite__loadv
+__ZL58__arclite_NSMutableDictionary__setObject_forKeyedSubscriptP19NSMutableDictionaryP13objc_selectorP11objc_objectS4_
+__ZL22add_image_hook_swiftV1PK11mach_headerl
+__ZL42__arclite_NSUndoManagerProxy_isKindOfClassP11objc_objectP13objc_selectorP10objc_class
+__ZL30__arclite_NSManagedObject_initP11objc_objectP13objc_selector
+__ZL41__arclite_NSManagedObject_allocWithEntityP11objc_objectP13objc_selectorS0_
+__ZL36__arclite_NSManagedObject_allocBatchP11objc_objectP13objc_selectorPS0_S0_j
+__ZL37__arclite_NSKKMS_fastIndexForKnownKeyP11objc_objectP13objc_selectorS0_
+__ZL28__arclite_NSKKMS_indexForKeyP11objc_objectP13objc_selectorS0_
+__ZL29__arclite_NSKKsD_objectForKeyP11objc_objectP13objc_selectorS0_
+__ZL35__arclite_NSKKsD_removeObjectForKeyP11objc_objectP13objc_selectorS0_
+__ZL33__arclite_NSKKsD_setObject_forKeyP11objc_objectP13objc_selectorS0_S0_
+__ZL41__arclite_NSKKsD_addEntriesFromDictionaryP11objc_objectP13objc_selectorP12NSDictionary
+__ZL28__arclite_objc_readClassPairP10objc_classPK15objc_image_info
+__ZL32__arclite_objc_allocateClassPairP10objc_classPKcm
+__ZL32__arclite_object_getIndexedIvarsP11objc_object
+__ZL23__arclite_objc_getClassPKc
+__ZL27__arclite_objc_getMetaClassPKc
+__ZL31__arclite_objc_getRequiredClassPKc
+__ZL26__arclite_objc_lookUpClassPKc
+__ZL26__arclite_objc_getProtocolPKc
+__ZL23__arclite_class_getNameP10objc_class
+__ZL26__arclite_protocol_getNameP8Protocol
+__ZL37__arclite_objc_copyClassNamesForImagePKcPj
+__ZL17transcribeMethodsP10objc_classP15glue_class_ro_t
+__ZL19transcribeProtocolsP10objc_classP15glue_class_ro_t
+__ZL20transcribePropertiesP10objc_classP15glue_class_ro_t
+__ZL14initialize_impP11objc_objectP13objc_selector
+__ZL18allocateMaybeSwiftP18glue_swift_class_tm
+__ZL22copySwiftV1MangledNamePKcb
+__ZL13demangledNamePKcb
+__ZL16scanMangledFieldRPKcS0_S1_Ri
+__ZL30arclite_uninitialized_functionv
+__ZL12cxxConstructP11objc_object
+__ZL20fixStringForCoreDataP11objc_object
+_OBJC_METACLASS_$___ARCLite__
+__ZL24OBJC_CLASS_$___ARCLite__
+__ZL31OBJC_METACLASS_RO_$___ARCLite__
+__non_lazy_classes
+__ZL27OBJC_CLASS_RO_$___ARCLite__
+__ZL11_class_name
+__ZL32OBJC_$_CLASS_METHODS___ARCLite__
+__ZL17_load_method_name
+__ZL17_load_method_type
+l_OBJC_PROTOCOL_$___ARCLiteKeyedSubscripting__
+l_OBJC_LABEL_PROTOCOL_$___ARCLiteKeyedSubscripting__
+l_OBJC_PROTOCOL_REFERENCE_$___ARCLiteKeyedSubscripting__
+__ZL30NSUndoManagerProxy_targetClass
+__ZL29original_NSManagedObject_init
+__ZL40original_NSManagedObject_allocWithEntity
+__ZL35original_NSManagedObject_allocBatch
+__ZL25NSMutableDictionary_class
+__ZL22NSConstantString_class
+__ZL14NSString_class
+__ZL36original_NSKKMS_fastIndexForKnownKey
+__ZL27original_NSKKMS_indexForKey
+__ZL28original_NSKKsD_objectForKey
+__ZL34original_NSKKsD_removeObjectForKey
+__ZL32original_NSKKsD_setObject_forKey
+__ZL40original_NSKKsD_addEntriesFromDictionary
+__ZZL22add_image_hook_swiftV1PK11mach_headerlE7patches
+__ZGVZL22add_image_hook_swiftV1PK11mach_headerlE7patches
+__ZL31original_objc_allocateClassPair
+__ZL31original_object_getIndexedIvars
+__ZL22original_objc_getClass
+__ZL26original_objc_getMetaClass
+__ZL30original_objc_getRequiredClass
+__ZL25original_objc_lookUpClass
+__ZL25original_objc_getProtocol
+__ZL22original_class_getName
+__ZL25original_protocol_getName
+__ZL36original_objc_copyClassNamesForImage
+__ZL12demangleLock
+__ZL9Demangled
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c++ -arch arm64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c++11 -Wno-trigraphs -fno-exceptions -fno-rtti -fno-sanitize=vptr -mpascal-strings -Os -Wno-missing-field-initializers -Wmissing-prototypes -Wno-implicit-atomic-properties -Wno-objc-interface-ivars -Wno-arc-repeated-use-of-weak -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -Wno-c++11-extensions -D NDEBUG=1 -D OBJC_OLD_DISPATCH_PROTOTYPES=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.Internal.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -Winvalid-offsetof -miphoneos-version-min=4.3 -g -fno-threadsafe-statics -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body -fembed-bitcode=all -iquote /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-generated-files.hmap -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-own-target-headers.hmap -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-all-target-headers.hmap -iquote /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-project-headers.hmap -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/Symbols/BuiltProducts/include -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/DerivedSources/arm64 -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/DerivedSources -F/Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/Symbols/BuiltProducts -iframework /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.Internal.sdk/System/Library/PrivateFrameworks -Wall -Wextra -Wno-gcc-compat -Wno-error=incomplete-umbrella -Wno-error=invalid-ios-deployment-target -Wno-error=incomplete-umbrella -Wno-error=invalid-ios-deployment-target -MMD -MT dependencies -MF /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/Objects-normal/arm64/arclite.d --serialize-diagnostics /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/Objects-normal/arm64/arclite.dia -c /Library/Caches/com.apple.xbs/Sources/arclite_iOS/arclite-70/source/arclite.mm -o /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/Objects-normal/arm64/arclite.o -mlinker-version=409.12
+/Library/Caches/com.apple.xbs/Sources/arclite_iOS/arclite-70/source/arclite.mm
+/Library/Caches/com.apple.xbs/Sources/arclite_iOS/arclite-70
+fixStringForCoreData
+cxxConstruct
+arclite_uninitialized_function
+scanMangledField
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.Internal.sdk/usr/include/_ctype.h
+__isctype
+demangledName
+copySwiftV1DemangledName
+copySwiftV1MangledName
+allocateMaybeSwift
+word_align
+isSwift
+initialize_imp
+transcribeProperties
+property_list_nth
+transcribeProtocols
+transcribeMethods
+data
+method_list_nth
+__arclite_objc_copyClassNamesForImage
+__arclite_protocol_getName
+__arclite_class_getName
+__arclite_objc_getProtocol
+__arclite_objc_lookUpClass
+__arclite_objc_getRequiredClass
+__arclite_objc_getMetaClass
+__arclite_objc_getClass
+__arclite_object_getIndexedIvars
+__arclite_objc_allocateClassPair
+metaclass
+__arclite_objc_readClassPair
+transcribeIvars
+ivar_list_nth
+max
+alignment
+ro
+fastFlags
+__arclite_NSKKsD_addEntriesFromDictionary
+__arclite_NSKKsD_setObject_forKey
+__arclite_NSKKsD_removeObjectForKey
+__arclite_NSKKsD_objectForKey
+__arclite_NSKKMS_indexForKey
+__arclite_NSKKMS_fastIndexForKnownKey
+__arclite_NSManagedObject_allocBatch
+__arclite_NSManagedObject_allocWithEntity
+__arclite_NSManagedObject_init
+__arclite_NSUndoManagerProxy_isKindOfClass
+add_image_hook_swiftV1
+patch_lazy_pointers
+patch_t<const char **(const char *, unsigned int *)>
+patch_t<const char *(Protocol *)>
+patch_t<const char *(Class)>
+patch_t<Protocol *(const char *)>
+patch_t<Class (const char *)>
+patch_t<void *(id)>
+patch_t<Class (Class, const char *, unsigned long)>
+patch_t<Class (Class, const objc_image_info *)>
+__arclite_NSMutableDictionary__setObject_forKeyedSubscript
+__ARCLite__load
+install_swiftV1
+replaceMethod
+install_dict_nil_value
+addOrReplaceMethod
+keyedGetter

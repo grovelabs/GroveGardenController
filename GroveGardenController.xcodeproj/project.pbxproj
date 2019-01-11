@@ -303,7 +303,7 @@
 				TargetAttributes = {
 					173DD2DA1E521AF300888F33 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 8JQ4CHYB58;
+						DevelopmentTeam = 8SU4LF8A2Z;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -532,7 +532,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8JQ4CHYB58;
+				DEVELOPMENT_TEAM = 8SU4LF8A2Z;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -540,7 +540,7 @@
 				INFOPLIST_FILE = GroveGardenController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.grovegrown.GroveGardenController;
+				PRODUCT_BUNDLE_IDENTIFIER = com.grovegrown.jblanchet.GroveGardenController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "GroveGardenController/GroveGardenController-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
@@ -551,7 +551,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8JQ4CHYB58;
+				DEVELOPMENT_TEAM = 8SU4LF8A2Z;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -559,7 +559,7 @@
 				INFOPLIST_FILE = GroveGardenController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.grovegrown.GroveGardenController;
+				PRODUCT_BUNDLE_IDENTIFIER = com.grovegrown.jblanchet.GroveGardenController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "GroveGardenController/GroveGardenController-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;

@@ -104,15 +104,9 @@ open class GroveManager: NSObject, Notifier {
       SparkCloud.sharedInstance().login(withUser: Secrets.Particle.username,
                                         password: Secrets.Particle.password)
       { (error) in
-        switch (error, Secrets.Particle.password_alt) {
-        case (let error?, let password_alt?) where error._code == 400:
-          // Expect 400 error if the first password is no longer valid
-          SparkCloud.sharedInstance().login(withUser: Secrets.Particle.username,
-                                            password: password_alt,
-                                            completion: completion)
-        default:
+        
           completion(error)
-        }
+  
       }
     }
   }
@@ -123,6 +117,7 @@ open class GroveManager: NSObject, Notifier {
    Careful, as each call to this will overwrite each currently held variable.
    */
   func getAllVariables() {
+    
     guard let device = self.grove?.device else { return }
 
     device.getVariable("sensors") { (data, error) in

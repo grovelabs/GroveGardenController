@@ -1,0 +1,1200 @@
+BCSymbolMap Version: 2.0
+-[SparkSetupResultViewController viewDidLoad]
+-[SparkSetupResultViewController didReceiveMemoryWarning]
+-[SparkSetupResultViewController viewDidAppear:]
+___48-[SparkSetupResultViewController viewDidAppear:]_block_invoke
+___copy_helper_block_
+___destroy_helper_block_
+-[SparkSetupResultViewController viewWillAppear:]
+-[SparkSetupResultViewController textFieldShouldReturn:]
+___56-[SparkSetupResultViewController textFieldShouldReturn:]_block_invoke
+___copy_helper_block_.240
+___destroy_helper_block_.241
+-[SparkSetupResultViewController doneButtonTapped:]
++[SparkSetupResultViewController exitSetup::]
+-[SparkSetupResultViewController troubleshootingButtonTouched:]
+-[SparkSetupResultViewController device]
+-[SparkSetupResultViewController setDevice:]
+-[SparkSetupResultViewController setupResult]
+-[SparkSetupResultViewController setSetupResult:]
+-[SparkSetupResultViewController shortMessageLabel]
+-[SparkSetupResultViewController setShortMessageLabel:]
+-[SparkSetupResultViewController longMessageLabel]
+-[SparkSetupResultViewController setLongMessageLabel:]
+-[SparkSetupResultViewController setupResultImageView]
+-[SparkSetupResultViewController setSetupResultImageView:]
+-[SparkSetupResultViewController brandImageView]
+-[SparkSetupResultViewController setBrandImageView:]
+-[SparkSetupResultViewController nameDeviceLabel]
+-[SparkSetupResultViewController setNameDeviceLabel:]
+-[SparkSetupResultViewController nameDeviceTextField]
+-[SparkSetupResultViewController setNameDeviceTextField:]
+-[SparkSetupResultViewController randomDeviceNamesArray]
+-[SparkSetupResultViewController setRandomDeviceNamesArray:]
+-[SparkSetupResultViewController doneButton]
+-[SparkSetupResultViewController setDoneButton:]
+-[SparkSetupResultViewController .cxx_destruct]
+___block_descriptor_tmp
+___block_descriptor_tmp.243
+_OBJC_IVAR_$_SparkSetupResultViewController._device
+_OBJC_IVAR_$_SparkSetupResultViewController._setupResult
+_OBJC_IVAR_$_SparkSetupResultViewController._shortMessageLabel
+_OBJC_IVAR_$_SparkSetupResultViewController._longMessageLabel
+_OBJC_IVAR_$_SparkSetupResultViewController._setupResultImageView
+_OBJC_IVAR_$_SparkSetupResultViewController._brandImageView
+_OBJC_IVAR_$_SparkSetupResultViewController._nameDeviceLabel
+_OBJC_IVAR_$_SparkSetupResultViewController._nameDeviceTextField
+_OBJC_IVAR_$_SparkSetupResultViewController._randomDeviceNamesArray
+_OBJC_IVAR_$_SparkSetupResultViewController._doneButton
+l_OBJC_PROTOCOL_$_NSObject
+l_OBJC_LABEL_PROTOCOL_$_NSObject
+l_OBJC_PROTOCOL_$_UITextFieldDelegate
+l_OBJC_LABEL_PROTOCOL_$_UITextFieldDelegate
+Apple LLVM version 10.0.0 (clang-1000.11.45.5)
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/UI/SparkSetupResultViewController.m
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/ParticleDeviceSetupLibrary
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/UI/SparkSetupResultViewController.h
+__destroy_helper_block_
+__copy_helper_block_
+__56-[SparkSetupResultViewController textFieldShouldReturn:]_block_invoke
+__48-[SparkSetupResultViewController viewDidAppear:]_block_invoke
+UI_USER_INTERFACE_IDIOM
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIDevice.h
++[Reachability reachabilityWithHostName:]
++[Reachability reachabilityWithAddress:]
++[Reachability reachabilityForInternetConnection]
++[Reachability reachabilityForLocalWiFi]
+-[Reachability startNotifier]
+_ReachabilityCallback
+-[Reachability stopNotifier]
+-[Reachability dealloc]
+-[Reachability localWiFiStatusForFlags:]
+-[Reachability networkStatusForFlags:]
+-[Reachability connectionRequired]
+-[Reachability currentReachabilityStatus]
+_OBJC_IVAR_$_Reachability._reachabilityRef
+_OBJC_IVAR_$_Reachability._alwaysReturnLocalWiFiStatus
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/Comm/Reachability.m
+ReachabilityCallback
+-[SparkSetupVideoViewController viewDidLoad]
+-[SparkSetupVideoViewController didReceiveMemoryWarning]
+-[SparkSetupVideoViewController viewWillAppear:]
+-[SparkSetupVideoViewController viewWillDisappear:]
+-[SparkSetupVideoViewController viewDidAppear:]
+-[SparkSetupVideoViewController doneButtonTapped:]
+-[SparkSetupVideoViewController videoFilePath]
+-[SparkSetupVideoViewController setVideoFilePath:]
+-[SparkSetupVideoViewController videoView]
+-[SparkSetupVideoViewController setVideoView:]
+-[SparkSetupVideoViewController brandImageView]
+-[SparkSetupVideoViewController setBrandImageView:]
+-[SparkSetupVideoViewController videoPlayer]
+-[SparkSetupVideoViewController setVideoPlayer:]
+-[SparkSetupVideoViewController .cxx_destruct]
+_OBJC_IVAR_$_SparkSetupVideoViewController._videoFilePath
+_OBJC_IVAR_$_SparkSetupVideoViewController._videoView
+_OBJC_IVAR_$_SparkSetupVideoViewController._brandImageView
+_OBJC_IVAR_$_SparkSetupVideoViewController._videoPlayer
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/UI/SparkSetupVideoViewController.m
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/UI/SparkSetupVideoViewController.h
+-[SparkUserLoginViewController viewDidLoad]
+-[SparkUserLoginViewController didReceiveMemoryWarning]
+-[SparkUserLoginViewController textFieldShouldReturn:]
+-[SparkUserLoginViewController forgotPasswordButton:]
+-[SparkUserLoginViewController viewWillAppear:]
+-[SparkUserLoginViewController loginButton:]
+___44-[SparkUserLoginViewController loginButton:]_block_invoke
+-[SparkUserLoginViewController noAccountButton:]
+-[SparkUserLoginViewController alertView:clickedButtonAtIndex:]
+-[SparkUserLoginViewController skipAuthButtonTapped:]
+-[SparkUserLoginViewController delegate]
+-[SparkUserLoginViewController setDelegate:]
+-[SparkUserLoginViewController emailTextField]
+-[SparkUserLoginViewController setEmailTextField:]
+-[SparkUserLoginViewController passwordTextField]
+-[SparkUserLoginViewController setPasswordTextField:]
+-[SparkUserLoginViewController forgotButton]
+-[SparkUserLoginViewController setForgotButton:]
+-[SparkUserLoginViewController loginButton]
+-[SparkUserLoginViewController setLoginButton:]
+-[SparkUserLoginViewController brandImage]
+-[SparkUserLoginViewController setBrandImage:]
+-[SparkUserLoginViewController noAccountButton]
+-[SparkUserLoginViewController setNoAccountButton:]
+-[SparkUserLoginViewController loginLabel]
+-[SparkUserLoginViewController setLoginLabel:]
+-[SparkUserLoginViewController skipAuthAlertView]
+-[SparkUserLoginViewController setSkipAuthAlertView:]
+-[SparkUserLoginViewController spinner]
+-[SparkUserLoginViewController setSpinner:]
+-[SparkUserLoginViewController skipAuthButton]
+-[SparkUserLoginViewController setSkipAuthButton:]
+-[SparkUserLoginViewController .cxx_destruct]
+_OBJC_IVAR_$_SparkUserLoginViewController._delegate
+_OBJC_IVAR_$_SparkUserLoginViewController._emailTextField
+_OBJC_IVAR_$_SparkUserLoginViewController._passwordTextField
+_OBJC_IVAR_$_SparkUserLoginViewController._forgotButton
+_OBJC_IVAR_$_SparkUserLoginViewController._loginButton
+_OBJC_IVAR_$_SparkUserLoginViewController._brandImage
+_OBJC_IVAR_$_SparkUserLoginViewController._noAccountButton
+_OBJC_IVAR_$_SparkUserLoginViewController._loginLabel
+_OBJC_IVAR_$_SparkUserLoginViewController._skipAuthAlertView
+_OBJC_IVAR_$_SparkUserLoginViewController._spinner
+_OBJC_IVAR_$_SparkUserLoginViewController._skipAuthButton
+l_OBJC_PROTOCOL_$_UIAlertViewDelegate
+l_OBJC_LABEL_PROTOCOL_$_UIAlertViewDelegate
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/UI/SparkUserLoginViewController.m
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/UI/SparkUserLoginViewController.h
+__44-[SparkUserLoginViewController loginButton:]_block_invoke
+-[SparkSetupUISpinner setType:]
+-[SparkSetupUISpinner startAnimating]
+-[SparkSetupUISpinner stopAnimating]
+-[SparkSetupUISpinner initWithType:]
+-[SparkSetupUISpinner type]
+-[SparkSetupUISpinner .cxx_destruct]
+_OBJC_IVAR_$_SparkSetupUISpinner._type
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/UI/UI Elements/SparkSetupUISpinner.m
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/UI/UI Elements/SparkSetupUISpinner.h
++[UIColor(withDecimalRGB) colorWithRed:green:blue:]
++[SparkSetupCustomization sharedInstance]
+-[SparkSetupCustomization init]
+-[SparkSetupCustomization deviceName]
+-[SparkSetupCustomization setDeviceName:]
+-[SparkSetupCustomization productImage]
+-[SparkSetupCustomization setProductImage:]
+-[SparkSetupCustomization brandName]
+-[SparkSetupCustomization setBrandName:]
+-[SparkSetupCustomization brandImage]
+-[SparkSetupCustomization setBrandImage:]
+-[SparkSetupCustomization brandImageBackgroundColor]
+-[SparkSetupCustomization setBrandImageBackgroundColor:]
+-[SparkSetupCustomization instructionalVideoFilename]
+-[SparkSetupCustomization setInstructionalVideoFilename:]
+-[SparkSetupCustomization modeButtonName]
+-[SparkSetupCustomization setModeButtonName:]
+-[SparkSetupCustomization listenModeLEDColorName]
+-[SparkSetupCustomization setListenModeLEDColorName:]
+-[SparkSetupCustomization networkNamePrefix]
+-[SparkSetupCustomization setNetworkNamePrefix:]
+-[SparkSetupCustomization termsOfServiceLinkURL]
+-[SparkSetupCustomization setTermsOfServiceLinkURL:]
+-[SparkSetupCustomization privacyPolicyLinkURL]
+-[SparkSetupCustomization setPrivacyPolicyLinkURL:]
+-[SparkSetupCustomization forgotPasswordLinkURL]
+-[SparkSetupCustomization setForgotPasswordLinkURL:]
+-[SparkSetupCustomization troubleshootingLinkURL]
+-[SparkSetupCustomization setTroubleshootingLinkURL:]
+-[SparkSetupCustomization termsOfServiceHTMLFile]
+-[SparkSetupCustomization setTermsOfServiceHTMLFile:]
+-[SparkSetupCustomization privacyPolicyHTMLFile]
+-[SparkSetupCustomization setPrivacyPolicyHTMLFile:]
+-[SparkSetupCustomization forgotPasswordHTMLFile]
+-[SparkSetupCustomization setForgotPasswordHTMLFile:]
+-[SparkSetupCustomization troubleshootingHTMLFile]
+-[SparkSetupCustomization setTroubleshootingHTMLFile:]
+-[SparkSetupCustomization pageBackgroundColor]
+-[SparkSetupCustomization setPageBackgroundColor:]
+-[SparkSetupCustomization pageBackgroundImage]
+-[SparkSetupCustomization setPageBackgroundImage:]
+-[SparkSetupCustomization normalTextColor]
+-[SparkSetupCustomization setNormalTextColor:]
+-[SparkSetupCustomization linkTextColor]
+-[SparkSetupCustomization setLinkTextColor:]
+-[SparkSetupCustomization elementBackgroundColor]
+-[SparkSetupCustomization setElementBackgroundColor:]
+-[SparkSetupCustomization elementTextColor]
+-[SparkSetupCustomization setElementTextColor:]
+-[SparkSetupCustomization tintSetupImages]
+-[SparkSetupCustomization setTintSetupImages:]
+-[SparkSetupCustomization normalTextFontName]
+-[SparkSetupCustomization setNormalTextFontName:]
+-[SparkSetupCustomization headerTextFontName]
+-[SparkSetupCustomization setHeaderTextFontName:]
+-[SparkSetupCustomization boldTextFontName]
+-[SparkSetupCustomization setBoldTextFontName:]
+-[SparkSetupCustomization fontSizeOffset]
+-[SparkSetupCustomization setFontSizeOffset:]
+-[SparkSetupCustomization organization]
+-[SparkSetupCustomization setOrganization:]
+-[SparkSetupCustomization organizationName]
+-[SparkSetupCustomization setOrganizationName:]
+-[SparkSetupCustomization organizationSlug]
+-[SparkSetupCustomization setOrganizationSlug:]
+-[SparkSetupCustomization productName]
+-[SparkSetupCustomization setProductName:]
+-[SparkSetupCustomization productSlug]
+-[SparkSetupCustomization setProductSlug:]
+-[SparkSetupCustomization allowSkipAuthentication]
+-[SparkSetupCustomization setAllowSkipAuthentication:]
+-[SparkSetupCustomization skipAuthenticationMessage]
+-[SparkSetupCustomization setSkipAuthenticationMessage:]
+-[SparkSetupCustomization disableLogOutOption]
+-[SparkSetupCustomization setDisableLogOutOption:]
+-[SparkSetupCustomization disableDeviceRename]
+-[SparkSetupCustomization setDisableDeviceRename:]
+-[SparkSetupCustomization deviceId]
+-[SparkSetupCustomization setDeviceId:]
+-[SparkSetupCustomization .cxx_destruct]
+_sharedInstance.sharedInstance
+_OBJC_IVAR_$_SparkSetupCustomization._deviceName
+_OBJC_IVAR_$_SparkSetupCustomization._productImage
+_OBJC_IVAR_$_SparkSetupCustomization._brandName
+_OBJC_IVAR_$_SparkSetupCustomization._brandImage
+_OBJC_IVAR_$_SparkSetupCustomization._brandImageBackgroundColor
+_OBJC_IVAR_$_SparkSetupCustomization._instructionalVideoFilename
+_OBJC_IVAR_$_SparkSetupCustomization._modeButtonName
+_OBJC_IVAR_$_SparkSetupCustomization._listenModeLEDColorName
+_OBJC_IVAR_$_SparkSetupCustomization._networkNamePrefix
+_OBJC_IVAR_$_SparkSetupCustomization._termsOfServiceLinkURL
+_OBJC_IVAR_$_SparkSetupCustomization._privacyPolicyLinkURL
+_OBJC_IVAR_$_SparkSetupCustomization._forgotPasswordLinkURL
+_OBJC_IVAR_$_SparkSetupCustomization._troubleshootingLinkURL
+_OBJC_IVAR_$_SparkSetupCustomization._termsOfServiceHTMLFile
+_OBJC_IVAR_$_SparkSetupCustomization._privacyPolicyHTMLFile
+_OBJC_IVAR_$_SparkSetupCustomization._forgotPasswordHTMLFile
+_OBJC_IVAR_$_SparkSetupCustomization._troubleshootingHTMLFile
+_OBJC_IVAR_$_SparkSetupCustomization._pageBackgroundColor
+_OBJC_IVAR_$_SparkSetupCustomization._pageBackgroundImage
+_OBJC_IVAR_$_SparkSetupCustomization._normalTextColor
+_OBJC_IVAR_$_SparkSetupCustomization._linkTextColor
+_OBJC_IVAR_$_SparkSetupCustomization._elementBackgroundColor
+_OBJC_IVAR_$_SparkSetupCustomization._elementTextColor
+_OBJC_IVAR_$_SparkSetupCustomization._tintSetupImages
+_OBJC_IVAR_$_SparkSetupCustomization._normalTextFontName
+_OBJC_IVAR_$_SparkSetupCustomization._headerTextFontName
+_OBJC_IVAR_$_SparkSetupCustomization._boldTextFontName
+_OBJC_IVAR_$_SparkSetupCustomization._fontSizeOffset
+_OBJC_IVAR_$_SparkSetupCustomization._organization
+_OBJC_IVAR_$_SparkSetupCustomization._organizationName
+_OBJC_IVAR_$_SparkSetupCustomization._organizationSlug
+_OBJC_IVAR_$_SparkSetupCustomization._productName
+_OBJC_IVAR_$_SparkSetupCustomization._productSlug
+_OBJC_IVAR_$_SparkSetupCustomization._allowSkipAuthentication
+_OBJC_IVAR_$_SparkSetupCustomization._skipAuthenticationMessage
+_OBJC_IVAR_$_SparkSetupCustomization._disableLogOutOption
+_OBJC_IVAR_$_SparkSetupCustomization._disableDeviceRename
+_OBJC_IVAR_$_SparkSetupCustomization._deviceId
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/User/SparkSetupCustomization.m
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/User/SparkSetupCustomization.h
+-[SparkUserForgotPasswordViewController viewDidLoad]
+-[SparkUserForgotPasswordViewController didReceiveMemoryWarning]
+-[SparkUserForgotPasswordViewController resetPasswordButtonTapped:]
+___67-[SparkUserForgotPasswordViewController resetPasswordButtonTapped:]_block_invoke
+-[SparkUserForgotPasswordViewController viewWillAppear:]
+-[SparkUserForgotPasswordViewController textFieldShouldReturn:]
+-[SparkUserForgotPasswordViewController alertView:clickedButtonAtIndex:]
+-[SparkUserForgotPasswordViewController cancelButtonTapped:]
+-[SparkUserForgotPasswordViewController delegate]
+-[SparkUserForgotPasswordViewController setDelegate:]
+-[SparkUserForgotPasswordViewController emailTextField]
+-[SparkUserForgotPasswordViewController setEmailTextField:]
+-[SparkUserForgotPasswordViewController brandImageView]
+-[SparkUserForgotPasswordViewController setBrandImageView:]
+-[SparkUserForgotPasswordViewController spinner]
+-[SparkUserForgotPasswordViewController setSpinner:]
+-[SparkUserForgotPasswordViewController .cxx_destruct]
+_OBJC_IVAR_$_SparkUserForgotPasswordViewController._delegate
+_OBJC_IVAR_$_SparkUserForgotPasswordViewController._emailTextField
+_OBJC_IVAR_$_SparkUserForgotPasswordViewController._brandImageView
+_OBJC_IVAR_$_SparkUserForgotPasswordViewController._spinner
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/UI/SparkUserForgotPasswordViewController.m
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/UI/SparkUserForgotPasswordViewController.h
+__67-[SparkUserForgotPasswordViewController resetPasswordButtonTapped:]_block_invoke
+-[SparkSetupUIButton initWithCoder:]
+-[SparkSetupUIButton replacePredefinedText]
+-[SparkSetupUIButton darkerColorForColor:]
+-[SparkSetupUIButton didTouchButton:]
+-[SparkSetupUIButton didUntouchButton:]
+-[SparkSetupUIButton setType:]
+-[SparkSetupUIButton setEnabled:]
+-[SparkSetupUIButton type]
+-[SparkSetupUIButton .cxx_destruct]
+_OBJC_IVAR_$_SparkSetupUIButton._type
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/UI/UI Elements/SparkSetupUIButton.m
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/UI/UI Elements/SparkSetupUIButton.h
+NSMakeRange
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSRange.h
+-[SparkSelectNetworkViewController viewDidLoad]
+-[SparkSelectNetworkViewController sortWifiList]
+___48-[SparkSelectNetworkViewController sortWifiList]_block_invoke
+-[SparkSelectNetworkViewController tableView:cellForRowAtIndexPath:]
+-[SparkSelectNetworkViewController checkPhotonConnection:]
+-[SparkSelectNetworkViewController viewDidAppear:]
+-[SparkSelectNetworkViewController restartDeviceDetectionTimer]
+-[SparkSelectNetworkViewController tableView:numberOfRowsInSection:]
+-[SparkSelectNetworkViewController numberOfSectionsInTableView:]
+-[SparkSelectNetworkViewController didReceiveMemoryWarning]
+-[SparkSelectNetworkViewController tableView:heightForRowAtIndexPath:]
+-[SparkSelectNetworkViewController prepareForSegue:sender:]
+-[SparkSelectNetworkViewController tableView:didSelectRowAtIndexPath:]
+-[SparkSelectNetworkViewController manualNetworkButtonTapped:]
+-[SparkSelectNetworkViewController viewWillAppear:]
+-[SparkSelectNetworkViewController photonScanAP]
+___48-[SparkSelectNetworkViewController photonScanAP]_block_invoke
+-[SparkSelectNetworkViewController refreshScanButton:]
+-[SparkSelectNetworkViewController wifiList]
+-[SparkSelectNetworkViewController setWifiList:]
+-[SparkSelectNetworkViewController deviceID]
+-[SparkSelectNetworkViewController setDeviceID:]
+-[SparkSelectNetworkViewController needToClaimDevice]
+-[SparkSelectNetworkViewController setNeedToClaimDevice:]
+-[SparkSelectNetworkViewController delegate]
+-[SparkSelectNetworkViewController setDelegate:]
+-[SparkSelectNetworkViewController wifiTableView]
+-[SparkSelectNetworkViewController setWifiTableView:]
+-[SparkSelectNetworkViewController brandImageView]
+-[SparkSelectNetworkViewController setBrandImageView:]
+-[SparkSelectNetworkViewController refreshButton]
+-[SparkSelectNetworkViewController setRefreshButton:]
+-[SparkSelectNetworkViewController selectNetworkLabel]
+-[SparkSelectNetworkViewController setSelectNetworkLabel:]
+-[SparkSelectNetworkViewController spinner]
+-[SparkSelectNetworkViewController setSpinner:]
+-[SparkSelectNetworkViewController selectedNetworkIndexPath]
+-[SparkSelectNetworkViewController setSelectedNetworkIndexPath:]
+-[SparkSelectNetworkViewController checkConnectionTimer]
+-[SparkSelectNetworkViewController setCheckConnectionTimer:]
+-[SparkSelectNetworkViewController selectedNetworkSSID]
+-[SparkSelectNetworkViewController setSelectedNetworkSSID:]
+-[SparkSelectNetworkViewController selectedNetworkSecurity]
+-[SparkSelectNetworkViewController setSelectedNetworkSecurity:]
+-[SparkSelectNetworkViewController selectedNetworkChannel]
+-[SparkSelectNetworkViewController setSelectedNetworkChannel:]
+-[SparkSelectNetworkViewController .cxx_destruct]
+___block_literal_global
+___block_descriptor_tmp.215
+_OBJC_IVAR_$_SparkSelectNetworkViewController._wifiList
+_OBJC_IVAR_$_SparkSelectNetworkViewController._deviceID
+_OBJC_IVAR_$_SparkSelectNetworkViewController._needToClaimDevice
+_OBJC_IVAR_$_SparkSelectNetworkViewController._delegate
+_OBJC_IVAR_$_SparkSelectNetworkViewController._wifiTableView
+_OBJC_IVAR_$_SparkSelectNetworkViewController._brandImageView
+_OBJC_IVAR_$_SparkSelectNetworkViewController._refreshButton
+_OBJC_IVAR_$_SparkSelectNetworkViewController._selectNetworkLabel
+_OBJC_IVAR_$_SparkSelectNetworkViewController._spinner
+_OBJC_IVAR_$_SparkSelectNetworkViewController._selectedNetworkIndexPath
+_OBJC_IVAR_$_SparkSelectNetworkViewController._checkConnectionTimer
+_OBJC_IVAR_$_SparkSelectNetworkViewController._selectedNetworkSSID
+_OBJC_IVAR_$_SparkSelectNetworkViewController._selectedNetworkSecurity
+_OBJC_IVAR_$_SparkSelectNetworkViewController._selectedNetworkChannel
+l_OBJC_PROTOCOL_$_UITableViewDataSource
+l_OBJC_LABEL_PROTOCOL_$_UITableViewDataSource
+l_OBJC_PROTOCOL_$_UIScrollViewDelegate
+l_OBJC_LABEL_PROTOCOL_$_UIScrollViewDelegate
+l_OBJC_PROTOCOL_$_UITableViewDelegate
+l_OBJC_LABEL_PROTOCOL_$_UITableViewDelegate
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/UI/SparkSelectNetworkViewController.m
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/UI/SparkSelectNetworkViewController.h
+__48-[SparkSelectNetworkViewController photonScanAP]_block_invoke
+__48-[SparkSelectNetworkViewController sortWifiList]_block_invoke
+-[SparkManualNetworkViewController viewDidLoad]
+-[SparkManualNetworkViewController didReceiveMemoryWarning]
+-[SparkManualNetworkViewController viewWillAppear:]
+-[SparkManualNetworkViewController prepareForSegue:sender:]
+-[SparkManualNetworkViewController connectButtonTapped:]
+-[SparkManualNetworkViewController cancelButtonTapped:]
+-[SparkManualNetworkViewController textFieldShouldReturn:]
+-[SparkManualNetworkViewController deviceID]
+-[SparkManualNetworkViewController setDeviceID:]
+-[SparkManualNetworkViewController needToClaimDevice]
+-[SparkManualNetworkViewController setNeedToClaimDevice:]
+-[SparkManualNetworkViewController brandImageView]
+-[SparkManualNetworkViewController setBrandImageView:]
+-[SparkManualNetworkViewController networkNameTextField]
+-[SparkManualNetworkViewController setNetworkNameTextField:]
+-[SparkManualNetworkViewController networkRequiresPasswordSwitch]
+-[SparkManualNetworkViewController setNetworkRequiresPasswordSwitch:]
+-[SparkManualNetworkViewController wifiSymbolImageView]
+-[SparkManualNetworkViewController setWifiSymbolImageView:]
+-[SparkManualNetworkViewController backButton]
+-[SparkManualNetworkViewController setBackButton:]
+-[SparkManualNetworkViewController .cxx_destruct]
+_OBJC_IVAR_$_SparkManualNetworkViewController._deviceID
+_OBJC_IVAR_$_SparkManualNetworkViewController._needToClaimDevice
+_OBJC_IVAR_$_SparkManualNetworkViewController._brandImageView
+_OBJC_IVAR_$_SparkManualNetworkViewController._networkNameTextField
+_OBJC_IVAR_$_SparkManualNetworkViewController._networkRequiresPasswordSwitch
+_OBJC_IVAR_$_SparkManualNetworkViewController._wifiSymbolImageView
+_OBJC_IVAR_$_SparkManualNetworkViewController._backButton
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/UI/SparkManualNetworkViewController.m
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/UI/SparkManualNetworkViewController.h
+-[SparkConnectingProgressView label]
+-[SparkConnectingProgressView setLabel:]
+-[SparkConnectingProgressView spinner]
+-[SparkConnectingProgressView setSpinner:]
+-[SparkConnectingProgressView .cxx_destruct]
+-[SparkConnectingProgressViewController viewDidLoad]
+-[SparkConnectingProgressViewController viewWillAppear:]
+-[SparkConnectingProgressViewController reachabilityChanged:]
+-[SparkConnectingProgressViewController didReceiveMemoryWarning]
+-[SparkConnectingProgressViewController setCurrentConnectionProgressStateError:]
+___80-[SparkConnectingProgressViewController setCurrentConnectionProgressStateError:]_block_invoke
+-[SparkConnectingProgressViewController tintConnectionProgressStateSpinner]
+-[SparkConnectingProgressViewController nextConnectionProgressState]
+___68-[SparkConnectingProgressViewController nextConnectionProgressState]_block_invoke
+___copy_helper_block_.131
+___destroy_helper_block_.132
+-[SparkConnectingProgressViewController viewDidAppear:]
+-[SparkConnectingProgressViewController finishSetupWithResult:]
+___63-[SparkConnectingProgressViewController finishSetupWithResult:]_block_invoke
+___copy_helper_block_.146
+___destroy_helper_block_.147
+-[SparkConnectingProgressViewController prepareForSegue:sender:]
+-[SparkConnectingProgressViewController configureDeviceNetworkCredentials]
+___Block_byref_object_copy_
+___Block_byref_object_dispose_
+___74-[SparkConnectingProgressViewController configureDeviceNetworkCredentials]_block_invoke
+___74-[SparkConnectingProgressViewController configureDeviceNetworkCredentials]_block_invoke_2
+___copy_helper_block_.186
+___destroy_helper_block_.187
+___copy_helper_block_.189
+___destroy_helper_block_.190
+-[SparkConnectingProgressViewController connectDeviceToNetwork]
+___63-[SparkConnectingProgressViewController connectDeviceToNetwork]_block_invoke
+___copy_helper_block_.208
+___destroy_helper_block_.209
+-[SparkConnectingProgressViewController waitForCloudConnection]
+___63-[SparkConnectingProgressViewController waitForCloudConnection]_block_invoke
+___copy_helper_block_.215
+___destroy_helper_block_.216
+-[SparkConnectingProgressViewController checkForInternetConnectivity]
+___69-[SparkConnectingProgressViewController checkForInternetConnectivity]_block_invoke
+___copy_helper_block_.221
+___destroy_helper_block_.222
+-[SparkConnectingProgressViewController checkDeviceIsClaimed]
+___61-[SparkConnectingProgressViewController checkDeviceIsClaimed]_block_invoke
+___61-[SparkConnectingProgressViewController checkDeviceIsClaimed]_block_invoke_2
+___copy_helper_block_.243
+___destroy_helper_block_.244
+___61-[SparkConnectingProgressViewController checkDeviceIsClaimed]_block_invoke.246
+___61-[SparkConnectingProgressViewController checkDeviceIsClaimed]_block_invoke_2.247
+___Block_byref_object_copy_.248
+___Block_byref_object_dispose_.249
+___61-[SparkConnectingProgressViewController checkDeviceIsClaimed]_block_invoke.250
+___61-[SparkConnectingProgressViewController checkDeviceIsClaimed]_block_invoke_2.263
+___copy_helper_block_.281
+___destroy_helper_block_.282
+___copy_helper_block_.287
+___destroy_helper_block_.288
+___copy_helper_block_.290
+___destroy_helper_block_.291
+___copy_helper_block_.293
+___destroy_helper_block_.294
+___copy_helper_block_.299
+___destroy_helper_block_.300
+-[SparkConnectingProgressViewController dealloc]
+-[SparkConnectingProgressViewController viewWillDisappear:]
+-[SparkConnectingProgressViewController startAnimatingSpinner:]
+-[SparkConnectingProgressViewController stopAnimatingSpinner:]
+-[SparkConnectingProgressViewController networkName]
+-[SparkConnectingProgressViewController setNetworkName:]
+-[SparkConnectingProgressViewController deviceID]
+-[SparkConnectingProgressViewController setDeviceID:]
+-[SparkConnectingProgressViewController password]
+-[SparkConnectingProgressViewController setPassword:]
+-[SparkConnectingProgressViewController channel]
+-[SparkConnectingProgressViewController setChannel:]
+-[SparkConnectingProgressViewController security]
+-[SparkConnectingProgressViewController setSecurity:]
+-[SparkConnectingProgressViewController needToClaimDevice]
+-[SparkConnectingProgressViewController setNeedToClaimDevice:]
+-[SparkConnectingProgressViewController ssidLabel]
+-[SparkConnectingProgressViewController setSsidLabel:]
+-[SparkConnectingProgressViewController connectionProgressTextList]
+-[SparkConnectingProgressViewController setConnectionProgressTextList:]
+-[SparkConnectingProgressViewController deviceIsConnectingLabel]
+-[SparkConnectingProgressViewController setDeviceIsConnectingLabel:]
+-[SparkConnectingProgressViewController brandImageView]
+-[SparkConnectingProgressViewController setBrandImageView:]
+-[SparkConnectingProgressViewController device]
+-[SparkConnectingProgressViewController setDevice:]
+-[SparkConnectingProgressViewController hostReachability]
+-[SparkConnectingProgressViewController setHostReachability:]
+-[SparkConnectingProgressViewController hostReachable]
+-[SparkConnectingProgressViewController setHostReachable:]
+-[SparkConnectingProgressViewController apiReachable]
+-[SparkConnectingProgressViewController setApiReachable:]
+-[SparkConnectingProgressViewController claimRetries]
+-[SparkConnectingProgressViewController setClaimRetries:]
+-[SparkConnectingProgressViewController configureRetries]
+-[SparkConnectingProgressViewController setConfigureRetries:]
+-[SparkConnectingProgressViewController connectAPRetries]
+-[SparkConnectingProgressViewController setConnectAPRetries:]
+-[SparkConnectingProgressViewController disconnectRetries]
+-[SparkConnectingProgressViewController setDisconnectRetries:]
+-[SparkConnectingProgressViewController errorAlertView]
+-[SparkConnectingProgressViewController setErrorAlertView:]
+-[SparkConnectingProgressViewController setupResult]
+-[SparkConnectingProgressViewController setSetupResult:]
+-[SparkConnectingProgressViewController currentState]
+-[SparkConnectingProgressViewController setCurrentState:]
+-[SparkConnectingProgressViewController currentStateView]
+-[SparkConnectingProgressViewController setCurrentStateView:]
+-[SparkConnectingProgressViewController progressViews]
+-[SparkConnectingProgressViewController setProgressViews:]
+-[SparkConnectingProgressViewController wifiSymbolImageView]
+-[SparkConnectingProgressViewController setWifiSymbolImageView:]
+-[SparkConnectingProgressViewController .cxx_destruct]
+_OBJC_IVAR_$_SparkConnectingProgressView._label
+_OBJC_IVAR_$_SparkConnectingProgressView._spinner
+___block_descriptor_tmp.133
+___block_descriptor_tmp.148
+___block_descriptor_tmp.188
+___block_descriptor_tmp.192
+___block_descriptor_tmp.210
+___block_descriptor_tmp.217
+___block_descriptor_tmp.224
+___block_descriptor_tmp.245
+___block_descriptor_tmp.284
+___block_descriptor_tmp.289
+___block_descriptor_tmp.292
+___block_descriptor_tmp.296
+___block_descriptor_tmp.301
+_OBJC_IVAR_$_SparkConnectingProgressViewController._networkName
+_OBJC_IVAR_$_SparkConnectingProgressViewController._deviceID
+_OBJC_IVAR_$_SparkConnectingProgressViewController._password
+_OBJC_IVAR_$_SparkConnectingProgressViewController._channel
+_OBJC_IVAR_$_SparkConnectingProgressViewController._security
+_OBJC_IVAR_$_SparkConnectingProgressViewController._needToClaimDevice
+_OBJC_IVAR_$_SparkConnectingProgressViewController._ssidLabel
+_OBJC_IVAR_$_SparkConnectingProgressViewController._connectionProgressTextList
+_OBJC_IVAR_$_SparkConnectingProgressViewController._deviceIsConnectingLabel
+_OBJC_IVAR_$_SparkConnectingProgressViewController._brandImageView
+_OBJC_IVAR_$_SparkConnectingProgressViewController._device
+_OBJC_IVAR_$_SparkConnectingProgressViewController._hostReachability
+_OBJC_IVAR_$_SparkConnectingProgressViewController._hostReachable
+_OBJC_IVAR_$_SparkConnectingProgressViewController._apiReachable
+_OBJC_IVAR_$_SparkConnectingProgressViewController._claimRetries
+_OBJC_IVAR_$_SparkConnectingProgressViewController._configureRetries
+_OBJC_IVAR_$_SparkConnectingProgressViewController._connectAPRetries
+_OBJC_IVAR_$_SparkConnectingProgressViewController._disconnectRetries
+_OBJC_IVAR_$_SparkConnectingProgressViewController._errorAlertView
+_OBJC_IVAR_$_SparkConnectingProgressViewController._setupResult
+_OBJC_IVAR_$_SparkConnectingProgressViewController._currentState
+_OBJC_IVAR_$_SparkConnectingProgressViewController._currentStateView
+_OBJC_IVAR_$_SparkConnectingProgressViewController._progressViews
+_OBJC_IVAR_$_SparkConnectingProgressViewController._wifiSymbolImageView
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/UI/SparkConnectingProgressViewController.m
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/UI/SparkConnectingProgressViewController.h
+__61-[SparkConnectingProgressViewController checkDeviceIsClaimed]_block_invoke_2.263
+__61-[SparkConnectingProgressViewController checkDeviceIsClaimed]_block_invoke.250
+__Block_byref_object_dispose_
+__Block_byref_object_copy_
+__61-[SparkConnectingProgressViewController checkDeviceIsClaimed]_block_invoke_2.247
+__61-[SparkConnectingProgressViewController checkDeviceIsClaimed]_block_invoke.246
+__61-[SparkConnectingProgressViewController checkDeviceIsClaimed]_block_invoke_2
+__61-[SparkConnectingProgressViewController checkDeviceIsClaimed]_block_invoke
+__69-[SparkConnectingProgressViewController checkForInternetConnectivity]_block_invoke
+__63-[SparkConnectingProgressViewController waitForCloudConnection]_block_invoke
+__63-[SparkConnectingProgressViewController connectDeviceToNetwork]_block_invoke
+__74-[SparkConnectingProgressViewController configureDeviceNetworkCredentials]_block_invoke_2
+__74-[SparkConnectingProgressViewController configureDeviceNetworkCredentials]_block_invoke
+__63-[SparkConnectingProgressViewController finishSetupWithResult:]_block_invoke
+__68-[SparkConnectingProgressViewController nextConnectionProgressState]_block_invoke
+__80-[SparkConnectingProgressViewController setCurrentConnectionProgressStateError:]_block_invoke
+-[SparkSetupWebViewController viewDidLoad]
+-[SparkSetupWebViewController didReceiveMemoryWarning]
+-[SparkSetupWebViewController closeButtonTouched:]
+-[SparkSetupWebViewController webView:didFailLoadWithError:]
+-[SparkSetupWebViewController webViewDidStartLoad:]
+-[SparkSetupWebViewController webViewDidFinishLoad:]
+-[SparkSetupWebViewController viewWillAppear:]
+-[SparkSetupWebViewController link]
+-[SparkSetupWebViewController setLink:]
+-[SparkSetupWebViewController htmlFilename]
+-[SparkSetupWebViewController setHtmlFilename:]
+-[SparkSetupWebViewController htmlFileDirectory]
+-[SparkSetupWebViewController setHtmlFileDirectory:]
+-[SparkSetupWebViewController webView]
+-[SparkSetupWebViewController setWebView:]
+-[SparkSetupWebViewController spinner]
+-[SparkSetupWebViewController setSpinner:]
+-[SparkSetupWebViewController .cxx_destruct]
+_OBJC_IVAR_$_SparkSetupWebViewController._link
+_OBJC_IVAR_$_SparkSetupWebViewController._htmlFilename
+_OBJC_IVAR_$_SparkSetupWebViewController._htmlFileDirectory
+_OBJC_IVAR_$_SparkSetupWebViewController._webView
+_OBJC_IVAR_$_SparkSetupWebViewController._spinner
+l_OBJC_PROTOCOL_$_UIWebViewDelegate
+l_OBJC_LABEL_PROTOCOL_$_UIWebViewDelegate
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/UI/SparkSetupWebViewController.m
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/UI/SparkSetupWebViewController.h
+-[SparkSetupUILabel replacePredefinedText]
+-[SparkSetupUILabel initWithCoder:]
+-[SparkSetupUILabel setType:]
+-[SparkSetupUILabel type]
+-[SparkSetupUILabel .cxx_destruct]
+_OBJC_IVAR_$_SparkSetupUILabel._type
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/UI/UI Elements/SparkSetupUILabel.m
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/UI/UI Elements/SparkSetupUILabel.h
+-[SparkSetupWifiTableViewCell awakeFromNib]
+-[SparkSetupWifiTableViewCell setSelected:animated:]
+-[SparkSetupWifiTableViewCell ssidLabel]
+-[SparkSetupWifiTableViewCell setSsidLabel:]
+-[SparkSetupWifiTableViewCell wifiStrengthImageView]
+-[SparkSetupWifiTableViewCell setWifiStrengthImageView:]
+-[SparkSetupWifiTableViewCell securedNetworkIconImageView]
+-[SparkSetupWifiTableViewCell setSecuredNetworkIconImageView:]
+-[SparkSetupWifiTableViewCell .cxx_destruct]
+_OBJC_IVAR_$_SparkSetupWifiTableViewCell._ssidLabel
+_OBJC_IVAR_$_SparkSetupWifiTableViewCell._wifiStrengthImageView
+_OBJC_IVAR_$_SparkSetupWifiTableViewCell._securedNetworkIconImageView
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/UI/UI Elements/SparkSetupWifiTableViewCell.m
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/UI/UI Elements/SparkSetupWifiTableViewCell.h
++[SparkSetupMainController getResourcesBundle]
++[SparkSetupMainController getSetupStoryboard]
++[SparkSetupMainController loadImageFromResourceBundle:]
+-[SparkSetupMainController init]
+-[SparkSetupMainController initWithSetupOnly:]
+-[SparkSetupMainController initWithAuthenticationOnly:]
+-[SparkSetupMainController viewDidLoad]
+___39-[SparkSetupMainController viewDidLoad]_block_invoke
+-[SparkSetupMainController runSetup]
+-[SparkSetupMainController showSignup]
+-[SparkSetupMainController showSignupWithPredefinedActivationCode:]
+-[SparkSetupMainController showLogin]
+-[SparkSetupMainController showPasswordReset]
+-[SparkSetupMainController setupDidLogoutObserver:]
+-[SparkSetupMainController didFinishUserAuthentication:loggedIn:]
+___65-[SparkSetupMainController didFinishUserAuthentication:loggedIn:]_block_invoke
+-[SparkSetupMainController didRequestPasswordReset:]
+-[SparkSetupMainController didRequestUserSignup:]
+-[SparkSetupMainController didRequestUserLogin:]
+-[SparkSetupMainController setupDidFinishObserver:]
+___51-[SparkSetupMainController setupDidFinishObserver:]_block_invoke
+-[SparkSetupMainController showViewController:]
+-[SparkSetupMainController hideViewController:]
+-[SparkSetupMainController dealloc]
+-[SparkSetupMainController delegate]
+-[SparkSetupMainController setDelegate:]
+-[SparkSetupMainController containerView]
+-[SparkSetupMainController setContainerView:]
+-[SparkSetupMainController currentVC]
+-[SparkSetupMainController setCurrentVC:]
+-[SparkSetupMainController authenticationOnly]
+-[SparkSetupMainController setAuthenticationOnly:]
+-[SparkSetupMainController setupOnly]
+-[SparkSetupMainController setSetupOnly:]
+-[SparkSetupMainController .cxx_destruct]
+___block_descriptor_tmp.82
+___block_descriptor_tmp.97
+_OBJC_IVAR_$_SparkSetupMainController._delegate
+_OBJC_IVAR_$_SparkSetupMainController._containerView
+_OBJC_IVAR_$_SparkSetupMainController._currentVC
+_OBJC_IVAR_$_SparkSetupMainController._authenticationOnly
+_OBJC_IVAR_$_SparkSetupMainController._setupOnly
+l_OBJC_PROTOCOL_$_SparkUserLoginDelegate
+l_OBJC_LABEL_PROTOCOL_$_SparkUserLoginDelegate
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/User/SparkSetupMainController.m
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/User/SparkSetupMainController.h
+__51-[SparkSetupMainController setupDidFinishObserver:]_block_invoke
+__65-[SparkSetupMainController didFinishUserAuthentication:loggedIn:]_block_invoke
+__39-[SparkSetupMainController viewDidLoad]_block_invoke
+-[SparkSetupCommManager init]
+-[SparkSetupCommManager initWithNetworkPrefix:]
++[SparkSetupCommManager checkSparkDeviceWifiConnection:]
+-[SparkSetupCommManager SparkSetupConnection:didReceiveData:]
+-[SparkSetupCommManager SparkSetupConnection:didUpdateState:error:]
+-[SparkSetupCommManager sendCommandTimeoutHandler:]
+-[SparkSetupCommManager openConnection]
+-[SparkSetupCommManager canSendCommandCallCompletionForError:]
+-[SparkSetupCommManager version:]
+___33-[SparkSetupCommManager version:]_block_invoke
+___33-[SparkSetupCommManager version:]_block_invoke_2
+___copy_helper_block_.108
+___destroy_helper_block_.109
+-[SparkSetupCommManager deviceID:]
+___34-[SparkSetupCommManager deviceID:]_block_invoke
+___34-[SparkSetupCommManager deviceID:]_block_invoke_2
+___copy_helper_block_.118
+___destroy_helper_block_.119
+___copy_helper_block_.121
+___destroy_helper_block_.122
+-[SparkSetupCommManager scanAP:]
+___32-[SparkSetupCommManager scanAP:]_block_invoke
+___32-[SparkSetupCommManager scanAP:]_block_invoke_2
+___copy_helper_block_.126
+___destroy_helper_block_.127
+___copy_helper_block_.129
+___destroy_helper_block_.130
+-[SparkSetupCommManager configureAP:passcode:security:channel:completion:]
+___74-[SparkSetupCommManager configureAP:passcode:security:channel:completion:]_block_invoke
+___74-[SparkSetupCommManager configureAP:passcode:security:channel:completion:]_block_invoke_2
+___copy_helper_block_.172
+___destroy_helper_block_.173
+___copy_helper_block_.175
+___destroy_helper_block_.176
+-[SparkSetupCommManager setClaimCode:completion:]
+___49-[SparkSetupCommManager setClaimCode:completion:]_block_invoke
+___49-[SparkSetupCommManager setClaimCode:completion:]_block_invoke_2
+___copy_helper_block_.192
+___destroy_helper_block_.193
+___copy_helper_block_.195
+___destroy_helper_block_.196
+-[SparkSetupCommManager connectAP:]
+___35-[SparkSetupCommManager connectAP:]_block_invoke
+___35-[SparkSetupCommManager connectAP:]_block_invoke_2
+___copy_helper_block_.200
+___destroy_helper_block_.201
+___copy_helper_block_.205
+___destroy_helper_block_.206
+-[SparkSetupCommManager publicKey:]
+___35-[SparkSetupCommManager publicKey:]_block_invoke
+___35-[SparkSetupCommManager publicKey:]_block_invoke_2
+___copy_helper_block_.210
+___destroy_helper_block_.211
+___copy_helper_block_.213
+___destroy_helper_block_.214
+-[SparkSetupCommManager dealloc]
+-[SparkSetupCommManager connection]
+-[SparkSetupCommManager setConnection:]
+-[SparkSetupCommManager commandType]
+-[SparkSetupCommManager setCommandType:]
+-[SparkSetupCommManager commandCompletionBlock]
+-[SparkSetupCommManager setCommandCompletionBlock:]
+-[SparkSetupCommManager commandSendBlock]
+-[SparkSetupCommManager setCommandSendBlock:]
+-[SparkSetupCommManager sendCommandTimeoutTimer]
+-[SparkSetupCommManager setSendCommandTimeoutTimer:]
+-[SparkSetupCommManager networkNamePrefix]
+-[SparkSetupCommManager setNetworkNamePrefix:]
+-[SparkSetupCommManager .cxx_destruct]
+___block_descriptor_tmp.111
+___block_descriptor_tmp.120
+___block_descriptor_tmp.123
+___block_descriptor_tmp.128
+___block_descriptor_tmp.131
+___block_descriptor_tmp.174
+___block_descriptor_tmp.177
+___block_descriptor_tmp.194
+___block_descriptor_tmp.197
+___block_descriptor_tmp.202
+___block_descriptor_tmp.207
+___block_descriptor_tmp.212
+_OBJC_IVAR_$_SparkSetupCommManager._connection
+_OBJC_IVAR_$_SparkSetupCommManager._commandType
+_OBJC_IVAR_$_SparkSetupCommManager._commandCompletionBlock
+_OBJC_IVAR_$_SparkSetupCommManager._commandSendBlock
+_OBJC_IVAR_$_SparkSetupCommManager._sendCommandTimeoutTimer
+_OBJC_IVAR_$_SparkSetupCommManager._networkNamePrefix
+l_OBJC_PROTOCOL_$_SparkSetupConnectionDelegate
+l_OBJC_LABEL_PROTOCOL_$_SparkSetupConnectionDelegate
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/Comm/SparkSetupCommManager.m
+__35-[SparkSetupCommManager publicKey:]_block_invoke_2
+__35-[SparkSetupCommManager publicKey:]_block_invoke
+__35-[SparkSetupCommManager connectAP:]_block_invoke_2
+__35-[SparkSetupCommManager connectAP:]_block_invoke
+__49-[SparkSetupCommManager setClaimCode:completion:]_block_invoke_2
+__49-[SparkSetupCommManager setClaimCode:completion:]_block_invoke
+__74-[SparkSetupCommManager configureAP:passcode:security:channel:completion:]_block_invoke_2
+__74-[SparkSetupCommManager configureAP:passcode:security:channel:completion:]_block_invoke
+__32-[SparkSetupCommManager scanAP:]_block_invoke_2
+__32-[SparkSetupCommManager scanAP:]_block_invoke
+__34-[SparkSetupCommManager deviceID:]_block_invoke_2
+__34-[SparkSetupCommManager deviceID:]_block_invoke
+__33-[SparkSetupCommManager version:]_block_invoke_2
+__33-[SparkSetupCommManager version:]_block_invoke
+-[SparkSetupConnection initSocket]
+___34-[SparkSetupConnection initSocket]_block_invoke
+-[SparkSetupConnection initWithIPAddress:port:]
+-[SparkSetupConnection socketOpenTimeoutHandler:]
+-[SparkSetupConnection stream:handleEvent:]
+-[SparkSetupConnection writeString:completion:]
+___47-[SparkSetupConnection writeString:completion:]_block_invoke
+___copy_helper_block_.102
+___destroy_helper_block_.103
+-[SparkSetupConnection dealloc]
+-[SparkSetupConnection close]
+-[SparkSetupConnection delegate]
+-[SparkSetupConnection setDelegate:]
+-[SparkSetupConnection state]
+-[SparkSetupConnection setState:]
+-[SparkSetupConnection inputStream]
+-[SparkSetupConnection setInputStream:]
+-[SparkSetupConnection outputStream]
+-[SparkSetupConnection setOutputStream:]
+-[SparkSetupConnection IPaddr]
+-[SparkSetupConnection setIPaddr:]
+-[SparkSetupConnection port]
+-[SparkSetupConnection setPort:]
+-[SparkSetupConnection rcvdDataBuffer]
+-[SparkSetupConnection setRcvdDataBuffer:]
+-[SparkSetupConnection outStreamOpened]
+-[SparkSetupConnection setOutStreamOpened:]
+-[SparkSetupConnection inStreamOpened]
+-[SparkSetupConnection setInStreamOpened:]
+-[SparkSetupConnection socketOpenTimeoutTimer]
+-[SparkSetupConnection setSocketOpenTimeoutTimer:]
+-[SparkSetupConnection .cxx_destruct]
+_OBJC_IVAR_$_SparkSetupConnection._outputStream
+___block_descriptor_tmp.104
+_OBJC_IVAR_$_SparkSetupConnection._delegate
+_OBJC_IVAR_$_SparkSetupConnection._state
+_OBJC_IVAR_$_SparkSetupConnection._inputStream
+_OBJC_IVAR_$_SparkSetupConnection._IPaddr
+_OBJC_IVAR_$_SparkSetupConnection._port
+_OBJC_IVAR_$_SparkSetupConnection._rcvdDataBuffer
+_OBJC_IVAR_$_SparkSetupConnection._outStreamOpened
+_OBJC_IVAR_$_SparkSetupConnection._inStreamOpened
+_OBJC_IVAR_$_SparkSetupConnection._socketOpenTimeoutTimer
+l_OBJC_PROTOCOL_$_NSStreamDelegate
+l_OBJC_LABEL_PROTOCOL_$_NSStreamDelegate
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/Comm/SparkSetupConnection.m
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/Comm/SparkSetupConnection.h
+__47-[SparkSetupConnection writeString:completion:]_block_invoke
+__34-[SparkSetupConnection initSocket]_block_invoke
++[SparkSetupSecurityManager getPublicKey]
++[SparkSetupSecurityManager setPublicKey:]
++[SparkSetupSecurityManager encryptWithPublicKey:plainText:]
++[SparkSetupSecurityManager decodeDataFromHexString:]
++[SparkSetupSecurityManager encodeDataToHexString:]
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/Comm/SparkSetupSecurityManager.m
+-[SparkGetReadyViewController viewDidLoad]
+-[SparkGetReadyViewController preferredStatusBarStyle]
+-[SparkGetReadyViewController didReceiveMemoryWarning]
+-[SparkGetReadyViewController cancelSetup:]
+-[SparkGetReadyViewController viewDidAppear:]
+___45-[SparkGetReadyViewController viewDidAppear:]_block_invoke
+-[SparkGetReadyViewController troubleShootingButtonTapped:]
+-[SparkGetReadyViewController prepareForSegue:sender:]
+-[SparkGetReadyViewController readyButtonTapped:]
+___49-[SparkGetReadyViewController readyButtonTapped:]_block_invoke
+-[SparkGetReadyViewController viewWillAppear:]
+-[SparkGetReadyViewController logoutButtonTouched:]
+-[SparkGetReadyViewController brandImageView]
+-[SparkGetReadyViewController setBrandImageView:]
+-[SparkGetReadyViewController readyButton]
+-[SparkGetReadyViewController setReadyButton:]
+-[SparkGetReadyViewController spinner]
+-[SparkGetReadyViewController setSpinner:]
+-[SparkGetReadyViewController loggedInLabel]
+-[SparkGetReadyViewController setLoggedInLabel:]
+-[SparkGetReadyViewController instructionsLabel]
+-[SparkGetReadyViewController setInstructionsLabel:]
+-[SparkGetReadyViewController productImageView]
+-[SparkGetReadyViewController setProductImageView:]
+-[SparkGetReadyViewController claimCode]
+-[SparkGetReadyViewController setClaimCode:]
+-[SparkGetReadyViewController claimedDevices]
+-[SparkGetReadyViewController setClaimedDevices:]
+-[SparkGetReadyViewController logoutButton]
+-[SparkGetReadyViewController setLogoutButton:]
+-[SparkGetReadyViewController cancelSetupButton]
+-[SparkGetReadyViewController setCancelSetupButton:]
+-[SparkGetReadyViewController loggedInUserLabel]
+-[SparkGetReadyViewController setLoggedInUserLabel:]
+-[SparkGetReadyViewController .cxx_destruct]
+_OBJC_IVAR_$_SparkGetReadyViewController._brandImageView
+_OBJC_IVAR_$_SparkGetReadyViewController._readyButton
+_OBJC_IVAR_$_SparkGetReadyViewController._spinner
+_OBJC_IVAR_$_SparkGetReadyViewController._loggedInLabel
+_OBJC_IVAR_$_SparkGetReadyViewController._instructionsLabel
+_OBJC_IVAR_$_SparkGetReadyViewController._productImageView
+_OBJC_IVAR_$_SparkGetReadyViewController._claimCode
+_OBJC_IVAR_$_SparkGetReadyViewController._claimedDevices
+_OBJC_IVAR_$_SparkGetReadyViewController._logoutButton
+_OBJC_IVAR_$_SparkGetReadyViewController._cancelSetupButton
+_OBJC_IVAR_$_SparkGetReadyViewController._loggedInUserLabel
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/UI/SparkGetReadyViewController.m
+__49-[SparkGetReadyViewController readyButtonTapped:]_block_invoke
+__45-[SparkGetReadyViewController viewDidAppear:]_block_invoke
+-[SparkSetupPasswordEntryViewController viewDidLoad]
+-[SparkSetupPasswordEntryViewController didReceiveMemoryWarning]
+-[SparkSetupPasswordEntryViewController showPasswordSwitchTapped:]
+-[SparkSetupPasswordEntryViewController viewWillAppear:]
+-[SparkSetupPasswordEntryViewController connectButtonTapped:]
+-[SparkSetupPasswordEntryViewController prepareForSegue:sender:]
+-[SparkSetupPasswordEntryViewController convertSecurityTypeToString:]
+-[SparkSetupPasswordEntryViewController textFieldShouldReturn:]
+-[SparkSetupPasswordEntryViewController changeNetworkButtonTapped:]
+-[SparkSetupPasswordEntryViewController networkName]
+-[SparkSetupPasswordEntryViewController setNetworkName:]
+-[SparkSetupPasswordEntryViewController deviceID]
+-[SparkSetupPasswordEntryViewController setDeviceID:]
+-[SparkSetupPasswordEntryViewController channel]
+-[SparkSetupPasswordEntryViewController setChannel:]
+-[SparkSetupPasswordEntryViewController security]
+-[SparkSetupPasswordEntryViewController setSecurity:]
+-[SparkSetupPasswordEntryViewController needToClaimDevice]
+-[SparkSetupPasswordEntryViewController setNeedToClaimDevice:]
+-[SparkSetupPasswordEntryViewController passwordTextField]
+-[SparkSetupPasswordEntryViewController setPasswordTextField:]
+-[SparkSetupPasswordEntryViewController networkNameLabel]
+-[SparkSetupPasswordEntryViewController setNetworkNameLabel:]
+-[SparkSetupPasswordEntryViewController securityTypeLabel]
+-[SparkSetupPasswordEntryViewController setSecurityTypeLabel:]
+-[SparkSetupPasswordEntryViewController showPasswordSwitch]
+-[SparkSetupPasswordEntryViewController setShowPasswordSwitch:]
+-[SparkSetupPasswordEntryViewController brandImageView]
+-[SparkSetupPasswordEntryViewController setBrandImageView:]
+-[SparkSetupPasswordEntryViewController wifiSymbolImageView]
+-[SparkSetupPasswordEntryViewController setWifiSymbolImageView:]
+-[SparkSetupPasswordEntryViewController backButton]
+-[SparkSetupPasswordEntryViewController setBackButton:]
+-[SparkSetupPasswordEntryViewController .cxx_destruct]
+_OBJC_IVAR_$_SparkSetupPasswordEntryViewController._networkName
+_OBJC_IVAR_$_SparkSetupPasswordEntryViewController._deviceID
+_OBJC_IVAR_$_SparkSetupPasswordEntryViewController._channel
+_OBJC_IVAR_$_SparkSetupPasswordEntryViewController._security
+_OBJC_IVAR_$_SparkSetupPasswordEntryViewController._needToClaimDevice
+_OBJC_IVAR_$_SparkSetupPasswordEntryViewController._passwordTextField
+_OBJC_IVAR_$_SparkSetupPasswordEntryViewController._networkNameLabel
+_OBJC_IVAR_$_SparkSetupPasswordEntryViewController._securityTypeLabel
+_OBJC_IVAR_$_SparkSetupPasswordEntryViewController._showPasswordSwitch
+_OBJC_IVAR_$_SparkSetupPasswordEntryViewController._brandImageView
+_OBJC_IVAR_$_SparkSetupPasswordEntryViewController._wifiSymbolImageView
+_OBJC_IVAR_$_SparkSetupPasswordEntryViewController._backButton
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/UI/SparkSetupPasswordEntryViewController.m
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/UI/SparkSetupPasswordEntryViewController.h
+-[SparkDiscoverDeviceViewController dealloc]
+-[SparkDiscoverDeviceViewController viewDidLoad]
+-[SparkDiscoverDeviceViewController didReceiveMemoryWarning]
+-[SparkDiscoverDeviceViewController resetWifiSignalIconWithDelay]
+___65-[SparkDiscoverDeviceViewController resetWifiSignalIconWithDelay]_block_invoke
+-[SparkDiscoverDeviceViewController restartDeviceDetectionTimer]
+-[SparkDiscoverDeviceViewController goToWifiListScreen]
+-[SparkDiscoverDeviceViewController willPopBackToDeviceDiscovery]
+-[SparkDiscoverDeviceViewController readyButton:]
+-[SparkDiscoverDeviceViewController viewWillAppear:]
+-[SparkDiscoverDeviceViewController viewDidAppear:]
+-[SparkDiscoverDeviceViewController checkDeviceConnectionForNotification:]
+-[SparkDiscoverDeviceViewController scheduleBackgroundTask]
+___59-[SparkDiscoverDeviceViewController scheduleBackgroundTask]_block_invoke
+___copy_helper_block_.182
+___destroy_helper_block_.183
+-[SparkDiscoverDeviceViewController SparkSetupConnection:didUpdateState:error:]
+-[SparkDiscoverDeviceViewController startPhotonQuery]
+___53-[SparkDiscoverDeviceViewController startPhotonQuery]_block_invoke
+___copy_helper_block_.193
+___destroy_helper_block_.194
+___53-[SparkDiscoverDeviceViewController startPhotonQuery]_block_invoke.196
+___copy_helper_block_.199
+___destroy_helper_block_.200
+-[SparkDiscoverDeviceViewController checkDeviceWifiConnection:]
+___63-[SparkDiscoverDeviceViewController checkDeviceWifiConnection:]_block_invoke
+___copy_helper_block_.202
+___destroy_helper_block_.203
+-[SparkDiscoverDeviceViewController prepareForSegue:sender:]
+-[SparkDiscoverDeviceViewController getDeviceID]
+___48-[SparkDiscoverDeviceViewController getDeviceID]_block_invoke
+___copy_helper_block_.257
+___destroy_helper_block_.258
+-[SparkDiscoverDeviceViewController photonScanAP]
+___49-[SparkDiscoverDeviceViewController photonScanAP]_block_invoke
+___copy_helper_block_.273
+___destroy_helper_block_.274
+-[SparkDiscoverDeviceViewController checkDeviceOwnershipChange]
+-[SparkDiscoverDeviceViewController alertView:clickedButtonAtIndex:]
+-[SparkDiscoverDeviceViewController photonPublicKey]
+___52-[SparkDiscoverDeviceViewController photonPublicKey]_block_invoke
+___copy_helper_block_.315
+___destroy_helper_block_.316
+-[SparkDiscoverDeviceViewController setDeviceClaimCode]
+___55-[SparkDiscoverDeviceViewController setDeviceClaimCode]_block_invoke
+___copy_helper_block_.328
+___destroy_helper_block_.329
+-[SparkDiscoverDeviceViewController getDeviceVersion]
+___53-[SparkDiscoverDeviceViewController getDeviceVersion]_block_invoke
+-[SparkDiscoverDeviceViewController cancelButtonTouched:]
+-[SparkDiscoverDeviceViewController claimCode]
+-[SparkDiscoverDeviceViewController setClaimCode:]
+-[SparkDiscoverDeviceViewController claimedDevices]
+-[SparkDiscoverDeviceViewController setClaimedDevices:]
+-[SparkDiscoverDeviceViewController wifiSignalImageView]
+-[SparkDiscoverDeviceViewController setWifiSignalImageView:]
+-[SparkDiscoverDeviceViewController networkNameLabel]
+-[SparkDiscoverDeviceViewController setNetworkNameLabel:]
+-[SparkDiscoverDeviceViewController troubleShootingButton]
+-[SparkDiscoverDeviceViewController setTroubleShootingButton:]
+-[SparkDiscoverDeviceViewController brandImage]
+-[SparkDiscoverDeviceViewController setBrandImage:]
+-[SparkDiscoverDeviceViewController scannedWifiList]
+-[SparkDiscoverDeviceViewController setScannedWifiList:]
+-[SparkDiscoverDeviceViewController cancelSetupButton]
+-[SparkDiscoverDeviceViewController setCancelSetupButton:]
+-[SparkDiscoverDeviceViewController step3Label]
+-[SparkDiscoverDeviceViewController setStep3Label:]
+-[SparkDiscoverDeviceViewController readyButton]
+-[SparkDiscoverDeviceViewController setReadyButton:]
+-[SparkDiscoverDeviceViewController spinner]
+-[SparkDiscoverDeviceViewController setSpinner:]
+-[SparkDiscoverDeviceViewController showMeHowButton]
+-[SparkDiscoverDeviceViewController setShowMeHowButton:]
+-[SparkDiscoverDeviceViewController backgroundTask]
+-[SparkDiscoverDeviceViewController setBackgroundTask:]
+-[SparkDiscoverDeviceViewController backgroundTaskTimer]
+-[SparkDiscoverDeviceViewController setBackgroundTaskTimer:]
+-[SparkDiscoverDeviceViewController checkConnectionTimer]
+-[SparkDiscoverDeviceViewController setCheckConnectionTimer:]
+-[SparkDiscoverDeviceViewController detectedDeviceID]
+-[SparkDiscoverDeviceViewController setDetectedDeviceID:]
+-[SparkDiscoverDeviceViewController gotPublicKey]
+-[SparkDiscoverDeviceViewController setGotPublicKey:]
+-[SparkDiscoverDeviceViewController gotOwnershipInfo]
+-[SparkDiscoverDeviceViewController setGotOwnershipInfo:]
+-[SparkDiscoverDeviceViewController didGoToWifiListScreen]
+-[SparkDiscoverDeviceViewController setDidGoToWifiListScreen:]
+-[SparkDiscoverDeviceViewController isDetectedDeviceClaimed]
+-[SparkDiscoverDeviceViewController setIsDetectedDeviceClaimed:]
+-[SparkDiscoverDeviceViewController needToCheckDeviceClaimed]
+-[SparkDiscoverDeviceViewController setNeedToCheckDeviceClaimed:]
+-[SparkDiscoverDeviceViewController userAlreadyOwnsDevice]
+-[SparkDiscoverDeviceViewController setUserAlreadyOwnsDevice:]
+-[SparkDiscoverDeviceViewController deviceClaimedByUser]
+-[SparkDiscoverDeviceViewController setDeviceClaimedByUser:]
+-[SparkDiscoverDeviceViewController changeOwnershipAlertView]
+-[SparkDiscoverDeviceViewController setChangeOwnershipAlertView:]
+-[SparkDiscoverDeviceViewController wifiView]
+-[SparkDiscoverDeviceViewController setWifiView:]
+-[SparkDiscoverDeviceViewController tryConn]
+-[SparkDiscoverDeviceViewController setTryConn:]
+-[SparkDiscoverDeviceViewController connectToWifiImageView]
+-[SparkDiscoverDeviceViewController setConnectToWifiImageView:]
+-[SparkDiscoverDeviceViewController wifiInfoImageView]
+-[SparkDiscoverDeviceViewController setWifiInfoImageView:]
+-[SparkDiscoverDeviceViewController checkmarkImageView]
+-[SparkDiscoverDeviceViewController setCheckmarkImageView:]
+-[SparkDiscoverDeviceViewController .cxx_destruct]
+___block_descriptor_tmp.184
+___block_descriptor_tmp.195
+___block_descriptor_tmp.201
+___block_descriptor_tmp.204
+___block_descriptor_tmp.260
+___block_descriptor_tmp.275
+___block_descriptor_tmp.317
+___block_descriptor_tmp.330
+___block_descriptor_tmp.333
+_OBJC_IVAR_$_SparkDiscoverDeviceViewController._claimCode
+_OBJC_IVAR_$_SparkDiscoverDeviceViewController._claimedDevices
+_OBJC_IVAR_$_SparkDiscoverDeviceViewController._wifiSignalImageView
+_OBJC_IVAR_$_SparkDiscoverDeviceViewController._networkNameLabel
+_OBJC_IVAR_$_SparkDiscoverDeviceViewController._troubleShootingButton
+_OBJC_IVAR_$_SparkDiscoverDeviceViewController._brandImage
+_OBJC_IVAR_$_SparkDiscoverDeviceViewController._scannedWifiList
+_OBJC_IVAR_$_SparkDiscoverDeviceViewController._cancelSetupButton
+_OBJC_IVAR_$_SparkDiscoverDeviceViewController._step3Label
+_OBJC_IVAR_$_SparkDiscoverDeviceViewController._readyButton
+_OBJC_IVAR_$_SparkDiscoverDeviceViewController._spinner
+_OBJC_IVAR_$_SparkDiscoverDeviceViewController._showMeHowButton
+_OBJC_IVAR_$_SparkDiscoverDeviceViewController._backgroundTask
+_OBJC_IVAR_$_SparkDiscoverDeviceViewController._backgroundTaskTimer
+_OBJC_IVAR_$_SparkDiscoverDeviceViewController._checkConnectionTimer
+_OBJC_IVAR_$_SparkDiscoverDeviceViewController._detectedDeviceID
+_OBJC_IVAR_$_SparkDiscoverDeviceViewController._gotPublicKey
+_OBJC_IVAR_$_SparkDiscoverDeviceViewController._gotOwnershipInfo
+_OBJC_IVAR_$_SparkDiscoverDeviceViewController._didGoToWifiListScreen
+_OBJC_IVAR_$_SparkDiscoverDeviceViewController._isDetectedDeviceClaimed
+_OBJC_IVAR_$_SparkDiscoverDeviceViewController._needToCheckDeviceClaimed
+_OBJC_IVAR_$_SparkDiscoverDeviceViewController._userAlreadyOwnsDevice
+_OBJC_IVAR_$_SparkDiscoverDeviceViewController._deviceClaimedByUser
+_OBJC_IVAR_$_SparkDiscoverDeviceViewController._changeOwnershipAlertView
+_OBJC_IVAR_$_SparkDiscoverDeviceViewController._wifiView
+_OBJC_IVAR_$_SparkDiscoverDeviceViewController._tryConn
+_OBJC_IVAR_$_SparkDiscoverDeviceViewController._connectToWifiImageView
+_OBJC_IVAR_$_SparkDiscoverDeviceViewController._wifiInfoImageView
+_OBJC_IVAR_$_SparkDiscoverDeviceViewController._checkmarkImageView
+l_OBJC_PROTOCOL_$_SparkSelectNetworkViewControllerDelegate
+l_OBJC_LABEL_PROTOCOL_$_SparkSelectNetworkViewControllerDelegate
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/UI/SparkDiscoverDeviceViewController.m
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/UI/SparkDiscoverDeviceViewController.h
+__53-[SparkDiscoverDeviceViewController getDeviceVersion]_block_invoke
+__55-[SparkDiscoverDeviceViewController setDeviceClaimCode]_block_invoke
+__52-[SparkDiscoverDeviceViewController photonPublicKey]_block_invoke
+__49-[SparkDiscoverDeviceViewController photonScanAP]_block_invoke
+__48-[SparkDiscoverDeviceViewController getDeviceID]_block_invoke
+__63-[SparkDiscoverDeviceViewController checkDeviceWifiConnection:]_block_invoke
+__53-[SparkDiscoverDeviceViewController startPhotonQuery]_block_invoke.196
+__53-[SparkDiscoverDeviceViewController startPhotonQuery]_block_invoke
+__59-[SparkDiscoverDeviceViewController scheduleBackgroundTask]_block_invoke
+__65-[SparkDiscoverDeviceViewController resetWifiSignalIconWithDelay]_block_invoke
+-[SparkSetupUIViewController viewDidLoad]
+-[SparkSetupUIViewController viewWillAppear:]
+-[SparkSetupUIViewController viewWillDisappear:]
+-[SparkSetupUIViewController didReceiveMemoryWarning]
+-[SparkSetupUIViewController disableKeyboardMovesViewUp]
+-[SparkSetupUIViewController isValidEmail:]
+-[SparkSetupUIViewController keyboardWillShow:]
+-[SparkSetupUIViewController keyboardWillHide:]
+-[SparkSetupUIViewController dismissKeyboard]
+-[SparkSetupUIViewController keyboardHeightAdjust]
+-[SparkSetupUIViewController setViewMovedUp:]
+-[SparkSetupUIViewController kbSizeHeight]
+-[SparkSetupUIViewController setKbSizeHeight:]
+-[SparkSetupUIViewController brandImageView]
+-[SparkSetupUIViewController setBrandImageView:]
+-[SparkSetupUIViewController tap]
+-[SparkSetupUIViewController setTap:]
+-[SparkSetupUIViewController .cxx_destruct]
+_OBJC_IVAR_$_SparkSetupUIViewController._kbSizeHeight
+_OBJC_IVAR_$_SparkSetupUIViewController._brandImageView
+_OBJC_IVAR_$_SparkSetupUIViewController._tap
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/UI/UI Elements/SparkSetupUIViewController.m
+-[SparkUserSignupViewController viewDidLoad]
+-[SparkUserSignupViewController textFieldShouldReturn:]
+-[SparkUserSignupViewController viewWillAppear:]
+-[SparkUserSignupViewController didReceiveMemoryWarning]
+-[SparkUserSignupViewController signupButton:]
+___46-[SparkUserSignupViewController signupButton:]_block_invoke
+___46-[SparkUserSignupViewController signupButton:]_block_invoke.102
+___46-[SparkUserSignupViewController signupButton:]_block_invoke_2
+___copy_helper_block_.103
+___destroy_helper_block_.104
+-[SparkUserSignupViewController privacyPolicyButton:]
+-[SparkUserSignupViewController termOfServiceButton:]
+-[SparkUserSignupViewController haveAnAccountButtonTouched:]
+-[SparkUserSignupViewController skipAuthButtonTapped:]
+-[SparkUserSignupViewController alertView:clickedButtonAtIndex:]
+-[SparkUserSignupViewController delegate]
+-[SparkUserSignupViewController setDelegate:]
+-[SparkUserSignupViewController predefinedActivationCode]
+-[SparkUserSignupViewController setPredefinedActivationCode:]
+-[SparkUserSignupViewController spinner]
+-[SparkUserSignupViewController setSpinner:]
+-[SparkUserSignupViewController passwordTextField]
+-[SparkUserSignupViewController setPasswordTextField:]
+-[SparkUserSignupViewController passwordVerifyTextField]
+-[SparkUserSignupViewController setPasswordVerifyTextField:]
+-[SparkUserSignupViewController emailTextField]
+-[SparkUserSignupViewController setEmailTextField:]
+-[SparkUserSignupViewController termsButton]
+-[SparkUserSignupViewController setTermsButton:]
+-[SparkUserSignupViewController privacyButton]
+-[SparkUserSignupViewController setPrivacyButton:]
+-[SparkUserSignupViewController signupButton]
+-[SparkUserSignupViewController setSignupButton:]
+-[SparkUserSignupViewController logoImageView]
+-[SparkUserSignupViewController setLogoImageView:]
+-[SparkUserSignupViewController haveAccountButton]
+-[SparkUserSignupViewController setHaveAccountButton:]
+-[SparkUserSignupViewController createAccountLabel]
+-[SparkUserSignupViewController setCreateAccountLabel:]
+-[SparkUserSignupViewController signupButtonSpace]
+-[SparkUserSignupViewController setSignupButtonSpace:]
+-[SparkUserSignupViewController skipAuthButton]
+-[SparkUserSignupViewController setSkipAuthButton:]
+-[SparkUserSignupViewController skipAuthAlertView]
+-[SparkUserSignupViewController setSkipAuthAlertView:]
+-[SparkUserSignupViewController .cxx_destruct]
+___block_descriptor_tmp.105
+___block_descriptor_tmp.110
+_OBJC_IVAR_$_SparkUserSignupViewController._delegate
+_OBJC_IVAR_$_SparkUserSignupViewController._predefinedActivationCode
+_OBJC_IVAR_$_SparkUserSignupViewController._spinner
+_OBJC_IVAR_$_SparkUserSignupViewController._passwordTextField
+_OBJC_IVAR_$_SparkUserSignupViewController._passwordVerifyTextField
+_OBJC_IVAR_$_SparkUserSignupViewController._emailTextField
+_OBJC_IVAR_$_SparkUserSignupViewController._termsButton
+_OBJC_IVAR_$_SparkUserSignupViewController._privacyButton
+_OBJC_IVAR_$_SparkUserSignupViewController._signupButton
+_OBJC_IVAR_$_SparkUserSignupViewController._logoImageView
+_OBJC_IVAR_$_SparkUserSignupViewController._haveAccountButton
+_OBJC_IVAR_$_SparkUserSignupViewController._createAccountLabel
+_OBJC_IVAR_$_SparkUserSignupViewController._signupButtonSpace
+_OBJC_IVAR_$_SparkUserSignupViewController._skipAuthButton
+_OBJC_IVAR_$_SparkUserSignupViewController._skipAuthAlertView
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/UI/SparkUserSignupViewController.m
+/Users/julien/dev/grove/GroveGardenController/Carthage/Checkouts/spark-setup-ios/Classes/UI/SparkUserSignupViewController.h
+__46-[SparkUserSignupViewController signupButton:]_block_invoke_2
+__46-[SparkUserSignupViewController signupButton:]_block_invoke.102
+__46-[SparkUserSignupViewController signupButton:]_block_invoke
+/Users/julien/Library/Caches/org.carthage.CarthageKit/DerivedData/10.1_10B61/spark-setup-ios/2dd90f38876bd79353c0c984b0304245c1dcaf61/Build/Intermediates.noindex/ArchiveIntermediates/ParticleDeviceSetupLibrary/IntermediateBuildFilesPath/ParticleDeviceSetupLibrary.build/Release-iphoneos/ParticleDeviceSetupLibrary.build/DerivedSources/ParticleDeviceSetupLibrary_vers.c

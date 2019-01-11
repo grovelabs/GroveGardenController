@@ -61,7 +61,7 @@ internal final class LoginViewController: UIViewController {
   @IBAction
   internal func loginButtonPressed(_ sender: UIButton) {
 
-    guard serialSuffix.characters.count == 6 else {
+    guard serialSuffix.count == 6 else {
       return showAlert(.serialNotLongEnough)
     }
 
@@ -86,7 +86,7 @@ internal final class LoginViewController: UIViewController {
   internal func serialTextFieldChanged(_ textField: UITextField) {
 
     switch textField.text {
-    case let text? where text.characters.count <= 6:
+    case let text? where text.count <= 6:
       serialSuffix = text
     default:
       break
