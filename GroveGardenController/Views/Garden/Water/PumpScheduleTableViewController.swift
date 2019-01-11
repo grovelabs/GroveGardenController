@@ -19,7 +19,7 @@ class PumpScheduleTableViewController: UITableViewController, NotificationListen
     removeListener(forNotification: .Grove)
   }
 
-  func bindView() {
+  @objc func bindView() {
     guard let grove = GroveManager.shared.grove else { return }
     let schedule = grove.pump?.schedule
 

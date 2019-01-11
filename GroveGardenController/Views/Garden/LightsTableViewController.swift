@@ -17,7 +17,7 @@ class LightsTableViewController: UITableViewController, NotificationListener {
     removeListener(forNotification: .Grove)
   }
 
-  func bindView() {
+  @objc func bindView() {
     guard let grove = GroveManager.shared.grove else { return }
 
     func sunriseToNight(_ schedule: Light.Schedule?) -> String {

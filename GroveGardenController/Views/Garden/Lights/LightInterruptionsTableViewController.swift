@@ -21,7 +21,7 @@ class LightInterruptionsTableViewController: UITableViewController, Notification
     removeListener(forNotification: .Grove)
   }
 
-  func bindView() {
+  @objc func bindView() {
     guard let grove = GroveManager.shared.grove else { return }
 
     let interrupted: Bool = {

@@ -14,7 +14,7 @@ extension UIViewController {
 
     let spinner = UIActivityIndicatorView()
     spinner.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
-    spinner.activityIndicatorViewStyle = .whiteLarge
+    spinner.style = .whiteLarge
     spinner.center = CGPoint(x: (loadingView.frame.width / 2),
                              y: (loadingView.frame.height / 2))
     spinner.hidesWhenStopped = true

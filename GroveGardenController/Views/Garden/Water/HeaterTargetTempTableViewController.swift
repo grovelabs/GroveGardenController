@@ -17,7 +17,7 @@ class HeaterTargetTempTableViewController: UITableViewController, NotificationLi
     removeListener(forNotification: .Grove)
   }
 
-  func bindView() {
+  @objc func bindView() {
     guard let grove = GroveManager.shared.grove else { return }
 
     let aquariumTempTarget = grove.aquariumTempTarget

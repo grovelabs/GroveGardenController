@@ -304,6 +304,7 @@
 					173DD2DA1E521AF300888F33 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 8SU4LF8A2Z;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -543,7 +544,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.grovegrown.jblanchet.GroveGardenController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "GroveGardenController/GroveGardenController-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -562,7 +564,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.grovegrown.jblanchet.GroveGardenController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "GroveGardenController/GroveGardenController-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

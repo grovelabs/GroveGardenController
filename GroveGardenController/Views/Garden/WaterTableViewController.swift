@@ -17,7 +17,7 @@ class WaterTableViewController: UITableViewController, NotificationListener {
     removeListener(forNotification: .Grove)
   }
 
-  func bindView() {
+  @objc func bindView() {
     guard let grove = GroveManager.shared.grove else { return }
 
     waterTempLabel.text = grove.sensors?.water.temperature?.printableFahrenheit() ?? ""

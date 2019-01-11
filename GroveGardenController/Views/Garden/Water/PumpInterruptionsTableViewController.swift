@@ -17,7 +17,7 @@ class PumpInterruptionsTableViewController: UITableViewController, NotificationL
     removeListener(forNotification: .Grove)
   }
 
-  func bindView() {
+  @objc func bindView() {
     guard let grove = GroveManager.shared.grove else { return }
 
     let interruption = grove.pump?.interruption

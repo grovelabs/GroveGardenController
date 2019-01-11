@@ -18,7 +18,7 @@ class FanIntensityTableViewController: UITableViewController, NotificationListen
     removeListener(forNotification: .Grove)
   }
 
-  func bindView() {
+  @objc func bindView() {
     guard let grove = GroveManager.shared.grove else { return }
     let speed = grove.fan?.schedule.speed
 

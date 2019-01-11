@@ -37,7 +37,7 @@ class LightScheduleTableViewController: UITableViewController, NotificationListe
     removeListener(forNotification: .Grove)
   }
 
-  func bindView() {
+  @objc func bindView() {
     guard let schedule = getSchedule() else { return }
 
     switch (newSunrise, showSunrisePicker) {
@@ -188,10 +188,10 @@ class LightScheduleTableViewController: UITableViewController, NotificationListe
                                      selector: #selector(sendNewColor),
                                      userInfo: nil,
                                      repeats: false)
-    RunLoop.current.add(colorSliderDebounceTimer, forMode: .defaultRunLoopMode)
+    RunLoop.current.add(colorSliderDebounceTimer, forMode: RunLoop.Mode.default)
   }
 
-  internal func sendNewColor() {
+  @objc internal func sendNewColor() {
     guard let schedule = getSchedule() else { return }
     let color = Int(colorTempSlider.value * 100)
     let newSchedule = schedule.changeSettings(color: color)

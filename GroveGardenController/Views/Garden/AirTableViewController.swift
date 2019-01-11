@@ -17,7 +17,7 @@ class AirTableViewController: UITableViewController, NotificationListener {
     removeListener(forNotification: .Grove)
   }
 
-  func bindView() {
+  @objc func bindView() {
     guard let grove = GroveManager.shared.grove else { return }
 
     airTempLabel.text = grove.sensors?.air.temperature?.printableFahrenheit() ?? ""

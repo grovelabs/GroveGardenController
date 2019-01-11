@@ -83,7 +83,7 @@ internal final class LoginViewController: UIViewController {
     }
   }
 
-  internal func serialTextFieldChanged(_ textField: UITextField) {
+  @objc internal func serialTextFieldChanged(_ textField: UITextField) {
 
     switch textField.text {
     case let text? where text.count <= 6:
@@ -95,11 +95,11 @@ internal final class LoginViewController: UIViewController {
     serialTextField.text = serialSuffix
   }
 
-  internal func passwordTextFieldDoneEditing() {
+  @objc internal func passwordTextFieldDoneEditing() {
     loginButtonPressed(loginButton)
   }
 
-  internal func dismissKeyboard() {
+  @objc internal func dismissKeyboard() {
     self.view.endEditing(true)
   }
 
